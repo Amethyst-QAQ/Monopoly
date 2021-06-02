@@ -4,9 +4,8 @@
 #include <iostream>
 #include <string>
 
-#define PRICE_1 0        //第一栋房屋价格
-#define PRICE_2 0        //第二栋房屋价格
-#define PRICE_3 0		 //旅馆价格
+#define PRICE_1 0        //房屋价格
+#define PRICE_2 0		 //旅馆价格
 
 //地产类
 class Country
@@ -24,7 +23,6 @@ private:
 
 public:
 	Country();
-
 	std::string getName() { return name; }
 	int getPrice() { return price; }
 	int getToll() { return toll + PRICE_1 * house + PRICE_2 * hotel; }
