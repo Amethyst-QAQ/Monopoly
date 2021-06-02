@@ -27,6 +27,9 @@
     <ClInclude Include="Fate.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Person.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Card.cpp">

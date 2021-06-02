@@ -143,6 +143,7 @@
     <ClInclude Include="Chance.h" />
     <ClInclude Include="Country.h" />
     <ClInclude Include="Fate.h" />
+    <ClInclude Include="Person.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Card.cpp" />
