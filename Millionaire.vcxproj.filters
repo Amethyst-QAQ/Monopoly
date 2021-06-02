@@ -30,6 +30,12 @@
     <ClInclude Include="Person.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Bank.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PowerStation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Card.cpp">
@@ -44,6 +50,9 @@
     <ClInclude Include="Ground.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClCompile Include="Bank.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Country.cpp">
