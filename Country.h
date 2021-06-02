@@ -41,6 +41,7 @@ public:
 	int getHotel() { return hotel; }
 	int getOwner() { return owner; }
 	bool getPledge() { return pledge; }
+	int getColor() { return color; }
 
 	void HouseBuild();	//建造房屋
 	void HotelBuild();	//建造旅馆

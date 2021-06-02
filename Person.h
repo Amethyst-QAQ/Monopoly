@@ -3,13 +3,14 @@
 
 #include<iostream>
 #include<string>
+#include"Country.h"
 
 #define N 7 //N为颜色总数
 
 //玩家类
 class Person
 {
-protected:
+private:
 	std::string name;		//玩家昵称
 	int num;				//玩家编号
 	int money;				//拥有的现金数
@@ -45,7 +46,7 @@ public:
 	float getLuck() { return luck; }
 
 	void changeLuck(float val) { luck -= val; }				//改变幸运值
-	void buyCountry() { country_num++; }					//购买空地
+	void buyCountry(Country country) { country_num++; color[country.getColor()]++; }					//购买空地
 	void buyPowerStation() { power_station_num++; }			//购买发电厂
 	void buildHouse() { house_num++; };						//盖房子
 	void buildHotel() { hotel_num++; house_num -= 2; };		//盖旅馆
