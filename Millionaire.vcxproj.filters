@@ -45,6 +45,12 @@
     <ClInclude Include="CardsDrawing.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Prison.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Card.cpp">
