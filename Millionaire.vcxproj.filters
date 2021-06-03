@@ -36,6 +36,12 @@
     <ClInclude Include="resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="FateGround.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ChanceGround.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Card.cpp">

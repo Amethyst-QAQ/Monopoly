@@ -141,8 +141,10 @@
   <ItemGroup>
     <ClInclude Include="Card.h" />
     <ClInclude Include="Chance.h" />
+    <ClInclude Include="ChanceGround.h" />
     <ClInclude Include="Country.h" />
     <ClInclude Include="Fate.h" />
+    <ClInclude Include="FateGround.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="PowerStation.h" />
     <ClInclude Include="resource.h" />
