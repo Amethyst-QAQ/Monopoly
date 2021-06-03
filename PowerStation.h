@@ -14,7 +14,7 @@ private:
 public:
 	PowerStation() : toll(200), owner(0), pledge(false) {}
 	
-	void onStepped();								//路过的时候调用，可以用作菜单
+	void onStepped();	//路过的时候调用，可以用作菜单
 	
 	void setOwner(int _owner) { owner = _owner; }
 
