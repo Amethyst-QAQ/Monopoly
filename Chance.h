@@ -7,7 +7,9 @@
 class Chance :public Card
 {
 public:
-	Chance(std::string _name, int _val) { Card(_name, _val); };  //构造函数，初始化事件名称
+	Chance(std::string _name, int _val):Card(_name,_val){}
+	             
+	//构造函数，初始化事件名称
 };
 
 #endif
