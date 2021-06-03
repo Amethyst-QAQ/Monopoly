@@ -143,15 +143,16 @@
     <ClInclude Include="Chance.h" />
     <ClInclude Include="Country.h" />
     <ClInclude Include="Fate.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="PowerStation.h" />
-    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="Chance.cpp" />
     <ClCompile Include="Fate.cpp" />
     <ClCompile Include="CardsDrawing.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClInclude Include="Ground.h" />
   </ItemGroup>
   <ItemGroup>
