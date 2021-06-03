@@ -45,7 +45,7 @@ public:
 	int getNumber() { return num; }
 	float getLuck() { return luck; }
 
-	void changeLuck(float val) { luck -= val; }				//改变幸运值
+	void setLuck(float _luck) { luck = _luck; }				//改变幸运值
 	void buyCountry(Country country) { country_num++; color[country.getColor()]++; }					//购买空地
 	void buyPowerStation() { power_station_num++; }			//购买发电厂
 	void buildHouse() { house_num++; };						//盖房子

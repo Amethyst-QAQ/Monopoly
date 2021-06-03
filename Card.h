@@ -14,7 +14,6 @@ private:
 public:
 	Card(std::string _event, int _val);
 	std::string doEvent() { return event; };	//事件操作
-	float LuckVal();							//计算幸运值，幸运值与抽到的卡片有关
 };
 
 #endif
