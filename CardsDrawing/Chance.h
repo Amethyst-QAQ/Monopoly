@@ -1,5 +1,5 @@
-#ifndef CHANCE_H
-#define CHANCE_H
+#ifndef CARDS_DRAWING_CHANCE_H
+#define CARDS_DRAWING_CHANCE_H
 
 #include"Card.h"
 

@@ -1,5 +1,5 @@
-#ifndef COUNTRY_H
-#define COUNTRY_H
+#ifndef GROUND_COUNTRY_H
+#define GROUND_COUNTRY_H
 
 #include <iostream>
 #include <string>

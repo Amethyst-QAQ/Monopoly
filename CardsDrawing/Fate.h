@@ -1,5 +1,5 @@
-#ifndef FATE_H
-#define FATE_H
+#ifndef CARDS_DRAWING_FATE_H
+#define CARDS_DRAWING_FATE_H
 
 #include"Card.h"
 
