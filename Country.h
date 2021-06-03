@@ -8,7 +8,7 @@
 #define PRICE_1 0        //房屋价格
 #define PRICE_2 0		 //旅馆价格
 
-bool isServer;
+extern bool isServer;
 
 //地产类，继承格子类
 class Country : public Ground
