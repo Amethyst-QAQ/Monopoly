@@ -31,16 +31,17 @@ bool Menu::input(int *ret)
 		}
 	}
 	
+	cout << wrongText << endl;
 	return false;
 }
 
 Menu::Menu(const std::string &mainText, const std::vector<std::string> &operations, const std::string &serverText):
-	_mainText{mainText}, _operations{operations}, _serverText{serverText}, regexes{}
+	_mainText{mainText}, _operations{operations}, _serverText{serverText}, regexes{}, wrongText{DEFAULT_WRONG_TEXT}
 {
 	for (int i = 0; i < operations.size(); i++)
 	{
 		regexes.push_back(regex(
-			"\\s*(" + to_string(i + 1) + "\\.?\\s*)?(" + operations[i] + ")?\\s*"
+			"\\s*(" + to_string(i + 1) + "[\\.\\s]?\\s*)?(" + operations[i] + ")?\\s*"
 		));
 	}
 }
