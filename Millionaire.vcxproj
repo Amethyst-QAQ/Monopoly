@@ -146,6 +146,7 @@
     <ClInclude Include="Fate.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="PowerStation.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bank.cpp" />
@@ -156,6 +157,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Country.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Millionaire.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\我的文档\作业\程序设计基础\大一下 大富翁\大一下半年大作业：大富翁.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
