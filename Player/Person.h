@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include <string>
-#include "Country.h"
-#include "Ground.h"
+#include "../Ground/Country.h"
+#include "../Ground/Ground.h"
 
 #define N 7 //N为颜色总数
 
