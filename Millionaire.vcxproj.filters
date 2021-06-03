@@ -30,9 +30,6 @@
     <ClInclude Include="Person.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Bank.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="PowerStation.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -47,10 +44,10 @@
     <ClInclude Include="Ground.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClCompile Include="Bank.cpp">
+    <ClCompile Include="CardsDrawing.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="CardsDrawing.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -58,10 +55,5 @@
     <ClCompile Include="Country.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Millionaire.rc">
-      <Filter>资源文件</Filter>
-    </ResourceCompile>
   </ItemGroup>
 </Project>

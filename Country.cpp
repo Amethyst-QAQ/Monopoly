@@ -1,4 +1,5 @@
 #include "Country.h"
+using namespace std;
 
 Country::Country(std::string _name, 
 				int _price, 
@@ -19,6 +20,11 @@ Country::Country(std::string _name,
 	hotel = 0;
 	owner = 0;		//编号0代表银行
 	pledge = false; //false代表未出售
+}
+
+void Country::onStepped()
+{
+	Ground::onStepped();
 }
 
 void Country::HouseBuild()
