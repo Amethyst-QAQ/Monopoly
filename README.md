@@ -19,9 +19,9 @@ Team Work of the game "Millionaire"
   
     PowerStation class (Channning & Sweetie-he)  (finished)
   
-  * Transportation class (Sweetie-he & Channing)
+  * Transportation class (Surveyous) 
   
-  * Prison class (Surveyous)
+  * Prison class (Sweetie-he & Channing)  (finished)
   
   * Beginning class (Channning & Sweetie-he)
   
