@@ -25,6 +25,7 @@ Country::Country(std::string _name,
 void Country::onStepped()
 {
 	Ground::onStepped();
+
 }
 
 void Country::HouseBuild()

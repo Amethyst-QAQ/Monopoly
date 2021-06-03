@@ -139,28 +139,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Arrest.h" />
-    <ClInclude Include="Card.h" />
-    <ClInclude Include="CardsDrawing.h" />
-    <ClInclude Include="Chance.h" />
-    <ClInclude Include="ChanceGround.h" />
-    <ClInclude Include="Country.h" />
-    <ClInclude Include="Fate.h" />
-    <ClInclude Include="FateGround.h" />
-    <ClInclude Include="Menu.h" />
-    <ClInclude Include="Person.h" />
-    <ClInclude Include="PowerStation.h" />
-    <ClInclude Include="Prison.h" />
+    <ClInclude Include="Ground\Arrest.h" />
+    <ClInclude Include="CardsDrawing\Card.h" />
+    <ClInclude Include="CardsDrawing\CardsDrawing.h" />
+    <ClInclude Include="CardsDrawing\Chance.h" />
+    <ClInclude Include="Ground\ChanceGround.h" />
+    <ClInclude Include="Ground\Country.h" />
+    <ClInclude Include="CardsDrawing\Fate.h" />
+    <ClInclude Include="Ground\FateGround.h" />
+    <ClInclude Include="Ground\PowerStation.h" />
+    <ClInclude Include="Ground\Prison.h" />
+    <ClInclude Include="Player\Menu.h" />
+    <ClInclude Include="Player\Person.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Card.cpp" />
-    <ClCompile Include="CardsDrawing.cpp" />
+    <ClCompile Include="CardsDrawing\Card.cpp" />
+    <ClCompile Include="CardsDrawing\CardsDrawing.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Menu.cpp" />
-    <ClInclude Include="Ground.h" />
+    <ClCompile Include="Player\Menu.cpp" />
+    <ClInclude Include="Ground\Ground.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Country.cpp" />
+    <ClCompile Include="Ground\Country.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
