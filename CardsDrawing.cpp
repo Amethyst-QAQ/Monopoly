@@ -4,7 +4,7 @@ using namespace std;
 
 //抽卡系统
 
-void LuckVal(Person &a)          //计算幸运值，幸运值与抽到的卡片有关
+void CardsDrawing::LuckVal(Person &a)          //计算幸运值，幸运值与抽到的卡片有关
 {
 	float luck= a.getLuck();
 	luck = 1 - luck * 0.9;        //计算luck值
@@ -12,7 +12,7 @@ void LuckVal(Person &a)          //计算幸运值，幸运值与抽到的卡片有关
 	a.setLuck(luck);              //更新Person的Luck值
 }
 
-Card* CardsDrawing(Person &a)
+Card* CardsDrawing::Draw (Person &a)
 {
 	srand((unsigned int)time(NULL));                //根据系统时间生成随机数
 	if (a.getLuck() >= 0.6 && a.getLuck() <= 1)
