@@ -33,13 +33,22 @@
     <ClInclude Include="PowerStation.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="Menu.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="FateGround.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ChanceGround.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CardsDrawing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Prison.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Arrest.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -54,6 +63,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -3,7 +3,7 @@
 
 #include"Card.h"
 
-//命运类  （坏的多）
+//命运类  （坏牌多）
 class Fate :public Card
 {
 public:

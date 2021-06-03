@@ -1,9 +1,10 @@
 #ifndef PERSON_H
 #define PERSON_H
 
-#include<iostream>
-#include<string>
-#include"Country.h"
+#include <iostream>
+#include <string>
+#include "Country.h"
+#include "Ground.h"
 
 #define N 7 //N为颜色总数
 
@@ -20,6 +21,8 @@ private:
 	int power_station_num;	//拥有的发电厂数目
 	int* color;				//各个颜色的地拥有的数目
 	float luck;				//幸运值（影响抽卡的好坏）
+	int pause;				//暂停回合数
+	Ground* position;		//指向玩家现在所在位置
 
 public:
 	Person(std::string _name, int _num) : name(_name), 
@@ -29,7 +32,8 @@ public:
 										  house_num(0),
 										  hotel_num(0),
 										  power_station_num(0),
-										  luck(0) 
+										  luck(0),
+										  pause(0)
 	{
 		color = new int[N];
 		for (int i = 0; i < N; i++)
@@ -44,7 +48,11 @@ public:
 	int getPowerStationNumber() { return power_station_num; }
 	int getNumber() { return num; }
 	float getLuck() { return luck; }
+	int getPause() { return pause; }
+	Ground* getPosition() { return position; }
 
+	void setPosition(Ground* ground) { position = ground; }	//改变玩家位置
+	void setPause(int num) { pause = num; }					//被暂停num回合
 	void setLuck(float _luck) { luck = _luck; }				//改变幸运值
 	void buyCountry(Country country) { country_num++; color[country.getColor()]++; }					//购买空地
 	void buyPowerStation() { power_station_num++; }			//购买发电厂
