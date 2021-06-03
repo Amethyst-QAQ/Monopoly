@@ -14,6 +14,9 @@ private:
 public:
 	PowerStation() : toll(200), owner(0), pledge(false) {}
 
+	void Passed();									//经过的时候调用
+	void onStepped();								//路过的时候调用，可以用作菜单
+	
 	void setOwner(int _owner) { owner = _owner; }
 
 	int getToll(Person a) { return toll * a.getPowerStationNumber(); }	//计算实际过路费
