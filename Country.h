@@ -26,10 +26,12 @@ private:
 public:
 	Country(std::string _name, int _price, int _toll, int _owner, int color, int _house_price, int _hotel_price);
 
+	void Passed();									//经过的时候调用
+	void onStepped();								//路过的时候调用，可以用作菜单
 	void setName(std::string _name) { name = _name; }
 	void setPrice(int _price) { price = _price; }
 	void setToll(int _toll) { toll = _toll; }
-	void setOwner(int _owner) { owner = _owner; } //相当于购买函数；路过时直接检测owner是不是0即可
+	void setOwner(int _owner) { owner = _owner; }	//相当于购买函数；路过时直接检测owner是不是0即可
 	void setColor(int _color) { color = _color; }
 	void setHousePrice(int _house_price) { house_price = _house_price; }
 	void setHotelPrice(int _hotel_price) { hotel_price = _hotel_price; }
