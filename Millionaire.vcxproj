@@ -151,8 +151,6 @@
   <ItemGroup>
     <ClCompile Include="Bank.cpp" />
     <ClCompile Include="Card.cpp" />
-    <ClCompile Include="Chance.cpp" />
-    <ClCompile Include="Fate.cpp" />
     <ClCompile Include="CardsDrawing.cpp" />
     <ClInclude Include="Ground.h" />
   </ItemGroup>
