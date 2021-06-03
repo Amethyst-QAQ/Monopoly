@@ -67,7 +67,4 @@
       <Filter>资源文件</Filter>
     </ResourceCompile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\我的文档\作业\程序设计基础\大一下 大富翁\大一下半年大作业：大富翁.md" />
-  </ItemGroup>
 </Project>

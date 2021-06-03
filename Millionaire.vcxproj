@@ -161,9 +161,6 @@
   <ItemGroup>
     <ResourceCompile Include="Millionaire.rc" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\我的文档\作业\程序设计基础\大一下 大富翁\大一下半年大作业：大富翁.md" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
