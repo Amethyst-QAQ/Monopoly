@@ -44,12 +44,6 @@
     <ClCompile Include="Card.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Chance.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Fate.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClInclude Include="Ground.h">
       <Filter>头文件</Filter>
     </ClInclude>
