@@ -1,5 +1,6 @@
 #ifndef FATEGROUND_H
 #define FATEGROUND_H
+#include"Ground.h"
 
 #include "Ground.h"
 #include "CardsDrawing.h"
