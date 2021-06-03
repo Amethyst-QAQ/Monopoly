@@ -1,5 +1,5 @@
-#ifndef PERSON_H
-#define PERSON_H
+#ifndef PLAYER_PERSON_H
+#define PLAYER_PERSON_H
 
 #include <iostream>
 #include <string>
