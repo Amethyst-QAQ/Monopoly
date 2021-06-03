@@ -20,10 +20,11 @@ Team Work of the game "Millionaire"
   * Mortgage
   * Determine if the player is broke
 * Ground class, the component of the map.
-  * Country class (Channning & Sweetie-he)
-  * PowerStation class (Channning & Sweetie-he)
-  * Transportation class (Sweetie-he & BigBigShrimp)
+  * Country class (Channning & Sweetie-he) （finished）
+  * PowerStation class (Channning & Sweetie-he) (finished)
+  * Transportation class (Sweetie-he & Channing)
   * Prison class (BigBigShrimp & Sweetie-he)
+  * Beginning class (Channning & Sweetie-he)
   * Design a game map (Channning & Sweetie-he)
 * Card class, to realize the basic attributes of cards.
   * Chance class,  the cards named Chance (BigBigShrimp & Sweetie-he)
