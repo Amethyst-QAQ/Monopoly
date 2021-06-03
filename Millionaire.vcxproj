@@ -139,7 +139,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Bank.h" />
+    <ClInclude Include="Card.h" />
+    <ClInclude Include="Chance.h" />
     <ClInclude Include="Country.h" />
+    <ClInclude Include="Fate.h" />
+    <ClInclude Include="Person.h" />
+    <ClInclude Include="PowerStation.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Bank.cpp" />
+    <ClCompile Include="Card.cpp" />
+    <ClCompile Include="Chance.cpp" />
+    <ClCompile Include="Fate.cpp" />
+    <ClInclude Include="Ground.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Country.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Millionaire.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
