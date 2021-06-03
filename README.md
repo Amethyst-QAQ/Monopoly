@@ -21,7 +21,7 @@ Team Work of the game "Millionaire"
   * Determine if the player is broke
 * Ground class, the component of the map.
   * Country class (Channning & Sweetie-he) （finished）
-  * PowerStation class (Channning & Sweetie-he) (finished)
+  * PowerStation class (Channning & Sweetie-he)  (finished)
   * Transportation class (Sweetie-he & Channing)
   * Prison class (BigBigShrimp & Sweetie-he)
   * Beginning class (Channning & Sweetie-he)
@@ -31,6 +31,8 @@ Team Work of the game "Millionaire"
   * Fate class, the cards named Fate (BigBigShrimp & Sweetie-he)
 * Player class, to store the imformation of players (Surveyous & Sweetie-he) (finished)
 * CardsDrawing function, to realize the methods of cards drawing  (BigBigShrimp & Sweetie-he)
+* Menu class, to realize the input and output(Sweetie-he)
 * Primary financial system (Sweetie-he & BigBigShrimp)
 * Props system (Sweetie-he & Surveyous)
 * Visual implementation (Sweetie-he)
+
