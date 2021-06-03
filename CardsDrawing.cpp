@@ -20,6 +20,7 @@ float CardsDrawing(Person &a)
 	{
 		//Chance中：好卡7张，坏卡3张
 		//Fate中：好卡3张，坏卡7张
+		if()
 		cout << "The number of the card you draw is " << 1 + rand() % 10 << endl;
 		LuckVal(a);                                 //抽卡后更改幸运值
 	}
