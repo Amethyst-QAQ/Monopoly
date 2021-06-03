@@ -29,6 +29,7 @@ Team Work of the game "Millionaire"
 * Card class, to realize the basic attributes of cards.
   * Chance class,  the cards named Chance (BigBigShrimp & Sweetie-he)
   * Fate class, the cards named Fate (BigBigShrimp & Sweetie-he)
+* Player class, to store the imformation of players (Surveyous & Sweetie-he) (finished)
 * CardsDrawing function, to realize the methods of cards drawing  (BigBigShrimp & Sweetie-he)
 * Primary financial system (Sweetie-he & BigBigShrimp)
 * Props system (Sweetie-he & Surveyous)
