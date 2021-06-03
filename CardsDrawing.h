@@ -6,14 +6,15 @@
 #include<iostream>
 #include<ctime>
 
+//牌库和抽卡系统
+
 class CardsDrawing
 {
 private:
-
+	//此处应有牌
+public:
+	void LuckVal(Person& a);
+	Card* Draw(Person& a);
 };
-
-void LuckVal(Person& a);
-
-Card* CardsDrawing(Person& a);
 
 #endif
