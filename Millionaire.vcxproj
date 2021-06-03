@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Arrest.h" />
     <ClInclude Include="Card.h" />
     <ClInclude Include="CardsDrawing.h" />
     <ClInclude Include="Chance.h" />
@@ -149,6 +150,7 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="PowerStation.h" />
+    <ClInclude Include="Prison.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Card.cpp" />
