@@ -18,7 +18,8 @@ float CardsDrawing(Person &a)
 	srand((unsigned int)time(NULL));                //根据系统时间生成随机数
 	if (a.getLuck() >= 0.65 && a.getLuck() <= 1)    //好卡
 	{
-		//Chance中：好卡7张，
+		//Chance中：好卡7张，坏卡3张
+		//Fate中：好卡3张，坏卡7张
 		cout << "The number of the card you draw is " << 1 + rand() % 10 << endl;
 		LuckVal(a);                                 //抽卡后更改幸运值
 	}
