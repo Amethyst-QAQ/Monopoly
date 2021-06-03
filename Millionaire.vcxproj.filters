@@ -53,9 +53,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CardsDrawing\Card.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClInclude Include="Ground\Ground.h">
       <Filter>头文件</Filter>
     </ClInclude>
