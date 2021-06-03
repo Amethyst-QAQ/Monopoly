@@ -1,11 +1,12 @@
 #ifndef GROUND_H
 #define GROUND_H
 
+//格子类
 class Ground
 {
 public:
-	virtual void onStepped() = 0;	//路过的时候调用，纯虚函数
-	virtual void passed() = 0;		//经过的时候调用，纯虚函数
+	virtual void onStepped() {};	//路过的时候调用，虚函数
+	virtual void onPassed() {};		//经过的时候调用，虚函数
 };
 
 #endif
