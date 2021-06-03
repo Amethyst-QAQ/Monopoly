@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Card.h" />
+    <ClInclude Include="CardsDrawing.h" />
     <ClInclude Include="Chance.h" />
     <ClInclude Include="ChanceGround.h" />
     <ClInclude Include="Country.h" />
