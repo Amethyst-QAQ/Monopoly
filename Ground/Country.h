@@ -17,8 +17,8 @@ class Country : public GroundWithPrice
 private:
 	std::string name;   //地产名称
 	int toll;           //过路费
-	int housePrice;    //建筑房屋的价格
-	int hotelPrice;    //建筑旅馆的价格
+	int housePrice;     //建筑房屋的价格
+	int hotelPrice;     //建筑旅馆的价格
 	int house;          //房屋数，上限两个
 	int hotel;          //旅馆数，上限两个
 	int color;			//颜色（拥有同色的所有国家地区就加收过路费为原来的3倍）
