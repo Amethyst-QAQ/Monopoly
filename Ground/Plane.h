@@ -9,7 +9,7 @@
 class Plane :public Transportation         //飞机收费站，基础过路费800
 {
 public:
-	Plane(std::string _name) :Transportation(_name, 800) {}
+	Plane() { toll = 800; }
 };
 
 #endif
