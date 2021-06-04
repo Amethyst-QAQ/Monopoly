@@ -1,4 +1,5 @@
 #include "Menu.h"
+#include "Output.h"
 #include <iostream>
 
 using namespace std;
@@ -15,6 +16,11 @@ void Menu::output()
 	}
 	else
 		cout << _serverText << endl;
+
+	string all = _mainText + "    ";
+	for (int i = 0; i < _operations.size(); i++)
+		all += to_string(i + 1) + ". " + _operations[i] + "    ";
+	Output::instance->textMap[all] = _serverText;
 }
 
 bool Menu::input(int *ret)
