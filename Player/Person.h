@@ -5,6 +5,7 @@
 #include <string>
 #include "../Ground/Country.h"
 #include "../Ground/Ground.h"
+#include "../Ground/PowerStation.h"
 
 #define N 7 //N为颜色总数
 
@@ -15,11 +16,9 @@ private:
 	std::string name;		//玩家昵称
 	int num;				//玩家编号
 	int money;				//拥有的现金数
-	int country_num;		//拥有的地产数目
-	int house_num;			//拥有的房屋总数
-	int hotel_num;			//拥有的旅馆总数
-	int power_station_num;	//拥有的发电厂数目
-	int* color;				//各个颜色的地拥有的数目
+	int countryNum;			//拥有的地产数目
+	int powerStationNum;	//拥有的发电厂数目
+	int* colorCountryNum;	//各个颜色的地拥有的数目
 	float luck;				//幸运值（影响抽卡的好坏）
 	int pause;				//暂停回合数
 	Ground* position;		//指向玩家现在所在位置
@@ -28,24 +27,21 @@ public:
 	Person(std::string _name, int _num) : name(_name), 
 										  num(_num),
 										  money(50000),
-										  country_num(0), 
-										  house_num(0),
-										  hotel_num(0),
-										  power_station_num(0),
+										  countryNum(0), 
+										  powerStationNum(0),
 										  luck(0),
-										  pause(0)
+										  pause(0),
+										  position(nullptr)
 	{
-		color = new int[N];
+		colorCountryNum = new int[N];
 		for (int i = 0; i < N; i++)
-			color[i] = 0;
+			colorCountryNum[i] = 0;
 	}
 	
 	std::string getName() { return name; }
 	int getMoney() { return money; }
-	int getCountryNumber() { return country_num; }
-	int getHouseNumber() { return house_num; }
-	int getHotelNumber() { return hotel_num; }
-	int getPowerStationNumber() { return power_station_num; }
+	int getCountryNumber() { return countryNum; }
+	int getPowerStationNumber() { return powerStationNum; }
 	int getNumber() { return num; }
 	float getLuck() { return luck; }
 	int getPause() { return pause; }

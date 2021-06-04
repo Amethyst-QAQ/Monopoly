@@ -147,6 +147,7 @@
     <ClInclude Include="Ground\Country.h" />
     <ClInclude Include="CardsDrawing\Fate.h" />
     <ClInclude Include="Ground\FateGround.h" />
+    <ClInclude Include="Ground\GroundWithPrice.h" />
     <ClInclude Include="Ground\PowerStation.h" />
     <ClInclude Include="Ground\Prison.h" />
     <ClInclude Include="Player\Menu.h" />
@@ -154,9 +155,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CardsDrawing\CardsDrawing.cpp" />
-    <ClCompile Include="CardsDrawing\CardsSuit.cpp" />
+    <ClCompile Include="Ground\GroundWithPrice.cpp" />
+    <ClCompile Include="Ground\PowerStation.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player\Menu.cpp" />
+    <ClCompile Include="Player\Person.cpp" />
     <ClInclude Include="Ground\Ground.h" />
   </ItemGroup>
   <ItemGroup>
