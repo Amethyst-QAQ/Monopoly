@@ -1,27 +1,18 @@
 #ifndef GROUND_POWER_STATION_H
 #define GROUND_POWER_STATION_H
 
-#include "Ground.h"
+#include "GroundWithPrice.h"
 #include "../Player/Person.h"
 
-class PowerStation : public Ground
+class PowerStation : public GroundWithPrice
 {
 private:
 	int toll;	//基础过路费
-	int owner;
-	bool pledge;
 
 public:
-	PowerStation() : toll(200), owner(0), pledge(false) {}
+	PowerStation(int _price) : toll(200), GroundWithPrice(_price) {}
 	
 	void onStepped();	//路过的时候调用，可以用作菜单
-	
-	void setOwner(int _owner) { owner = _owner; }
-
-	int getToll(Person a) { return toll * a.getPowerStationNumber(); }	//计算实际过路费
-	bool getPledge() { return pledge; }
-
-	void Hypothecate() { pledge = true; }
 };
 
 #endif // !POWER_STATION_H
