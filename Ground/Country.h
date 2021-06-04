@@ -11,7 +11,7 @@
 
 extern bool isServer;
 
-//地产类，继承格子类
+///地产类，继承格子类
 class Country : public GroundWithPrice
 {
 private:

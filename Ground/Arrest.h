@@ -5,8 +5,8 @@
 #include "Ground.h"
 #include "../Player/Person.h"
 
-//入狱格子
-class Arrest
+///入狱格子
+class Arrest : public Ground
 {
 public:
 	void onStepped(Person& a, Prison* b) 

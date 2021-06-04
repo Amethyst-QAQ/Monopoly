@@ -2,7 +2,7 @@
 
 using namespace std;
 
-//抽卡系统
+///抽卡系统
 
 void CardsDrawing::LuckVal(Person &a)          //计算幸运值，幸运值与抽到的卡片有关
 {

@@ -1,7 +1,7 @@
 #ifndef GROUND_GROUND_H
 #define GROUND_GROUND_H
 
-//格子类
+///格子类
 class Ground
 {
 public:

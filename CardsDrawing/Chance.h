@@ -3,7 +3,7 @@
 
 #include"Card.h"
 
-//机会类 （好牌多）
+///机会类 （好牌多）
 class Chance :public Card
 {
 public:

@@ -9,7 +9,7 @@
 
 #define N 7 //N为颜色总数
 
-//玩家类
+///玩家类
 class Person
 {
 private:

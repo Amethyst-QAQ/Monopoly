@@ -6,7 +6,7 @@
 #include<iostream>
 #include<ctime>
 
-//牌库和抽卡系统
+///牌库和抽卡系统
 
 class CardsDrawing
 {
