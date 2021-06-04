@@ -1,11 +1,11 @@
 #include "Person.h"
 
-void Person::buyCountry(Country* country)
+void Person::buyCountry()
 {
+	countryNum++;
 }
 
-void Person::buyPowerStation(PowerStation* a)
+void Person::buyPowerStation()
 {
 	powerStationNum++;
-	money -= 
 }

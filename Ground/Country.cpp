@@ -16,10 +16,25 @@ Country::Country(std::string _name,
 									
 
 
-void Country::onStepped()
+void Country::onStepped(int player)
 {
-	Ground::onStepped();
+	GroundWithPrice::onStepped(player);
 
+}
+
+void Country::buy(int player)
+{
+	Person& p = players[player];
+	int money = p.getMoney();
+	if (money < price)
+		cout << "You don't have enough money." << endl;
+	else
+	{
+		cout << "Successfully bought!" << endl;
+		money -= price;
+		p.setMoney(money);
+		p.buyCountry();
+	}
 }
 
 void Country::HouseBuild()
