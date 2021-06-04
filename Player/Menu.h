@@ -1,5 +1,5 @@
-#ifndef MENU_H
-#define MENU_H
+#ifndef PLAYER_MENU_H
+#define PLAYER_MENU_H
 
 #include <string>
 #include <vector>

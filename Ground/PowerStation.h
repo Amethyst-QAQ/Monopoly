@@ -1,0 +1,18 @@
+#ifndef GROUND_POWER_STATION_H
+#define GROUND_POWER_STATION_H
+
+#include "GroundWithPrice.h"
+#include "../Player/Person.h"
+
+class PowerStation : public GroundWithPrice
+{
+private:
+	int toll;	//基础过路费
+
+public:
+	PowerStation(int _price) : toll(200), GroundWithPrice(_price) {}
+	
+	void onStepped();	//路过的时候调用，可以用作菜单
+};
+
+#endif // !POWER_STATION_H
