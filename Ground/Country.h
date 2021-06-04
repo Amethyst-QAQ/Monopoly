@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include "GroundWithPrice.h"
+#include "../Player/Person.h"
 
 #define PRICE_1 0        //房屋价格
 #define PRICE_2 0		 //旅馆价格
@@ -25,7 +26,7 @@ private:
 public:
 	Country(std::string _name, int _price, int _toll, int color, int _house_price, int _hotel_price);
 
-	void onStepped();									//路过的时候调用，可以用作菜单
+	void onStepped(int player);									//路过的时候调用，可以用作菜单
 
 	void setName(std::string _name) { name = _name; }
 	void setToll(int _toll) { toll = _toll; }
@@ -38,6 +39,8 @@ public:
 	int getHouse() { return house; }
 	int getHotel() { return hotel; }
 	int getColor() { return color; }
+
+	void buy(int player);
 
 	void HouseBuild();	//建造房屋
 	void HotelBuild();	//建造旅馆
