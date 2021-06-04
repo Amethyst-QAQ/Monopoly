@@ -1,9 +1,9 @@
-#ifndef ARREST_H
-#define ARREST_H
+#ifndef GROUND_ARREST_H
+#define GROUND_ARREST_H
 
 #include "Prison.h"
 #include "Ground.h"
-#include "Person.h"
+#include "../Player/Person.h"
 
 //ШыгќИёзг
 class Arrest

@@ -1,8 +1,8 @@
-#ifndef POWER_STATION_H
-#define POWER_STATION_H
+#ifndef GROUND_POWER_STATION_H
+#define GROUND_POWER_STATION_H
 
 #include "Ground.h"
-#include "Person.h"
+#include "../Player/Person.h"
 
 class PowerStation : public Ground
 {

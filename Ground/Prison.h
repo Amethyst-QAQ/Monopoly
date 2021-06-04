@@ -1,8 +1,8 @@
-#ifndef PRISON_H
-#define PRISON_H
+#ifndef GROUND_PRISON_H
+#define GROUND_PRISON_H
 
 #include "Ground.h"
-#include "Person.h"
+#include "../Player/Person.h"
 
 /*МргќИёзг*/
 

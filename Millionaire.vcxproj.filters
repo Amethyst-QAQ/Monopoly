@@ -15,62 +15,59 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Country.h">
+    <ClInclude Include="Ground\Country.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Card.h">
+    <ClInclude Include="CardsDrawing\Card.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Chance.h">
+    <ClInclude Include="CardsDrawing\Chance.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Fate.h">
+    <ClInclude Include="CardsDrawing\Fate.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Person.h">
+    <ClInclude Include="Player\Person.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="PowerStation.h">
+    <ClInclude Include="Player\Menu.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Menu.h">
+    <ClInclude Include="Ground\FateGround.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="FateGround.h">
+    <ClInclude Include="Ground\ChanceGround.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="ChanceGround.h">
+    <ClInclude Include="CardsDrawing\CardsDrawing.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CardsDrawing.h">
+    <ClInclude Include="Ground\Arrest.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Prison.h">
+    <ClInclude Include="Ground\Prison.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Arrest.h">
+    <ClInclude Include="Ground\PowerStation.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Card.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClInclude Include="Ground.h">
+    <ClInclude Include="Ground\Ground.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClCompile Include="CardsDrawing.cpp">
+    <ClCompile Include="CardsDrawing\CardsDrawing.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Menu.cpp">
+    <ClCompile Include="Player\Menu.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Country.cpp">
+    <ClCompile Include="Ground\Country.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

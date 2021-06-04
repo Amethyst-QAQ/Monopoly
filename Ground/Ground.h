@@ -1,5 +1,5 @@
-#ifndef GROUND_H
-#define GROUND_H
+#ifndef GROUND_GROUND_H
+#define GROUND_GROUND_H
 
 //¸ñ×ÓÀà
 class Ground
