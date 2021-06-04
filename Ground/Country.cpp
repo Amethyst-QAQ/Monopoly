@@ -4,23 +4,17 @@ using namespace std;
 Country::Country(std::string _name, 
 				int _price, 
 				int _toll, 
-				int _owner,
 				int _color,
 				int _house_price, 
-				int _hotel_price)
-{
-	setName(_name);
-	setPrice(_price);
-	setToll(_toll);
-	setColor(color);
-	setHousePrice(_house_price);
-	setHotelPrice(_hotel_price);
+				int _hotel_price) : 
+									GroundWithPrice(_price),
+									name(_name),
+									toll(_toll),
+									color(_color),
+									housePrice(_house_price),
+									hotelPrice(_hotel_price) {}
+									
 
-	house = 0;
-	hotel = 0;
-	owner = 0;		//编号0代表银行
-	pledge = false; //false代表未出售
-}
 
 void Country::onStepped()
 {
@@ -37,9 +31,4 @@ void Country::HotelBuild()
 {
 	hotel++;
 	house -= 2;
-}
-
-void Country::Hypothecate()
-{
-	pledge = true;
 }
