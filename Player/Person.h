@@ -54,6 +54,7 @@ public:
 	void setPosition(Ground* ground) { position = ground; }	//改变玩家位置
 	void setPause(int num) { pause = num; }					//被暂停num回合
 	void setLuck(float _luck) { luck = _luck; }				//改变幸运值
+	void setHotel(int num) { hotel_num = num; }             //改变旅馆数
 	void buyCountry(Country country) { country_num++; color[country.getColor()]++; }					//购买空地
 	void buyPowerStation() { power_station_num++; }			//购买发电厂
 	void buildHouse() { house_num++; };						//盖房子
