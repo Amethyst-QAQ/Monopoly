@@ -143,6 +143,7 @@
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\CardsDrawing.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />
+    <ClInclude Include="Ground\Beginning.h" />
     <ClInclude Include="Ground\ChanceGround.h" />
     <ClInclude Include="Ground\Country.h" />
     <ClInclude Include="CardsDrawing\Fate.h" />

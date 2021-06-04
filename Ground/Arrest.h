@@ -6,7 +6,7 @@
 #include "../Player/Person.h"
 
 //ШыгќИёзг
-class Arrest
+class Arrest :public Ground
 {
 public:
 	void onStepped(Person& a, Prison* b) 
