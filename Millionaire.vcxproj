@@ -151,6 +151,7 @@
     <ClInclude Include="Ground\PowerStation.h" />
     <ClInclude Include="Ground\Prison.h" />
     <ClInclude Include="Player\Menu.h" />
+    <ClInclude Include="Player\Output.h" />
     <ClInclude Include="Player\Person.h" />
   </ItemGroup>
   <ItemGroup>
@@ -159,6 +160,7 @@
     <ClCompile Include="Ground\PowerStation.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player\Menu.cpp" />
+    <ClCompile Include="Player\Output.cpp" />
     <ClCompile Include="Player\Person.cpp" />
     <ClInclude Include="Ground\Ground.h" />
   </ItemGroup>
