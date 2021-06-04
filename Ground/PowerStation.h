@@ -4,6 +4,8 @@
 #include "GroundWithPrice.h"
 #include "../Player/Person.h"
 
+///∑¢µÁ’æ¿‡
+
 class PowerStation : public GroundWithPrice
 {
 private:
