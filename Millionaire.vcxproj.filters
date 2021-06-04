@@ -57,6 +57,18 @@
     <ClInclude Include="Ground\Beginning.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Ground\Transportation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground\Car.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground\Train.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground\Plane.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ground\Ground.h">
