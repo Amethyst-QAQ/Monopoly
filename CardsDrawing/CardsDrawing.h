@@ -10,8 +10,6 @@
 
 class CardsDrawing
 {
-private:
-	//此处应有牌
 public:
 	void LuckVal(Person& a);
 	Card* Draw(Person& a);
