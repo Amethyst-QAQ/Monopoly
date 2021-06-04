@@ -51,6 +51,8 @@ public:
 
 	void buyCountry();		//购买空地
 	void buyPowerStation();	//购买发电厂
+
+	void broke();			//破产
 };
 
 #endif // !PERSON_H

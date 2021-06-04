@@ -20,6 +20,8 @@ Country::Country(std::string _name,
 
 void Country::onStepped(int player)
 {
+	Person& p = players[player];
+
 	GroundWithPrice::onStepped(player);
 
 	if (owner != 0)
@@ -56,6 +58,20 @@ void Country::onStepped(int player)
 					return;
 				}
 			}
+		}
+		else
+		{
+			string name = p.getName();
+			int price = getToll();
+
+			cout << "This is " << name << "'s country." << endl;
+			cout << "You have to pay " << price << "yuan as tolls." << endl;
+
+			int money = p.getMoney();
+			money -= price;
+			p.setMoney(money);
+			
+			p.broke();
 		}
 	}
 }
