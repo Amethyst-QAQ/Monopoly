@@ -54,6 +54,9 @@
     <ClInclude Include="Ground\GroundWithPrice.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Ground\Beginning.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ground\Ground.h">
