@@ -9,7 +9,7 @@
 class Train :public Transportation         //火车收费站，基础过路费200
 {
 public:
-	Train(std::string _name) :Transportation(_name, 200) {}
+	Train() { toll = 200; }
 };
 
 #endif
