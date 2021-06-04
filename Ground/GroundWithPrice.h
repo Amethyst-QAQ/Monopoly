@@ -5,9 +5,13 @@
 #include "Ground.h"
 #include "../Player/Menu.h"
 
+class Person;
+
+extern Person* players;
+
 class GroundWithPrice : public Ground
 {
-private:
+protected:
 	int owner;		//拥有者
 	int price;		//价格
 	bool pledge;	//是否被抵押
@@ -15,7 +19,7 @@ private:
 public:
 	GroundWithPrice(int _price) : owner(0), price(_price), pledge(false) {}
 
-	virtual void onStepped();
+	virtual void onStepped(int player);
 
 	int getOwner() { return owner; }
 	int getPrice() { return price; }
@@ -24,6 +28,8 @@ public:
 	void setOwner(int _owner) { owner = _owner; }
 	void setPrice(int _price) { price = _price; }
 	void Hypothecate() { pledge = true; }
+
+	virtual void buy(int player) = 0;
 };
 
 #endif
