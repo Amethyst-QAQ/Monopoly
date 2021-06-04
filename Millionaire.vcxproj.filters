@@ -54,6 +54,9 @@
     <ClInclude Include="Ground\GroundWithPrice.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Player\Output.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ground\Ground.h">
@@ -80,6 +83,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Ground\PowerStation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Player\Output.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
