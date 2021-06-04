@@ -1,5 +1,5 @@
-#ifndef COUNTRY_H
-#define COUNTRY_H
+#ifndef GROUND_COUNTRY_H
+#define GROUND_COUNTRY_H
 
 #include <iostream>
 #include <string>
@@ -29,7 +29,7 @@ public:
 	Country(std::string _name, int _price, int _toll, int _owner, int color, int _house_price, int _hotel_price);
 
 	void onStepped();									//路过的时候调用，可以用作菜单
-	
+
 	void setName(std::string _name) { name = _name; }
 	void setPrice(int _price) { price = _price; }
 	void setToll(int _toll) { toll = _toll; }
