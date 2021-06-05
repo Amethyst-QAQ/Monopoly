@@ -64,8 +64,11 @@ void Country::onStepped(int player)
 			string name = p.getName();
 			int price = getToll();
 
-			cout << "This is " << name << "'s country." << endl;
-			cout << "You have to pay " << price << "yuan as tolls." << endl;
+			string Text = "This is " + name + "'s country.You have to pay " + to_string(price) + "yuan as tolls.";
+			string serveText = "pay_tool";
+
+			Output::instance->print(Text, serveText);;
+
 
 			int money = p.getMoney();
 			money -= price;
