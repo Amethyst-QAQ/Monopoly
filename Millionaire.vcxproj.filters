@@ -57,6 +57,42 @@
     <ClInclude Include="Player\Output.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="CardsDrawing\CardsSuit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CardsDrawing\ChanceSuit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CardsDrawing\FateSuit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\Event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\Listener.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground\Beginning.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground\Transportation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground\Car.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground\Train.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Ground\Plane.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Event\EventHandler.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Financial\Insurance.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ground\Ground.h">
@@ -86,6 +122,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Player\Output.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CardsDrawing\CardsSuit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Event\EventHandler.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Financial\Insurance.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
