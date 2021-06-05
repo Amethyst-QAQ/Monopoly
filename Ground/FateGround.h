@@ -5,7 +5,7 @@
 #include "Ground.h"
 #include "../CardsDrawing/CardsDrawing.h"
 
-//命运格子类
+///命运格子类
 class FateGround : public Ground
 {
 public:

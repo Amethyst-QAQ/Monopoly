@@ -3,11 +3,11 @@
 
 #include"Card.h"
 
-//命运类  （坏牌多）
+///命运类  （坏牌多）
 class Fate :public Card
 {
 public:
-	Fate(std::string _name, int _val) : Card (_name, _val) {}  	//构造函数，初始化事件名称，设置这张卡的幸运值
+	Fate(std::string name, int val,int num) :Card(name, val,num) {}          //构造函数，初始化Fate卡的事件名称与幸运值
 };
 
 #endif // !FATE_H
