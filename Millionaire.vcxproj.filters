@@ -137,4 +137,7 @@
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Event\README.md" />
+  </ItemGroup>
 </Project>
