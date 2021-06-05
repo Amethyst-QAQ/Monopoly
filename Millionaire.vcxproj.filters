@@ -101,9 +101,6 @@
     <ClInclude Include="Ground\Ground.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClCompile Include="CardsDrawing\CardsSuit.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -134,6 +131,18 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Financial\Insurance.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CARDSDRAWING\CardsSuit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CardsDrawing\ChanceSuit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CardsDrawing\FateSuit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CardsDrawing\Card.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

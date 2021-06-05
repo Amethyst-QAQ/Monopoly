@@ -1,7 +1,8 @@
 #ifndef CARDS_DRAWING_CHANCE_H
 #define CARDS_DRAWING_CHANCE_H
 
-#include"Card.h"
+#include "Card.h"
+#include "../Player/Output.h"
 
 ///机会类 （好牌多）
 class Chance :public Card

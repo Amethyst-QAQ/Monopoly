@@ -168,7 +168,10 @@
     <ClInclude Include="Player\Person.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CardsDrawing\CardsSuit.cpp" />
+    <ClCompile Include="CardsDrawing\Card.cpp" />
+    <ClCompile Include="CARDSDRAWING\CardsSuit.cpp" />
+    <ClCompile Include="CardsDrawing\ChanceSuit.cpp" />
+    <ClCompile Include="CardsDrawing\FateSuit.cpp" />
     <ClCompile Include="Event\EventHandler.cpp" />
     <ClCompile Include="Financial\Insurance.cpp" />
     <ClCompile Include="Ground\GroundWithPrice.cpp" />
