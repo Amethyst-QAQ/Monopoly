@@ -4,16 +4,16 @@
 #include"../Player/Person.h"
 #include"ChanceSuit/Chance_1.h"
 
+extern Person* players;
+
 
 //牌库类
 class CardsSuit
 {
-private:
-	Chance_1 c_1;
 public:
-	virtual void Show();             //显示卡的信息
-	virtual Card* Draw();            //抽卡
-	void LuckVal(Person& a);         //计算幸运值，幸运值与抽到的卡片有关
+	virtual void Show() = 0;			//显示牌库的信息
+	virtual Card* Draw(int player) = 0;	//抽卡
+	void getLuckVal(int player);		//计算幸运值，幸运值与抽到的卡片有关
 };
 
 
