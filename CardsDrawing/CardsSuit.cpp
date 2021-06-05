@@ -1,4 +1,4 @@
-#include"Chance.h"
+#include"Chance.h".
 #include"Fate.h"
 #include"Person.h"
 #include<iostream>
@@ -10,7 +10,7 @@ public:
 	Chance_1() :Chance("扫黄行动", 0) {}              //构造函数，初始化Chance_1卡的事件名称与幸运值
 	void doEvent(Person& a)
 	{
-		cout << "***"<<getName()<<"***" << endl;     //打印招数名字
+		cout << getName() << endl;     //打印招数名字
 		int temp = a.getHotelNumber();
 		temp -= 1;
 		a.setHotel(temp);
