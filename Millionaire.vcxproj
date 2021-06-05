@@ -141,12 +141,13 @@
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
     <ClInclude Include="CardsDrawing\ChanceSuit.h" />
+    <ClInclude Include="CardsDrawing\ChanceSuit\Chance_1.h" />
     <ClInclude Include="CardsDrawing\FateSuit.h" />
+    <ClInclude Include="CardsDrawing\FateSuit\Fate_1.h" />
     <ClInclude Include="Event\Event.h" />
     <ClInclude Include="Event\Listener.h" />
     <ClInclude Include="Ground\Arrest.h" />
     <ClInclude Include="CardsDrawing\Card.h" />
-    <ClInclude Include="CardsDrawing\CardsDrawing.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />
     <ClInclude Include="Ground\ChanceGround.h" />
     <ClInclude Include="Ground\Country.h" />
@@ -160,7 +161,6 @@
     <ClInclude Include="Player\Person.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CardsDrawing\CardsDrawing.cpp" />
     <ClCompile Include="CardsDrawing\CardsSuit.cpp" />
     <ClCompile Include="Ground\GroundWithPrice.cpp" />
     <ClCompile Include="Ground\PowerStation.cpp" />

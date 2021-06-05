@@ -39,9 +39,6 @@
     <ClInclude Include="Ground\ChanceGround.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CardsDrawing\CardsDrawing.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Ground\Arrest.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -72,12 +69,18 @@
     <ClInclude Include="Event\Listener.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="CardsDrawing\ChanceSuit\Chance_1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CardsDrawing\FateSuit\Fate_1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ground\Ground.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClCompile Include="CardsDrawing\CardsDrawing.cpp">
+    <ClCompile Include="CardsDrawing\CardsSuit.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
@@ -101,9 +104,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Player\Output.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CardsDrawing\CardsSuit.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
