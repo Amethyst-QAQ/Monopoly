@@ -26,7 +26,7 @@ void PowerStation::onStepped(int player)
 	if (owner != 0 && owner != player)
 	{
 		string name = p.getName();
-		int price = getToll();
+		int price = getToll(player);
 
 		cout << "This is " << name << "'s country." << endl;
 		cout << "You have to pay " << price << "yuan as tolls." << endl;

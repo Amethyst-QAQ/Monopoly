@@ -24,12 +24,12 @@ private:
 
 public:
 	Person(std::string _name) : name(_name), 
-										  money(50000),
-										  countryNum(0), 
-										  powerStationNum(0),
-										  luck(0),
-										  pause(0),
-										  position(nullptr)
+								money(50000),
+								countryNum(0), 
+								powerStationNum(0),
+								luck(0),
+								pause(0),
+								position(nullptr)
 	{
 		colorCountryNum = new int[N];
 		for (int i = 0; i < N; i++)
