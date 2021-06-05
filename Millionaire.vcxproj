@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -139,6 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CardsDrawing\CardsSuit.h" />
+    <ClInclude Include="CardsDrawing\ChanceSuit.h" />
+    <ClInclude Include="CardsDrawing\FateSuit.h" />
+    <ClInclude Include="Event\Event.h" />
+    <ClInclude Include="Event\Listener.h" />
     <ClInclude Include="Ground\Arrest.h" />
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\CardsDrawing.h" />
@@ -156,14 +161,17 @@
     <ClInclude Include="Ground\Train.h" />
     <ClInclude Include="Ground\Transportation.h" />
     <ClInclude Include="Player\Menu.h" />
+    <ClInclude Include="Player\Output.h" />
     <ClInclude Include="Player\Person.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CardsDrawing\CardsDrawing.cpp" />
+    <ClCompile Include="CardsDrawing\CardsSuit.cpp" />
     <ClCompile Include="Ground\GroundWithPrice.cpp" />
     <ClCompile Include="Ground\PowerStation.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player\Menu.cpp" />
+    <ClCompile Include="Player\Output.cpp" />
     <ClCompile Include="Player\Person.cpp" />
     <ClInclude Include="Ground\Ground.h" />
   </ItemGroup>

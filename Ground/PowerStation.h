@@ -4,6 +4,8 @@
 #include "GroundWithPrice.h"
 #include "../Player/Person.h"
 
+///发电站类
+
 class PowerStation : public GroundWithPrice
 {
 private:
@@ -11,8 +13,11 @@ private:
 
 public:
 	PowerStation(int _price) : toll(200), GroundWithPrice(_price) {}
+
+	int getToll(int player) { return players[player].getPowerStationNumber() * toll; }
+	void buy(int player);
 	
-	void onStepped();	//路过的时候调用，可以用作菜单
+	void onStepped(int player);	//路过的时候调用，可以用作菜单
 };
 
 #endif // !POWER_STATION_H

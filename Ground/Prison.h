@@ -4,7 +4,7 @@
 #include "Ground.h"
 #include "../Player/Person.h"
 
-/*监狱格子*/
+///监狱格子
 
 class Prison : public Ground
 {
