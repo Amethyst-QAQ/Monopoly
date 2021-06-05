@@ -1,23 +1,19 @@
 #ifndef CARDSSUIT_H
 #define CARDSSUIT_H
 
-#include"ChanceSuit.h"
-#include"FateSuit.h"
+#include"../Player/Person.h"
+#include"ChanceSuit/Chance_1.h"
 
-class ChanceSuit
+
+//牌库类
+class CardsSuit
 {
 private:
 	Chance_1 c_1;
 public:
-	void Show();   //显示卡的信息
-};
-
-class FateSuit
-{
-private:
-	Fate_1 f_1;
-public:
-	void Show();   //显示卡的名称
+	virtual void Show();             //显示卡的信息
+	virtual Card* Draw();            //抽卡
+	void LuckVal(Person& a);         //计算幸运值，幸运值与抽到的卡片有关
 };
 
 
