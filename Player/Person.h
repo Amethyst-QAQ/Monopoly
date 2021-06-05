@@ -24,12 +24,12 @@ private:
 
 public:
 	Person(std::string _name) : name(_name), 
-										  money(50000),
-										  countryNum(0), 
-										  powerStationNum(0),
-										  luck(0),
-										  pause(0),
-										  position(nullptr)
+								money(50000),
+								countryNum(0), 
+								powerStationNum(0),
+								luck(0),
+								pause(0),
+								position(nullptr)
 	{
 		colorCountryNum = new int[N];
 		for (int i = 0; i < N; i++)
@@ -44,7 +44,7 @@ public:
 	int getPause() { return pause; }
 	Ground* getPosition() { return position; }
 
-	void setMoney(int _money) { money = _money; }
+	void setMoney(int _money);
 	void setPosition(Ground* ground) { position = ground; }			//改变玩家位置
 	void setPause(int num) { pause = num; }							//被暂停num回合
 	void setLuck(float _luck) { luck = _luck; }						//改变幸运值
