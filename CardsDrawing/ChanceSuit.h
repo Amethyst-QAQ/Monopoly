@@ -1,10 +1,10 @@
-#ifndef CARDSDRWING_CHANCESUIT_H
-#define CARDSDRWING_CHANCESUIT_H
+#ifndef CARDS_DRWING_CHANCE_SUIT_H
+#define CARDS_DRWING_CHANCE_SUIT_H
 
 #include <set>
 #include"Chance.h"
 #include"CardsSuit.h"
-#include "../Player/Person.h/"
+#include "../Player/Person.h"
 
 extern Person* players;
 

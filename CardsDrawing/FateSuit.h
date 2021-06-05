@@ -1,5 +1,5 @@
-#ifndef CARDSDRAWING_FATESUIT_H
-#define CARDSDRAWING_FATESUIT_H
+#ifndef CARDS_DRAWING_FATE_SUIT_H
+#define CARDS_DRAWING_FATE_SUIT_H
 
 #include <set>
 #include "Fate.h"

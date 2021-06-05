@@ -22,8 +22,8 @@ public:
 	int getVal() { return val; }			//获得卡的幸运值
 	int getNum() { return num; }			//获得卡的编号
 
-	virtual void show();					//用于输出卡的信息
-	virtual void doEvent() = 0;				//卡的执行操作，设为虚函数，需要子类重写
+	void show();							//用于输出卡的信息
+	virtual void doEvent() {};				//卡的执行操作，设为虚函数，需要子类重写
 }; 
 
 #endif
