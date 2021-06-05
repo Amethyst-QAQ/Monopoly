@@ -1,4 +1,5 @@
 #include "PowerStation.h"
+#include "../Player/Person.h"
 
 using namespace std;
 
@@ -48,4 +49,9 @@ void PowerStation::onStepped(int player)
 
 		p.broke();
 	}
+}
+
+int PowerStation::getToll(int player)
+{
+	return players[player].getPowerStationNumber() * toll;
 }
