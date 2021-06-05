@@ -139,6 +139,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CardsDrawing\CardsSuit.h" />
+    <ClInclude Include="CardsDrawing\ChanceSuit.h" />
+    <ClInclude Include="CardsDrawing\FateSuit.h" />
     <ClInclude Include="Ground\Arrest.h" />
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\CardsDrawing.h" />
@@ -156,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CardsDrawing\CardsDrawing.cpp" />
+    <ClCompile Include="CardsDrawing\CardsSuit.cpp" />
     <ClCompile Include="Ground\GroundWithPrice.cpp" />
     <ClCompile Include="Ground\PowerStation.cpp" />
     <ClCompile Include="main.cpp" />
