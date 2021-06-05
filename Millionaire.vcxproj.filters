@@ -57,6 +57,9 @@
     <ClInclude Include="Player\Output.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Event\Event.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ground\Ground.h">
