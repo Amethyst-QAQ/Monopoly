@@ -1,7 +1,6 @@
 #ifndef PLAYER_PERSON_H
 #define PLAYER_PERSON_H
 
-#include <iostream>
 #include <string>
 #include "../Ground/Country.h"
 #include "../Ground/Ground.h"
