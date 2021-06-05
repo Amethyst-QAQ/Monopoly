@@ -46,7 +46,7 @@ REGISTER_CHILD_EVENT(B);
 
 ## 发送事件
 
-使用`Event.h`中的`EMIT_EVENT(className，obj，time)`来发送一个事件。
+使用`Event.h`中的`EMIT_EVENT(className, obj, time)`来发送一个事件。
 
 `className`为要发送的事件类名称。
 
