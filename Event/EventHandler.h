@@ -23,8 +23,9 @@ private:
 	friend class Listener;
 	bool finished;
 public:
-	static EventHandler* instance;  ///< 不要手动调用此变量
+	static EventHandler* instance;
 	void emitEvent(Event *event);   ///< 不要手动调用此函数
+
 	/**
 	* @brief 结束事件
 	*
