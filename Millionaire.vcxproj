@@ -143,6 +143,7 @@
     <ClInclude Include="CardsDrawing\ChanceSuit.h" />
     <ClInclude Include="CardsDrawing\FateSuit.h" />
     <ClInclude Include="Event\Event.h" />
+    <ClInclude Include="Event\Listener.h" />
     <ClInclude Include="Ground\Arrest.h" />
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\CardsDrawing.h" />
