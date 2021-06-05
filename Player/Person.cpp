@@ -9,3 +9,8 @@ void Person::buyPowerStation()
 {
 	powerStationNum++;
 }
+
+void Person::broke()
+{
+
+}

@@ -2,7 +2,6 @@
 #define GROUND_POWER_STATION_H
 
 #include "GroundWithPrice.h"
-#include "../Player/Person.h"
 
 ///发电站类
 
@@ -14,7 +13,7 @@ private:
 public:
 	PowerStation(int _price) : toll(200), GroundWithPrice(_price) {}
 
-	int getToll(int player) { return players[player].getPowerStationNumber() * toll; }
+	int getToll(int player);
 	void buy(int player);
 	
 	void onStepped(int player);	//路过的时候调用，可以用作菜单
