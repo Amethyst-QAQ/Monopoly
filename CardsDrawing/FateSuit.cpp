@@ -12,7 +12,7 @@ void FateSuit::show()
 
 Fate* FateSuit::draw(int player)
 {
-	Person& p = players[player];
+	Player& p = players[player];
 	Fate* card = nullptr;				//用来找卡的指针
 	srand((unsigned int)time(NULL));	//根据系统时间生成随机数
 	if (p.getLuck() >= 0.6 && p.getLuck() <= 1)

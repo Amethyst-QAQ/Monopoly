@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include "GroundWithPrice.h"
-#include "../Player/Person.h"
+#include "../Player/Player.h"
 #include "../Player/Output.h"
 
 #define PRICE_1 0        //·¿ÎÝ¼Û¸ñ

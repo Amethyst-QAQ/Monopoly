@@ -1,11 +1,11 @@
 #include "PowerStation.h"
-#include "../Player/Person.h"
+#include "../Player/Player.h"
 
 using namespace std;
 
 void PowerStation::buy(int player)
 {
-	Person& p = players[player];
+	Player& p = players[player];
 	int money = p.getMoney();
 	string mainText;
 	string serveText;
@@ -31,7 +31,7 @@ void PowerStation::buy(int player)
 
 void PowerStation::onStepped(int player)
 {
-	Person& p = players[player];
+	Player& p = players[player];
 
 	GroundWithPrice::onStepped(player);
 
