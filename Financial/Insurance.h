@@ -1,34 +1,39 @@
 #ifndef FINANCIAL_INSURANCE_H
 #define FINANCIAL_INSURANCE_H
 
-#include <iostream>
 #include <string>
+#include "../Player/Menu.h"
+#include "../Player/Person.h"
+#include "../Player/Output.h"
+
+extern Person* players;
 
 class Insurance
 {
 private:
-	int SumInsured;	//保额
-	int premium;	//保费
-	int month;		//交费时间
-	int TimeLimit;	//生效时间
+	int SumInsured;		//保额
+	int premium;		//保费
+	int TimeLimit;		//交费时长
+	int AccountPeriod;	//生效时长
+	int month;			//已交时长
+	int owner;
 
 public:
-	Insurance(int _SumInsured, int _premium, int _month, int _TimeLimit);
+	Insurance(int _SumInsured, int _premium, int _TimeLimit, int _AccountPeriod, int _owner);
+	~Insurance() {};
 
 	int getSumInsured() { return SumInsured; }
 	int getPremium() { return premium; }
-	int getMonth() { return month; }
-	int getTimeLimit() { return TimeLimit; }
+	int getMonth() { return TimeLimit; }
+	int getTimeLimit() { return AccountPeriod; }
 
 	void setSumInsured(int sum) { SumInsured = sum; }
 	void setPremium(int _premium) { premium = _premium; }
-	void setMonth(int _month) { month = _month; }
-	void setTimeLimit(int _TimeLimit) { TimeLimit = _TimeLimit; }
+	void setTimeLimit(int _TimeLimit) {TimeLimit = _TimeLimit; }
+	void setAccountPeriod(int _AccountPeriod) {AccountPeriod = _AccountPeriod; }
+	void setOwner(int _owner) { owner = _owner; }
 
-	void Pay()
-	{
-
-	}
+	void MonthlyPayment();		//每回合支付保险
 };
 
 #endif
