@@ -145,23 +145,32 @@
     <ClInclude Include="CardsDrawing\FateSuit.h" />
     <ClInclude Include="CardsDrawing\FateSuit\Fate_1.h" />
     <ClInclude Include="Event\Event.h" />
+    <ClInclude Include="Event\EventHandler.h" />
     <ClInclude Include="Event\Listener.h" />
+    <ClInclude Include="Financial\Insurance.h" />
     <ClInclude Include="Ground\Arrest.h" />
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />
+    <ClInclude Include="Ground\Beginning.h" />
+    <ClInclude Include="Ground\Car.h" />
     <ClInclude Include="Ground\ChanceGround.h" />
     <ClInclude Include="Ground\Country.h" />
     <ClInclude Include="CardsDrawing\Fate.h" />
     <ClInclude Include="Ground\FateGround.h" />
     <ClInclude Include="Ground\GroundWithPrice.h" />
+    <ClInclude Include="Ground\Plane.h" />
     <ClInclude Include="Ground\PowerStation.h" />
     <ClInclude Include="Ground\Prison.h" />
+    <ClInclude Include="Ground\Train.h" />
+    <ClInclude Include="Ground\Transportation.h" />
     <ClInclude Include="Player\Menu.h" />
     <ClInclude Include="Player\Output.h" />
     <ClInclude Include="Player\Person.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CardsDrawing\CardsSuit.cpp" />
+    <ClCompile Include="Event\EventHandler.cpp" />
+    <ClCompile Include="Financial\Insurance.cpp" />
     <ClCompile Include="Ground\GroundWithPrice.cpp" />
     <ClCompile Include="Ground\PowerStation.cpp" />
     <ClCompile Include="main.cpp" />
