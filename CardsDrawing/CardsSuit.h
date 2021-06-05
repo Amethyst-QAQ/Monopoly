@@ -1,9 +1,9 @@
 #ifndef CARDS_DRAWING_CARDS_SUIT_H
 #define CARDS_DRAWING_CARDS_SUIT_H
 
-#include"../Player/Person.h"
+#include"../Player/Player.h"
 
-extern Person* players;
+extern Player* players;
 
 
 //≈∆ø‚¿‡

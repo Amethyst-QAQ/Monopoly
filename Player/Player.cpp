@@ -1,16 +1,16 @@
-#include "Person.h"
+#include "Player.h"
 
-void Person::buyCountry()
+void Player::buyCountry()
 {
 	countryNum++;
 }
 
-void Person::buyPowerStation()
+void Player::buyPowerStation()
 {
 	powerStationNum++;
 }
 
-void Person::setMoney(int _money)
+void Player::setMoney(int _money)
 {
 	if (_money < 0)
 		broke();
@@ -18,7 +18,7 @@ void Person::setMoney(int _money)
 		money = _money;
 }
 
-void Person::broke()
+void Player::broke()
 {
 	std::string mainText = "You don't have enough money.Do you want to pledge one of your countries or a power station£¿";
 	std::string serveText = "broke";

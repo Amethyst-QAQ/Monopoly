@@ -4,9 +4,9 @@
 #include <set>
 #include"Chance.h"
 #include"CardsSuit.h"
-#include "../Player/Person.h"
+#include "../Player/Player.h"
 
-extern Person* players;
+extern Player* players;
 
 ///»ú»áÅÆ¿â
 class ChanceSuit : public CardsSuit, public Chance

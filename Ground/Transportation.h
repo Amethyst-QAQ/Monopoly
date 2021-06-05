@@ -3,7 +3,7 @@
 
 #include<string>
 #include "Ground.h"
-#include "../Player/Person.h"
+#include "../Player/Player.h"
 
 //收费站格子
 

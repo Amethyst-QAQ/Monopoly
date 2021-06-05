@@ -20,7 +20,7 @@ Country::Country(std::string _name,
 
 void Country::onStepped(int player)
 {
-	Person& p = players[player];
+	Player& p = players[player];
 
 	GroundWithPrice::onStepped(player);
 
@@ -81,7 +81,7 @@ void Country::onStepped(int player)
 
 void Country::buy(int player)
 {
-	Person& p = players[player];
+	Player& p = players[player];
 	int money = p.getMoney();
 	if (money < price)
 		cout << "You don't have enough money." << endl;
@@ -96,7 +96,7 @@ void Country::buy(int player)
 
 void Country::HouseBuild()
 {
-	Person& p = players[owner];
+	Player& p = players[owner];
 	int money = p.getMoney();
 	if (money < housePrice)
 		cout << "You don't have enough money." << endl;
@@ -111,7 +111,7 @@ void Country::HouseBuild()
 
 void Country::HotelBuild()
 {
-	Person& p = players[owner];
+	Player& p = players[owner];
 	int money = p.getMoney();
 	if (money < hotelPrice)
 		cout << "You don't have enough money." << endl;

@@ -3,10 +3,10 @@
 #include"Ground.h"
 
 #include "Ground.h"
-#include "../CardsDrawing/CardsDrawing.h"
+#include "../CardsDrawing/FateSuit.h"
 
 ///命运格子类
-class FateGround : public Ground
+class FateGround : public Ground, FateSuit
 {
 public:
 	void onStepped();

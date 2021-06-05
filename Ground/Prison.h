@@ -2,7 +2,7 @@
 #define GROUND_PRISON_H
 
 #include "Ground.h"
-#include "../Player/Person.h"
+#include "../Player/Player.h"
 
 ///监狱格子
 
@@ -16,7 +16,7 @@ public:
 
 	Prison() : pause(1) {}
 
-	void beArrest(Person& a) { a.setPause(pause); }	/*通过修改person的属性设置暂停回合数*/
+	void beArrest(Player& a) { a.setPause(pause); }	/*通过修改Player的属性设置暂停回合数*/
 };
 
 #endif // !PRISON_H

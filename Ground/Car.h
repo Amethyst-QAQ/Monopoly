@@ -1,10 +1,9 @@
 #ifndef GROUND_CAR_H
 #define GROUND_CAR_H
 
-#include <iostream>
 #include <string>
 #include "Transportation.h"
-#include "../Player/Person.h"
+#include "../Player/Player.h"
 
 class Car :public Transportation         //汽车收费站，基础过路费400
 {

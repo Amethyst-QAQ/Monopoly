@@ -15,7 +15,7 @@ Insurance::Insurance(int _SumInsured,
 
 void Insurance::MonthlyPayment()
 {
-	Person& p = players[owner];
+	Player& p = players[owner];
 	int money = p.getMoney();
 	
 	string mainText = "Please complete the monthly payment of your insurance.";

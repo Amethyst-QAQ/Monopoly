@@ -1,13 +1,13 @@
 #ifndef GROUND_GROUND_WITH_PRICE_H
 #define GROUND_GROUND_WITH_PRICE_H
 
-#include <iostream>
 #include "Ground.h"
 #include "../Player/Menu.h"
+#include "../Player/Player.h"
 
-class Person;
+class Player;
 
-extern Person* players;
+extern Player* players;
 
 class GroundWithPrice : public Ground
 {

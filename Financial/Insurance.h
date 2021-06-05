@@ -3,10 +3,10 @@
 
 #include <string>
 #include "../Player/Menu.h"
-#include "../Player/Person.h"
+#include "../Player/Player.h"
 #include "../Player/Output.h"
 
-extern Person* players;
+extern Player* players;
 
 class Insurance
 {

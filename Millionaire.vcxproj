@@ -165,7 +165,7 @@
     <ClInclude Include="Ground\Transportation.h" />
     <ClInclude Include="Player\Menu.h" />
     <ClInclude Include="Player\Output.h" />
-    <ClInclude Include="Player\Person.h" />
+    <ClInclude Include="Player\Player.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CardsDrawing\Card.cpp" />
@@ -179,7 +179,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player\Menu.cpp" />
     <ClCompile Include="Player\Output.cpp" />
-    <ClCompile Include="Player\Person.cpp" />
+    <ClCompile Include="Player\Player.cpp" />
     <ClInclude Include="Ground\Ground.h" />
   </ItemGroup>
   <ItemGroup>
