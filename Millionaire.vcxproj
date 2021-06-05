@@ -143,7 +143,9 @@
     <ClInclude Include="CardsDrawing\ChanceSuit.h" />
     <ClInclude Include="CardsDrawing\FateSuit.h" />
     <ClInclude Include="Event\Event.h" />
+    <ClInclude Include="Event\EventHandler.h" />
     <ClInclude Include="Event\Listener.h" />
+    <ClInclude Include="Financial\Insurance.h" />
     <ClInclude Include="Ground\Arrest.h" />
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\CardsDrawing.h" />
@@ -162,6 +164,8 @@
   <ItemGroup>
     <ClCompile Include="CardsDrawing\CardsDrawing.cpp" />
     <ClCompile Include="CardsDrawing\CardsSuit.cpp" />
+    <ClCompile Include="Event\EventHandler.cpp" />
+    <ClCompile Include="Financial\Insurance.cpp" />
     <ClCompile Include="Ground\GroundWithPrice.cpp" />
     <ClCompile Include="Ground\PowerStation.cpp" />
     <ClCompile Include="main.cpp" />
