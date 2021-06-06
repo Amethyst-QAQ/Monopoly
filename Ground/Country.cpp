@@ -21,8 +21,7 @@ Country::Country(std::string _name,
 void Country::onStepped(int player)
 {
 	Player& p = players[player];
-
-	GroundWithPrice::onStepped(player);
+	cout << "The country is " << name << endl;
 
 	if (owner != 0)
 	{
@@ -69,14 +68,13 @@ void Country::onStepped(int player)
 
 			Output::instance->print(Text, serveText);;
 
-
 			int money = p.getMoney();
 			money -= price;
 			p.setMoney(money);
-			
-			p.broke();
 		}
 	}
+
+	GroundWithPrice::onStepped(player);
 }
 
 void Country::buy(int player)
@@ -87,7 +85,7 @@ void Country::buy(int player)
 		cout << "You don't have enough money." << endl;
 	else
 	{
-		cout << "Successfully bought!" << endl;
+		cout << "Successfully bought!" << endl << endl;
 		money -= price;
 		p.setMoney(money);
 		p.buyCountry();

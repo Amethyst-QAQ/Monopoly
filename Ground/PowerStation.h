@@ -13,6 +13,8 @@ private:
 	int toll;	//基础过路费
 
 public:
+	PowerStation() : toll(200), GroundWithPrice() {}
+	PowerStation(std::string _name) : toll(200), GroundWithPrice() {}
 	PowerStation(int _price) : toll(200), GroundWithPrice(_price) {}
 
 	int getToll(int player);

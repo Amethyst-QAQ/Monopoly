@@ -14,7 +14,7 @@ void FateGround::onStepped(int player)
 	serveText = "draw_chancecard";
 
 	Output::instance->print(mainText, serveText);
-	luckyCard = pile.draw(player);
+	luckyCard = pile_2.draw(player);
 	luckyCard->doEvent();
 }
 
