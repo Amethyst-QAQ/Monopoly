@@ -2,8 +2,6 @@
 #define PLAYER_PERSON_H
 
 #include <string>
-#include <set>
-#include <vector>
 #include <iostream>
 #include "Menu.h"
 #include "../Ground/Ground.h"
