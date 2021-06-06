@@ -3,9 +3,10 @@
 
 #include<string>
 #include "Ground.h"
-#include "../Player/Person.h"
+#include "../Player/Player.h"
 
 //收费站格子
+
 class Transportation :public Ground
 {
 protected:
@@ -14,8 +15,10 @@ protected:
 public:
 	Transportation() : toll(0), dice(0) {}
 
-	void onStepped(Person& a)        //路过时调用
+	void onStepped(int player)        //路过时调用
 	{
+		Ground::onStepped(player);
+		
 		a.setMoney(a.getMoney() - toll * dice);
 	}
 	void setDice(int _dice) { dice = _dice; }

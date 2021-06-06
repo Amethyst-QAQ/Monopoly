@@ -1,16 +1,28 @@
 #include "PowerStation.h"
+#include "../Player/Player.h"
 
 using namespace std;
 
 void PowerStation::buy(int player)
 {
-	Person& p = players[player];
+	Player& p = players[player];
 	int money = p.getMoney();
+	string mainText;
+	string serveText;
+
 	if (money < price)
-		cout << "You don't have enough money." << endl;
+	{
+		mainText = "You don't have enough money.";
+		serveText = "poor";
+
+		Output::instance->print(mainText, serveText);
+	}
 	else
 	{
-		cout << "Successfully bought!" << endl;
+		mainText = "Successfully bought!";
+		serveText = "success";
+
+		Output::instance->print(mainText, serveText);
 		money -= price;
 		p.setMoney(money);
 		p.buyPowerStation();
@@ -19,7 +31,7 @@ void PowerStation::buy(int player)
 
 void PowerStation::onStepped(int player)
 {
-	Person& p = players[player];
+	Player& p = players[player];
 
 	GroundWithPrice::onStepped(player);
 
@@ -37,4 +49,9 @@ void PowerStation::onStepped(int player)
 
 		p.broke();
 	}
+}
+
+int PowerStation::getToll(int player)
+{
+	return players[player].getPowerStationNumber() * toll;
 }

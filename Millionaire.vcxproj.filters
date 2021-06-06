@@ -27,7 +27,7 @@
     <ClInclude Include="CardsDrawing\Fate.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Player\Person.h">
+    <ClInclude Include="Player\Player.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Player\Menu.h">
@@ -101,9 +101,6 @@
     <ClInclude Include="Ground\Ground.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClCompile Include="CardsDrawing\CardsSuit.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -115,7 +112,7 @@
     <ClCompile Include="Ground\Country.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Player\Person.cpp">
+    <ClCompile Include="Player\Player.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Ground\GroundWithPrice.cpp">
@@ -136,5 +133,20 @@
     <ClCompile Include="Financial\Insurance.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CARDSDRAWING\CardsSuit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CardsDrawing\ChanceSuit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CardsDrawing\FateSuit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CardsDrawing\Card.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Event\README.md" />
   </ItemGroup>
 </Project>
