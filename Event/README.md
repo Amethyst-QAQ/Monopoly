@@ -1,22 +1,22 @@
-# 事件系统
+# �¼�ϵͳ
 
-事件系统由事件类、监听器与事件处理系统组成。事件发生后，事件处理系统将把事件类送给每个监听器。
+�¼�ϵͳ���¼��ࡢ���������¼�����ϵͳ��ɡ��¼��������¼�����ϵͳ�����¼����͸�ÿ����������
 
-以下为事件系统的简易使用指南。
+����Ϊ�¼�ϵͳ�ļ���ʹ��ָ�ϡ�
 
-## 注册事件类
+## ע���¼���
 
-为了发送事件，需要注册事件类。
+Ϊ�˷����¼�����Ҫע���¼��ࡣ
 
-事件类可以是任何类，但建议把事件类设计为只具有若干setter函数的简单类。
+�¼���������κ��࣬��������¼������Ϊֻ��������setter�����ļ��ࡣ
 
-事件类可以继承其它类，但建议将事件类的整个继承树中所有类都注册为事件类。
+�¼�����Լ̳������࣬�����齫�¼���������̳����������඼ע��Ϊ�¼��ࡣ
 
-对于父类不是事件类的类，使用`Event.h` 中的`REGISTER_INITIAL_EVENT(类名)`来把类注册成为事件类。
+���ڸ��಻���¼�����࣬ʹ��`Event.h` �е�`REGISTER_INITIAL_EVENT(����)`������ע���Ϊ�¼��ࡣ
 
-对于父类是事件类的类，使用`Event.h` 中的`REGISTER_CHILD_EVENT(类名, 父类名)`来把类注册成为事件类。
+���ڸ������¼�����࣬ʹ��`Event.h` �е�`REGISTER_CHILD_EVENT(����, ������)`������ע���Ϊ�¼��ࡣ
 
-以下是一个简单的示例：
+������һ���򵥵�ʾ����
 
 ```c++
 #include "Event.h"
@@ -44,19 +44,19 @@ public:
 REGISTER_CHILD_EVENT(B);
 ```
 
-## 发送事件
+## �����¼�
 
-使用`Event.h`中的`EMIT_EVENT(className, obj, time)`来发送一个事件。
+ʹ��`Event.h`�е�`EMIT_EVENT(className, obj, time)`������һ���¼���
 
-`className`为要发送的事件类名称。
+`className`ΪҪ���͵��¼������ơ�
 
-`obj`为要发送的时间对象。注意，`obj`必须是`className`指明的类的对象指针。
+`obj`ΪҪ���͵�ʱ�����ע�⣬`obj`������`className`ָ������Ķ���ָ�롣
 
-`time`为任意合法标识符或任意长度不为1的合法标识符去掉其首个字符，用于指示同一作用域内第几次使用该命令。同一作用域下的所有`EMIT_EVENT`命令不能具有相同的`time`。推荐将其设为该作用域下此命令的执行次数。
+`time`Ϊ����Ϸ���ʶ�������ⳤ�Ȳ�Ϊ1�ĺϷ���ʶ��ȥ�����׸��ַ�������ָʾͬһ�������ڵڼ���ʹ�ø����ͬһ�������µ�����`EMIT_EVENT`����ܾ�����ͬ��`time`���Ƽ�������Ϊ���������´������ִ�д�����
 
-事件发送后，将会被监听器接收。
+�¼����ͺ󣬽��ᱻ���������ա�
 
-以下是一个简单的示例（假设已如上一节注册事件类`A`）
+������һ���򵥵�ʾ��������������һ��ע���¼���`A`��
 
 ```c++
 int main()
@@ -68,21 +68,21 @@ int main()
 }
 ```
 
-## 监听事件
+## �����¼�
 
-使用`Listener.h`中的`CREATE_LISTENER(type, func, priority)`来创建一个监听器并监听事件。
+ʹ��`Listener.h`�е�`CREATE_LISTENER(type, func, priority)`������һ���������������¼���
 
-`type`为要监听的时间类型。
+`type`ΪҪ������ʱ�����͡�
 
-`func`为事件发生后执行的函数指针，若监听事件类型为`T`，那么`func`为`void(*)(T*)`类型。
+`func`Ϊ�¼�������ִ�еĺ���ָ�룬�������¼�����Ϊ`T`����ô`func`Ϊ`void(*)(T*)`���͡�
 
-`priority`是一个`int`类型整数，为监听器的优先级。
+`priority`��һ��`int`����������Ϊ�����������ȼ���
 
-针对某类型事件的监听器创建后，便会持续监听所有该类型事件，直到它被使用`delete`删除。对于同一事件，所有监听器的执行顺序为从监听父类的监听器到监听子类的监听器，从优先级高的监听器到优先级低的监听器。
+���ĳ�����¼��ļ����������󣬱������������и������¼���ֱ������ʹ��`delete`ɾ��������ͬһ�¼������м�������ִ��˳��Ϊ�Ӽ�������ļ���������������ļ������������ȼ��ߵļ����������ȼ��͵ļ�������
 
-监听器接收到事件后，可以使用`EventHandler.h`中的`EventHandler::instance->finishEvent()`成员函数结束事件。如果事件在某个监听器内被结束，那么在它之后执行的监听器都不会接收到此事件。
+���������յ��¼��󣬿���ʹ��`EventHandler.h`�е�`EventHandler::instance->finishEvent()`��Ա���������¼�������¼���ĳ���������ڱ���������ô����֮��ִ�еļ�������������յ����¼���
 
-以下是一个简单的示例（假设已如第一节注册事件类`A`、`B`）
+������һ���򵥵�ʾ�������������һ��ע���¼���`A`��`B`��
 
 ```c++
 void onEvent1(B* event)
@@ -107,7 +107,7 @@ int main()
     Listener* b = CREATE_LISTENER(B, onEvent2, 5);
     Listener* c = CREATE_LISTENER(A, onEvent3, 1);
     
-    //此处发生了一个B类型事件
+    //�˴�������һ��B�����¼�
     
     delete a;
     delete b;
@@ -115,4 +115,4 @@ int main()
 }
 ```
 
-在以上例子中，由于`c`监听的`A`类是`B`类的父类，所以`c`的函数`onEvent3`会最先执行。由于`b`的优先级高于`a`，所以`onEvent2`比`onEvent1`先执行。由于事件在`onEvent2`中被结束，实际上`onEvent1`不会执行。
+�����������У�����`c`������`A`����`B`��ĸ��࣬����`c`�ĺ���`onEvent3`������ִ�С�����`b`�����ȼ�����`a`������`onEvent2`��`onEvent1`��ִ�С������¼���`onEvent2`�б�������ʵ����`onEvent1`����ִ�С�

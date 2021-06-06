@@ -1,8 +1,8 @@
-#include "Player/Person.h"
+#include "Player/Player.h"
 #include "Player/Output.h"
 
 bool isServer = false;
-Person *players = nullptr;
+Player *players = nullptr;
 
 using namespace std;
 
