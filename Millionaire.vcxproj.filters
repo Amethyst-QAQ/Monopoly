@@ -16,6 +16,7 @@
     <ClCompile Include="Player\Output.cpp" />
     <ClCompile Include="Player\Player.cpp" />
     <ClCompile Include="Ground\Country.cpp" />
+    <ClCompile Include="Ground\Arrest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
