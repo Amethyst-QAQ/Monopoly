@@ -96,8 +96,7 @@ int main(int argc, char** argv)
 				{
 				case 1:
 					int num;
-					//num = dice.getNum();
-					num = i + 1;
+					num = dice.getNum();
 					mainText = "The result is " + to_string(num) + ".";
 					serverText = "move" + to_string(num);
 					Output::instance->print(mainText, serverText);
