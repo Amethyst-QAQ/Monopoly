@@ -1,17 +1,18 @@
 #ifndef GROUND_CHANCEGROUND_H
 #define GROUND_CHANCEGROUND_H
-#include"Ground.h"
 
 #include "Ground.h"
 #include "../CardsDrawing/ChanceSuit.h"
+#include "../Player/Output.h"
+#include "../Player/Menu.h"
 
-///命运格子类
-class ChanceGround : public Ground, ChanceSuit
+using namespace std;
+
+extern ChanceSuit pile_1;
+
+///机会格子类
+class ChanceGround : public Ground
 {
-	void onstepped()
-	{
-
-	}
+	void onStepped(int player);
 };
 #endif // !CHANCEGROUND_H
-

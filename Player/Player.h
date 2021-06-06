@@ -2,10 +2,10 @@
 #define PLAYER_PERSON_H
 
 #include <string>
-#include <set>
-#include "../Ground/Country.h"
+#include <iostream>
+#include "Menu.h"
+#include "../Player/Output.h"
 #include "../Ground/Ground.h"
-#include "../Ground/PowerStation.h"
 
 #define N 7 //N为颜色总数
 
@@ -35,6 +35,19 @@ public:
 		for (int i = 0; i < N; i++)
 			colorCountryNum[i] = 0;
 	}
+	Player() : name("nmae"),
+			   money(50000),
+			   countryNum(0),
+			   powerStationNum(0),
+			   luck(0),
+			   pause(0),
+			   position(nullptr)
+
+	{
+		colorCountryNum = new int[N];
+		for (int i = 0; i < N; i++)
+			colorCountryNum[i] = 0;
+	}
 	
 	std::string getName() { return name; }
 	int getMoney() { return money; }
@@ -51,7 +64,8 @@ public:
 
 	void buyCountry();		//购买空地
 	void buyPowerStation();	//购买发电厂
-
+	
+	void show();
 	void broke();			//破产
 };
 
