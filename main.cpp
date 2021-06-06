@@ -27,28 +27,31 @@ int main(int argc, char** argv)
 	vector<Ground*> mapVector;
 
 	mapVector.push_back(new Beginning);
+	Prison* prison = new Prison;
+	Arrest* arrest = new Arrest(prison);
+	mapVector.push_back(arrest);
 	mapVector.push_back(new Country("0"));
 	mapVector.push_back(new Country("1"));
 	mapVector.push_back(new Country("2"));
 	mapVector.push_back(new Country("3"));
-	mapVector.push_back(new PowerStation);
-	mapVector.push_back(new Country(""));
+	mapVector.push_back(new PowerStation(0));
+	mapVector.push_back(new Country("4"));
 	mapVector.push_back(new Country("5"));
 	mapVector.push_back(new Country("6"));
-	//mapVector.push_back(new ChanceGround);
+	mapVector.push_back(new ChanceGround);
 	mapVector.push_back(new Country("7"));
 	mapVector.push_back(new Country("8"));
 	mapVector.push_back(new Country("9"));
-	//mapVector.push_back(new Arrest);
+	mapVector.push_back(prison);
 	mapVector.push_back(new Country("10"));
 	mapVector.push_back(new Country("11"));
 	mapVector.push_back(new Country("12"));
 	mapVector.push_back(new Country("13"));
-	mapVector.push_back(new PowerStation);
+	mapVector.push_back(new PowerStation(1));
 	mapVector.push_back(new Country("14"));
 	mapVector.push_back(new Country("15"));
 	mapVector.push_back(new Country("16"));
-	//mapVector.push_back(new FateGround);
+	mapVector.push_back(new FateGround);
 	mapVector.push_back(new Country("17"));
 	mapVector.push_back(new Country("18"));
 	mapVector.push_back(new Country("19"));
@@ -64,11 +67,26 @@ int main(int argc, char** argv)
 		for (int i = 0; i < 4; i++)
 		{
 			int n = 0;
-			string mainText = "It's No." + to_string(i+1) + "'s turn.\nPlease choose your operations.";
-			vector<string> operations = { "Shoot dice", "Search informations" };
-			string serveText = "choice";
+			string mainText;
+			vector<string> operations;
+			string serverText;
 
-			Menu menu(mainText, operations, serveText);
+			n = players[i].getPause();
+			if (n > 0)
+			{
+				mainText = "You're suspended for this round.";
+				serverText = "pause";
+				Output::instance->print(mainText, serverText);
+
+				players[i].bePaused();
+				continue;
+			}
+
+			mainText = "It's No." + to_string(i+1) + "'s turn.\nPlease choose your operations.";
+			operations = { "Shoot dice", "Search informations" };
+			serverText = "choice";
+
+			Menu menu(mainText, operations, serverText);
 
 			while (n != 1)
 			{
@@ -79,10 +97,9 @@ int main(int argc, char** argv)
 				case 1:
 					int num;
 					num = dice.getNum();
-
 					mainText = "The result is " + to_string(num) + ".";
-					serveText = "move" + to_string(num);
-					Output::instance->print(mainText, serveText);
+					serverText = "move" + to_string(num);
+					Output::instance->print(mainText, serverText);
 
 					map.movePlayer(i, num);
 					break;
