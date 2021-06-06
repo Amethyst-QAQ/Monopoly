@@ -2,6 +2,8 @@
 #define GROUND_POWER_STATION_H
 
 #include "GroundWithPrice.h"
+#include "../Player/Player.h"
+#include "../Player/Output.h"
 
 ///∑¢µÁ’æ¿‡
 
