@@ -145,6 +145,9 @@
     <ClCompile Include="CardsDrawing\Card.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Ground\Map.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />
