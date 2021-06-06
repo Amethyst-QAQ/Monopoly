@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CardsDrawing\CardsDrawingSystem.h" />
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
     <ClInclude Include="CardsDrawing\ChanceSuit.h" />
     <ClInclude Include="CardsDrawing\ChanceSuit\Chance_1.h" />
@@ -158,11 +159,13 @@
     <ClInclude Include="CardsDrawing\Fate.h" />
     <ClInclude Include="Ground\FateGround.h" />
     <ClInclude Include="Ground\GroundWithPrice.h" />
+    <ClInclude Include="Ground\Map.h" />
     <ClInclude Include="Ground\Plane.h" />
     <ClInclude Include="Ground\PowerStation.h" />
     <ClInclude Include="Ground\Prison.h" />
     <ClInclude Include="Ground\Train.h" />
     <ClInclude Include="Ground\Transportation.h" />
+    <ClInclude Include="Player\Dice.h" />
     <ClInclude Include="Player\Menu.h" />
     <ClInclude Include="Player\Output.h" />
     <ClInclude Include="Player\Player.h" />
@@ -172,9 +175,11 @@
     <ClCompile Include="CARDSDRAWING\CardsSuit.cpp" />
     <ClCompile Include="CardsDrawing\ChanceSuit.cpp" />
     <ClCompile Include="CardsDrawing\FateSuit.cpp" />
-    <ClCompile Include="Event\EventHandler.cpp" />
     <ClCompile Include="Financial\Insurance.cpp" />
+    <ClCompile Include="Ground\ChanceGround.cpp" />
+    <ClCompile Include="Ground\FateGround.cpp" />
     <ClCompile Include="Ground\GroundWithPrice.cpp" />
+    <ClCompile Include="Ground\Map.cpp" />
     <ClCompile Include="Ground\PowerStation.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player\Menu.cpp" />

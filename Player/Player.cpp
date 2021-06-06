@@ -1,5 +1,7 @@
 #include "Player.h"
 
+using namespace std;
+
 void Player::buyCountry()
 {
 	countryNum++;
@@ -16,6 +18,14 @@ void Player::setMoney(int _money)
 		broke();
 	else
 		money = _money;
+}
+
+void Player::show()
+{
+	std::string mainText;
+	std::string serveText;
+	
+	//Î´Íê´ýÐø ¡­ ¡­
 }
 
 void Player::broke()
