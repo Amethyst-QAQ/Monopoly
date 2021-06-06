@@ -178,6 +178,7 @@
     <ClCompile Include="Ground\ChanceGround.cpp" />
     <ClCompile Include="Ground\FateGround.cpp" />
     <ClCompile Include="Ground\GroundWithPrice.cpp" />
+    <ClCompile Include="Ground\Map.cpp" />
     <ClCompile Include="Ground\PowerStation.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player\Menu.cpp" />
