@@ -175,6 +175,7 @@
     <ClCompile Include="CardsDrawing\FateSuit.cpp" />
     <ClCompile Include="Financial\Insurance.cpp" />
     <ClCompile Include="Ground\GroundWithPrice.cpp" />
+    <ClCompile Include="Ground\Map.cpp" />
     <ClCompile Include="Ground\PowerStation.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player\Menu.cpp" />
