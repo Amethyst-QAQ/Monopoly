@@ -5,6 +5,7 @@
 #include "../Player/Player.h"
 
 //起点格子
+
 class Beginning :public Ground
 {
 public:

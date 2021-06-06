@@ -3,9 +3,10 @@
 
 #include <string>
 #include <set>
-#include "../Ground/Country.h"
+#include <vector>
+#include <iostream>
+#include "Menu.h"
 #include "../Ground/Ground.h"
-#include "../Ground/PowerStation.h"
 
 #define N 7 //N为颜色总数
 
