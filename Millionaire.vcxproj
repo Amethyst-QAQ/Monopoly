@@ -148,6 +148,7 @@
     <ClInclude Include="Event\EventHandler.h" />
     <ClInclude Include="Event\Listener.h" />
     <ClInclude Include="Financial\Insurance.h" />
+    <ClInclude Include="Financial\Stock.h" />
     <ClInclude Include="Ground\Arrest.h" />
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />

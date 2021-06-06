@@ -99,6 +99,9 @@
     <ClInclude Include="Ground\Map.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Financial\Stock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ground\Ground.h">
