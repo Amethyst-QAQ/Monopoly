@@ -7,21 +7,21 @@ void PowerStation::buy(int player)
 	Player& p = players[player];
 	int money = p.getMoney();
 	string mainText;
-	string serveText;
+	string serverText;
 
 	if (money < price)
 	{
 		mainText = "You don't have enough money.";
-		serveText = "poor";
+		serverText = "poor";
 
-		Output::instance->print(mainText, serveText);
+		Output::instance->print(mainText, serverText);
 	}
 	else
 	{
 		mainText = "Successfully bought!";
-		serveText = "success";
+		serverText = "success";
 
-		Output::instance->print(mainText, serveText);
+		Output::instance->print(mainText, serverText);
 		money -= price;
 		p.setMoney(money);
 		p.buyPowerStation();
