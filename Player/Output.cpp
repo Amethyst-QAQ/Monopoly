@@ -18,7 +18,7 @@ void Output::print(std::string text, std::string serverText)
 {
 	textMap[text] = serverText;
 
-	if (isServer)
+	if (!isServer)
 		cout << text << endl;
 	else
 		cout << serverText << endl;

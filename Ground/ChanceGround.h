@@ -8,25 +8,11 @@
 
 using namespace std;
 
-extern ChanceSuit pile;
+extern ChanceSuit pile_1;
 
 ///机会格子类
-class ChanceGround : public Ground, ChanceSuit
+class ChanceGround : public Ground
 {
-	void onStepped(int player)
-	{
-		Player& p = players[player];
-		Chance* luckyCard;
-		string mainText;
-		string serveText;
-
-		mainText = "Please draw a card from ChanceSuit.";
-		serveText = "draw_chancecard";
-
-		Output::instance->print(mainText, serveText);
-		luckyCard = pile.draw(player);
-		luckyCard->doEvent();
-	}
+	void onStepped(int player);
 };
 #endif // !CHANCEGROUND_H
-

@@ -5,7 +5,7 @@
 #include "Ground.h"
 #include "../CardsDrawing/FateSuit.h"
 
-extern FateSuit pile;
+extern FateSuit pile_2;
 
 ///命运格子类
 ///机会格子类

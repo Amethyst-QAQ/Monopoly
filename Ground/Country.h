@@ -25,6 +25,8 @@ private:
 	int color;			//颜色（拥有同色的所有国家地区就加收过路费为原来的3倍）
 	
 public:
+	Country() :name{""}, toll {100}, housePrice{1000}, hotelPrice{1000}, house{0}, hotel{0}, color{0} {}
+	Country(std::string _name) :name{_name}, toll{ 100 }, housePrice{ 1000 }, hotelPrice{ 1000 }, house{ 0 }, hotel{ 0 }, color{ 0 } {}
 	Country(std::string _name, int _price, int _toll, int color, int _house_price, int _hotel_price);
 
 	void onStepped(int player);									//路过的时候调用，可以用作菜单

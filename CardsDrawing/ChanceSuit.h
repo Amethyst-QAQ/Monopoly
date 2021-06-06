@@ -9,10 +9,9 @@
 extern Player* players;
 
 ///»ú»áÅÆ¿â
-class ChanceSuit : public CardsSuit, public Chance
+class ChanceSuit : public CardsSuit
 {
 private:
-	std::set<Chance> suit;
 	Chance* card;
 	std::list<Chance> suit;
 
