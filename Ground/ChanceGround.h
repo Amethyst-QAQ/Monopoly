@@ -6,9 +6,9 @@
 #include "../CardsDrawing/CardsSuit.h"
 
 ///命运格子类
-class ChanceGround : public Ground, ChanceGround
+class ChanceGround : public Ground, public CardsSuit
 {
-	void onstepped()
+	void onStepped(int player)
 	{
 
 	}
