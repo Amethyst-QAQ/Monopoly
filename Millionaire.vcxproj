@@ -158,6 +158,7 @@
     <ClInclude Include="CardsDrawing\Fate.h" />
     <ClInclude Include="Ground\FateGround.h" />
     <ClInclude Include="Ground\GroundWithPrice.h" />
+    <ClInclude Include="Ground\Map.h" />
     <ClInclude Include="Ground\Plane.h" />
     <ClInclude Include="Ground\PowerStation.h" />
     <ClInclude Include="Ground\Prison.h" />
