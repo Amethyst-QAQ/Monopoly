@@ -7,7 +7,7 @@
 
 //收费站格子
 
-class Transportation :public Ground
+class Transportation : public Ground
 {
 protected:
 	int toll;                        //基础过路费
