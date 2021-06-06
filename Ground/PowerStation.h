@@ -11,11 +11,10 @@ class PowerStation : public GroundWithPrice
 {
 private:
 	int toll;	//基础过路费
-
+	int num;
 public:
-	PowerStation() : toll(200), GroundWithPrice() {}
-	PowerStation(std::string _name) : toll(200), GroundWithPrice() {}
-	PowerStation(int _price) : toll(200), GroundWithPrice(_price) {}
+	PowerStation(int _num) : toll(100), num(_num),GroundWithPrice() {}
+	PowerStation(int _num, int _price) : toll(100), num(_num), GroundWithPrice(_price) {}
 
 	int getToll(int player);
 	void buy(int player);
