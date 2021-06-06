@@ -1,8 +1,8 @@
 #ifndef PLAYER_PERSON_H
 #define PLAYER_PERSON_H
 
-#include <iostream>
 #include <string>
+#include <set>
 #include "../Ground/Country.h"
 #include "../Ground/Ground.h"
 #include "../Ground/PowerStation.h"
@@ -10,7 +10,7 @@
 #define N 7 //N为颜色总数
 
 ///玩家类
-class Person
+class Player
 {
 private:
 	std::string name;		//玩家昵称
@@ -23,7 +23,7 @@ private:
 	Ground* position;		//指向玩家现在所在位置
 
 public:
-	Person(std::string _name) : name(_name), 
+	Player(std::string _name) : name(_name), 
 								money(50000),
 								countryNum(0), 
 								powerStationNum(0),

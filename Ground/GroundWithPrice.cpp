@@ -1,5 +1,4 @@
 #include "GroundWithPrice.h"
-#include "../Player/Person.h"
 
 using namespace std;
 
