@@ -9,7 +9,11 @@
 //机会类
 class ChanceSuit :public CardsSuit, public Chance
 {
+private:
+	Card chancesuit[10][10];
+	Card* p;
 public:
+	ChanceSuit() {}
 	Card* Draw(Person& a)
 	{
 		Card* p = NULL;                              //用来找卡的指针
@@ -49,13 +53,12 @@ public:
 			{
 				m = rand() % 3;                     //等级为5的卡牌共有3张
 			}
-			
-			if (n == getVal() && m == getNum())
-			{
-				return p;                           //返回抽到的这张卡
-			}
+		}
+
+	}
+	void PushCard()
+	{
 	}
 };
 
 #endif // !CHANCESUIT_H
-

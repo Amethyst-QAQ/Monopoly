@@ -2,14 +2,11 @@
 #define CARDSSUIT_H
 
 #include"../Player/Person.h"
-#include"ChanceSuit/Chance_1.h"
 
 
 //牌库类
 class CardsSuit
 {
-private:
-	Chance_1 c_1;
 public:
 	virtual void Show();             //显示卡的信息
 	virtual Card* Draw();            //抽卡
