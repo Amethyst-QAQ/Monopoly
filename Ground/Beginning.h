@@ -4,18 +4,23 @@
 #include "Ground.h"
 #include "../Player/Player.h"
 
+extern Player* players;
 //起点格子
 
 class Beginning :public Ground
 {
 public:
-	void onPassed(Player& a)
+	void onPassed(int player)
 	{
-		a.setMoney(a.getMoney() + 2000);
+		Ground::onPassed(player);
+		Player& p = players[player];
+		p.setMoney(p.getMoney() + 2000);
 	}
-	void onLeaved(Player& a)                   //离开起点时调用
+
+	void onLeft(int player)                   //离开起点时调用
 	{
-		a.setMoney(a.getMoney() + 2000);
+		Player& p = players[player];
+		p.setMoney(p.getMoney() + 2000);
 	}
 };
 

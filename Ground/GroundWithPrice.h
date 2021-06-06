@@ -17,6 +17,8 @@ protected:
 	bool pledge;	//ÊÇ·ñ±»µÖÑº
 
 public:
+	GroundWithPrice() : owner(0), price(100), pledge(false) {}
+
 	GroundWithPrice(int _price) : owner(0), price(_price), pledge(false) {}
 
 	virtual void onStepped(int player);

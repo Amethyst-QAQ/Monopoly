@@ -20,6 +20,14 @@ void Player::setMoney(int _money)
 		money = _money;
 }
 
+void Player::show()
+{
+	std::string mainText;
+	std::string serveText;
+	
+	//Î´Íê´ýÐø ¡­ ¡­
+}
+
 void Player::broke()
 {
 	std::string mainText = "You don't have enough money.Do you want to pledge one of your countries or a power station£¿";

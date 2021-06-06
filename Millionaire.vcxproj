@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CardsDrawing\CardsDrawingSystem.h" />
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
     <ClInclude Include="CardsDrawing\ChanceSuit.h" />
     <ClInclude Include="CardsDrawing\ChanceSuit\Chance_1.h" />
@@ -165,6 +166,7 @@
     <ClInclude Include="Ground\Prison.h" />
     <ClInclude Include="Ground\Train.h" />
     <ClInclude Include="Ground\Transportation.h" />
+    <ClInclude Include="Player\Dice.h" />
     <ClInclude Include="Player\Menu.h" />
     <ClInclude Include="Player\Output.h" />
     <ClInclude Include="Player\Player.h" />
