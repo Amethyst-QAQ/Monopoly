@@ -9,7 +9,7 @@ class Chance : public Card
 {
 public:
 	Chance(std::string name, int val,int num) :Card(name, val,num) {}          //构造函数，初始化Chance卡的事件名称与幸运值
-	virtual void doEvent() {};
+	virtual void doEvent() { Card::doEvent(); }
 };
 
 #endif
