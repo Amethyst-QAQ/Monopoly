@@ -12,8 +12,8 @@ extern Player* players;
 class ChanceSuit : public CardsSuit, public Chance
 {
 private:
-	Chance* card;
 	std::set<Chance> suit;
+	Chance* card;
 
 public:
 	void show ();					//Êä³öÅÆ¿â

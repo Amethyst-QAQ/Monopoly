@@ -145,6 +145,12 @@
     <ClCompile Include="CardsDrawing\Card.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Ground\FateGround.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Ground\ChanceGround.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />

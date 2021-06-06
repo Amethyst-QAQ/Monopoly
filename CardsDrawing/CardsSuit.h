@@ -10,7 +10,7 @@ extern Player* players;
 class CardsSuit
 {
 public:
-	virtual void Show() = 0;			//显示牌库的信息
+	virtual void show() = 0;			//显示牌库的信息
 	void getLuckVal(int player);		//计算幸运值，幸运值与抽到的卡片有关
 };
 
