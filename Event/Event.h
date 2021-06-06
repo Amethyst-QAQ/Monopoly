@@ -41,17 +41,17 @@ public:
 * REGISTER_CHILD_EVENT
 * 
 */
-#define REGISTER_INITIAL_EVENT(className)                               \
-class Event##className : public Event                                   \
-{                                                                       \
-private:                                                                \
-	className *obj;                                                     \
-	friend class EventHandler;                                          \
-public:														            \
-	Event##className() : obj(nullptr) { classType.insert(#className); } \
-	className* getObj##className() { return obj; }                      \
-	void setObj##className(className* obj) { this->obj = obj; }         \
-	virtual void* getObjAddr(){ return static_cast<void*>(obj); }       \
+#define REGISTER_INITIAL_EVENT(className)                                  \
+class Event##className : public Event                                      \
+{                                                                          \
+private:                                                                   \
+	className *obj;                                                        \
+	friend class EventHandler;                                             \
+public:														               \
+	Event##className() : obj(nullptr) { classType.push_back(#className); } \
+	className* getObj##className() { return obj; }                         \
+	void setObj##className(className* obj) { this->obj = obj; }            \
+	virtual void* getObjAddr(){ return static_cast<void*>(obj); }          \
 }
 
 /**
@@ -67,21 +67,21 @@ public:														            \
 * @attention 如果注册为事件的类的父类未被注册，
 * 请使用REGISTER_INITIAL_EVENT
 */
-#define REGISTER_CHILD_EVENT(className, parent)                                          \
-class Event##className : public Event##parent                                            \
-{                                                                                        \
-private:                                                                                 \
-	className* obj;                                                                      \
-	friend class EventHandler;                                                           \
-public:                                                                                  \
-	Event##className() : Event##parent(), obj(nullptr) { classType.insert(#className); } \
-	className* getObj##className() { return obj; }                                       \
-	void setObj##className(className* obj)                                               \
-	{                                                                                    \
-		this->obj = obj;                                                                 \
-		setObj##parent(static_cast<parent*>(obj));                                       \
-	}                                                                                    \
-    virtual void* getObjAddr(){ return static_cast<void*>(obj); }                        \
+#define REGISTER_CHILD_EVENT(className, parent)                                             \
+class Event##className : public Event##parent                                               \
+{                                                                                           \
+private:                                                                                    \
+	className* obj;                                                                         \
+	friend class EventHandler;                                                              \
+public:                                                                                     \
+	Event##className() : Event##parent(), obj(nullptr) { classType.push_back(#className); } \
+	className* getObj##className() { return obj; }                                          \
+	void setObj##className(className* obj)                                                  \
+	{                                                                                       \
+		this->obj = obj;                                                                    \
+		setObj##parent(static_cast<parent*>(obj));                                          \
+	}                                                                                       \
+    virtual void* getObjAddr(){ return static_cast<void*>(obj); }                           \
 }
 
 /**

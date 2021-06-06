@@ -130,9 +130,6 @@
     <ClCompile Include="CardsDrawing\CardsSuit.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Event\EventHandler.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Financial\Insurance.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
