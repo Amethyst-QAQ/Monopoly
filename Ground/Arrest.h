@@ -3,17 +3,19 @@
 
 #include "Prison.h"
 #include "Ground.h"
+#include "../Player/Output.h"
 #include "../Player/Player.h"
+
+extern Player* players;
 
 ///ШыгќИёзг
 class Arrest : public Ground
 {
+private:
+	Prison* prison;
 public:
-	void onStepped(Player& a, Prison* b)
-	{ 
-		a.setPosition(b); 
-		b->beArrest(a); 
-	}
+	Arrest(Prison* _prison) : prison(_prison) {}
+	void onStepped(int player);
 };
 
 #endif
