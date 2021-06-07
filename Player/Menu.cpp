@@ -36,6 +36,12 @@ bool Menu::input(int *ret)
 			return true;
 		}
 	}
+
+	if (_operations.size() == 0 && regex_match(buffer, regex("-?[1-9][0-9]*"))
+	{
+		*ret = atoi(buffer);
+		return true;
+	}
 	
 	cout << wrongText << endl;
 	return false;
