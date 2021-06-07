@@ -19,7 +19,9 @@ public:
 	{
 		Ground::onStepped(player);
 		
-		a.setMoney(a.getMoney() - toll * dice);
+		Player& p = players[player];
+
+		p.setMoney(p.getMoney() - toll * dice);
 	}
 	void setDice(int _dice) { dice = _dice; }
 	int getToll() { return toll; }
