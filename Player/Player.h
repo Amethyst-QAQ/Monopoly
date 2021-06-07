@@ -20,9 +20,7 @@ private:
 	int* colorCountryNum;	//各个颜色的地拥有的数目
 	float luck;				//幸运值（影响抽卡的好坏）
 	int pause;				//暂停回合数
-	float myStockPrice;     //个人出售股票定价
 	int stockNum;           //个人持有股数
-	int sellNum;            //个人挂出的股数
 	Ground* position;		//指向玩家现在所在位置
 
 public:
@@ -32,6 +30,7 @@ public:
 		powerStationNum(0),
 		luck(0),
 		pause(0),
+		stockNum(0),
 		position(nullptr)
 	{
 		colorCountryNum = new int[N];
@@ -44,6 +43,7 @@ public:
 		powerStationNum(0),
 		luck(0),
 		pause(0),
+		stockNum(0),
 		position(nullptr)
 
 	{
@@ -59,8 +59,6 @@ public:
 	float getLuck() { return luck; }
 	int getPause() { return pause; }
 	int getStockNum() { return stockNum; }
-	float getmyStockPrice() { return myStockPrice; }
-	int getsellellkNum() { return sellNum; }
 	Ground* getPosition() { return position; }
 
 	void setMoney(int _money);
@@ -68,15 +66,14 @@ public:
 	void changePause(int num) { pause = pause + num; }				//被暂停num回合
 	void setLuck(float _luck) { luck = _luck; }						//改变幸运值
 	void setStockNum(int num) { stockNum = num; }                   //输入现持股数
-	void setmyStockPrice(float price) { myStockPrice = price; }     //输入个人股票定价
-	void setSellNum(int num) { sellNum = num; }                     //输入个人挂出的股数
 
-	void buyCountry();		//购买空地
-	void buyPowerStation();	//购买发电厂
+	void buyStock(int sum) { stockNum = stockNum + sum; }			//买入股票
+	void buyCountry() { countryNum++; }								//购买空地
+	void buyPowerStation() { powerStationNum++; }					//购买发电厂
 
-	void bePaused() { pause--; };
-	void show();
-	void broke();			//破产
+	void bePaused() { pause--; };									//暂停一回合
+	void show();													//输出玩家信息
+	void broke();													//破产
 };
 
 #endif // !PERSON_H
