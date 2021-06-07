@@ -12,14 +12,14 @@ extern Player* players;
 class ChanceSuit : public CardsSuit
 {
 private:
-	Chance* card;
+	//Chance* card;
 	std::list<Chance> suit;
 
 public:
 	void show ();					//输出牌库
 	Chance* draw(int player);		//抽卡函数
 
-	void add(Chance* ChanceCard) { suit.push_back(*card); }	//向牌库中添加牌
+	void add(Chance* ChanceCard) { suit.push_back(*ChanceCard); }	//向牌库中添加牌
 };
 
 #endif // !CARDSDRWING_CHANCESUIT_H
