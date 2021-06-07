@@ -2,18 +2,10 @@
 #include "Player/Output.h"
 #include "Player/Dice.h"
 #include "Player/Menu.h"
-#include "Ground/Map.h"
-#include "Ground/Beginning.h"
-#include "Ground/Country.h"
-#include "Ground/Arrest.h"
-#include "Ground/ChanceGround.h"
-#include "Ground/FateGround.h"
-#include "Ground/PowerStation.h"
+#include "Ground/InitGrounds.h"
 
 bool isServer = false;
 Player *players = nullptr;
-ChanceSuit pile_1{};
-FateSuit pile_2{};
 
 using namespace std;
 
@@ -62,7 +54,7 @@ int main(int argc, char** argv)
 	players = new Player[4];
 	map.initPlayers();
 
-	while (true)
+	for (int j = 0; j <= 9; j++)
 	{
 		for (int i = 0; i < 4; i++)
 		{
