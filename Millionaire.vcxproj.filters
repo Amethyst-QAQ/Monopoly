@@ -17,6 +17,7 @@
     <ClCompile Include="Player\Player.cpp" />
     <ClCompile Include="Ground\Country.cpp" />
     <ClCompile Include="Ground\Arrest.cpp" />
+    <ClCompile Include="Financial\Stock.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
@@ -51,6 +52,7 @@
     <ClInclude Include="Player\Dice.h" />
     <ClInclude Include="CardsDrawing\CardsDrawingSystem.h" />
     <ClInclude Include="Ground\InitGrounds.h" />
+    <ClInclude Include="Financial\Stock.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />
