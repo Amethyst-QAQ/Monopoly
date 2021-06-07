@@ -3,17 +3,17 @@
 void Card::show()
 {
 	std::string mainText;
-	std::string serveText;
+	std::string serverText;
 
 	mainText = "The name of the card is : " + name;
-	serveText = "card_name";
-	Output::instance->print(mainText, serveText);
+	serverText = "card_name";
+	Output::instance->print(mainText, serverText);
 
 	mainText = "The lucky value of the card is : " + std::to_string(val);
-	serveText = "card_val";
-	Output::instance->print(mainText, serveText);
+	serverText = "card_val";
+	Output::instance->print(mainText, serverText);
 
 	mainText = "The num of the card is : " + std::to_string(num);
-	serveText = "card_num";
-	Output::instance->print(mainText, serveText);
+	serverText = "card_num";
+	Output::instance->print(mainText, serverText);
 }

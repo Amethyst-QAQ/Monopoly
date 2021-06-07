@@ -2,16 +2,6 @@
 
 using namespace std;
 
-void Player::buyCountry()
-{
-	countryNum++;
-}
-
-void Player::buyPowerStation()
-{
-	powerStationNum++;
-}
-
 void Player::setMoney(int _money)
 {
 	if (_money < 0)
