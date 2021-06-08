@@ -67,7 +67,8 @@ public:
 	void setLuck(float _luck) { luck = _luck; }						//改变幸运值
 	void setStockNum(int num) { stockNum = num; }                   //输入现持股数
 
-	void buyStock(int sum) { stockNum = stockNum + sum; }			//买入股票
+	void buyStock(int sum, float price);							//买入股票
+	void sellStock(int sum, float price);							//售出股票
 	void buyCountry() { countryNum++; }								//购买空地
 	void buyPowerStation() { powerStationNum++; }					//购买发电厂
 

@@ -21,7 +21,6 @@ int main(int argc, char** argv)
 	mapVector.push_back(new Beginning);
 	Prison* prison = new Prison;
 	Arrest* arrest = new Arrest(prison);
-	mapVector.push_back(arrest);
 	mapVector.push_back(new Country("0"));
 	mapVector.push_back(new Country("1"));
 	mapVector.push_back(new Country("2"));
@@ -34,7 +33,7 @@ int main(int argc, char** argv)
 	mapVector.push_back(new Country("7"));
 	mapVector.push_back(new Country("8"));
 	mapVector.push_back(new Country("9"));
-	mapVector.push_back(prison);
+	mapVector.push_back(arrest);
 	mapVector.push_back(new Country("10"));
 	mapVector.push_back(new Country("11"));
 	mapVector.push_back(new Country("12"));
@@ -47,7 +46,11 @@ int main(int argc, char** argv)
 	mapVector.push_back(new Country("17"));
 	mapVector.push_back(new Country("18"));
 	mapVector.push_back(new Country("19"));
+	mapVector.push_back(prison);
 	mapVector.push_back(new Country("20"));
+	mapVector.push_back(new Country("21"));
+	mapVector.push_back(new Country("22"));
+	mapVector.push_back(new Country("23"));
 
 	Map map(mapVector);
 	Dice dice;
@@ -74,9 +77,9 @@ int main(int argc, char** argv)
 				continue;
 			}
 
-			mainText = "It's No." + to_string(i+1) + "'s turn.\nPlease choose your operations.";
+			mainText = "It's No." + to_string(i+1) + "player's turn.\nPlease choose your operations.";
 			operations = { "Shoot dice", "Search informations" };
-			serverText = "choice";
+			serverText = "choice " + to_string(i + 1);
 
 			Menu menu(mainText, operations, serverText);
 
