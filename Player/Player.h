@@ -14,7 +14,7 @@ private:
 	std::map <std::string, int> properties;
 
 public:
-	Player() : name(), money(50000),num(0), position(0) {}
+	Player() : name(), money(1000),num(0), position(0) {}
 
 	void show();
 	std::string getName() { return name; }
@@ -30,6 +30,11 @@ public:
 		this->money = money;
 		if (money < 0)
 			broke();
+	}
+	void setMoneyInBroke(int money)
+	{
+		if (this->money < 0)
+			this->money = money;
 	}
 	void setPosition(int position) { this->position = position; }
 	void setProperty(const std::string &name, int value) { properties[name] = value; }

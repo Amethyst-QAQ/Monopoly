@@ -58,12 +58,14 @@ void Player::broke()
 	int priceSum = 0;
 
 	for (GroundWithPrice *i : grounds)
-		priceSum += i->getPrice() / 2;
+		if(!i->getPledge())
+			
+			priceSum += i->getPrice() / 2;
 
 	if (priceSum + money < 0)
 	{
 		Output::instance->print(
-			"Player " + name + "Failed.",
+			"Player " + name + " Failed.",
 			"fail(" + name + ")"
 		);
 
@@ -84,18 +86,13 @@ void Player::broke()
 		for(int i = 0;i < grounds.size();i++)
 		{
 			temp = grounds[i];
-			operation.push_back(getName() + "(The  price is: " + to_string(temp->getPrice()) + " yuan)");
-			serverText = serverText + to_string(i) + "\n";
+			operation.push_back(grounds[i]->getName() + "(The  price is: " + to_string(temp->getPrice()) + " yuan)");
+			serverText = serverText + to_string(grounds[i]->getPosition()) + "\n";
 		}
 
 		Menu menu(mainText, operation, serverText);
 		int n = menu.exec();
 
-		bool pledge = true;
-		grounds[n - 1]->setPledge(pledge);
-
-		mainText = "You have successfully pledged the country.";
-		serverText = "successful_pledged";
-		Output::instance->print(mainText, serverText);
+		grounds[n - 1]->pledgeByPlayer(this);
 	}
 }

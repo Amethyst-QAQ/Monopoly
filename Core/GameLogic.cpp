@@ -173,7 +173,7 @@ bool GameLogic::round()
 		Menu menu(
 			"This is Player " + players[i].getName() + "'s turn.",
 			mainOperations,
-			"choice " + to_string(i + 1)
+			"choice(" + to_string(i + 1) + ")"
 		);
 
 		while (true)
@@ -236,6 +236,13 @@ void GameLogic::searchInfomation(Player *player)
 
 void GameLogic::cleanup()
 {
+	for (int i = 0; i < playerAmount; i++)
+		if (players[i].getProperty("failed") == 0)
+			Output::instance->print(
+				players[i].getName() + " is the winner.",
+				"winner(" + players[i].getName() + ")"
+			);
+
 	delete[] players;
 	delete Map::instance;
 	delete FateSuit::instance;
