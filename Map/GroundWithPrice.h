@@ -26,6 +26,8 @@ public:
 	void setPrice(int price) { this->price = price; }
 	void setPledge(bool pledge) { this->pledge = pledge; }
 
+	virtual int getToll() = 0;
+
 	virtual void buy(Player *player);
 	virtual void redeem(Player *player);
 

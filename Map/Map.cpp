@@ -2,6 +2,7 @@
 
 #include "Ground.h"
 #include "../Player/Player.h"
+#include "Country.h"
 
 Map::Map(std::vector<Ground *> allGrounds) : allNodes()
 {
@@ -12,6 +13,14 @@ Map::Map(std::vector<Ground *> allGrounds) : allNodes()
 		temp = new MapNode(allGrounds[i], temp);
 		temp->index = allNodes.size();
 		allNodes.push_back(temp);
+
+		if (dynamic_cast<Country *>(allGrounds[i]))
+		{
+			auto tempCountry = dynamic_cast<Country *>(allGrounds[i]);
+			if (getCountryAmount(tempCountry->getColor()) == 0)
+				countryAmounts[tempCountry->getColor()] = 0;
+			countryAmounts[tempCountry->getColor()]++;
+		}
 	}
 	beginning->prev = temp;
 	beginning->prev->next = beginning;
@@ -62,3 +71,10 @@ Ground *Map::findGround(int position, int distance)
 	return currentNode->ground;
 }
 
+int Map::getCountryAmount(int color)
+{
+	auto i = countryAmounts.find(color);
+	if (i != countryAmounts.end())
+		return (*i).second();
+	return 0;
+}

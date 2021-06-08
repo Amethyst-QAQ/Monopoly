@@ -153,6 +153,7 @@
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />
     <ClInclude Include="CardsDrawing\Fate.h" />
+    <ClInclude Include="Map\Country.h" />
     <ClInclude Include="Map\Ground.h" />
     <ClInclude Include="Map\GroundWithPrice.h" />
     <ClInclude Include="Map\Map.h" />
@@ -170,6 +171,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="IO\Menu.cpp" />
     <ClCompile Include="IO\Output.cpp" />
+    <ClCompile Include="Map\Country.cpp" />
     <ClCompile Include="Map\Ground.cpp" />
     <ClCompile Include="Map\GroundWithPrice.cpp" />
     <ClCompile Include="Map\Map.cpp" />
