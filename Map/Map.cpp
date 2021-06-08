@@ -45,8 +45,8 @@ void Map::movePlayer(Player *player, int distance)
 		currentNode->ground->onPassed(player);
 		currentNode = currentNode->next;
 	}
-	currentNode->ground->onStepped(player);
 	player->setPosition(currentNode->index);
+	currentNode->ground->onStepped(player);
 }
 
 void Map::movePlayerTo(Player *player, int position)
