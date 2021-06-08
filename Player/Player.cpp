@@ -10,6 +10,23 @@ void Player::setMoney(int _money)
 		money = _money;
 }
 
+void Player::buyStock(int sum, float price)
+{
+	price = price * sum;
+	if (money >= price)
+	{
+		stockNum += sum;
+		money -= price;
+	}
+	else broke();
+}
+
+void Player::sellStock(int sum, float price)
+{
+	stockNum -= sum;		//个人持股数减少
+	money += (sum * price);	//个人钱数增加
+}
+
 void Player::show()
 {
 	std::string mainText;

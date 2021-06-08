@@ -7,6 +7,7 @@ void ChanceSuit::show()
 	{
 		*card = *i;
 		card->show();
+		printf("\n");
 	}
 }
 

@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="CardsDrawing\Card.cpp" />
-    <ClCompile Include="CARDSDRAWING\CardsSuit.cpp" />
-    <ClCompile Include="CardsDrawing\ChanceSuit.cpp" />
     <ClCompile Include="CardsDrawing\FateSuit.cpp" />
     <ClCompile Include="Financial\Insurance.cpp" />
     <ClCompile Include="Ground\ChanceGround.cpp" />
@@ -18,6 +16,9 @@
     <ClCompile Include="Ground\Country.cpp" />
     <ClCompile Include="Ground\Arrest.cpp" />
     <ClCompile Include="Financial\Stock.cpp" />
+    <ClCompile Include="Ground\init.cpp" />
+    <ClCompile Include="CardsDrawing\ChanceSuit.cpp" />
+    <ClCompile Include="CardsDrawing\CardsSuit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />

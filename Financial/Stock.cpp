@@ -1,5 +1,5 @@
 #include"Stock.h"
-#include<iostream>
+
 using namespace std;
 
 Stock::Stock(float _initialPrice, int _num) : initialPrice(_initialPrice), 
@@ -26,9 +26,15 @@ void Stock::setActualPrice()
 void Stock::buyStock(int player)
 {
 	Player& p = players[player];
+	
+	string str;
+	float price = 0;					//记录价格
+	int sum = 0;					//记录数量
+	int s = 0;					//计数器
+	int* choice = new int[num];	//记录玩家所对应选项
 
-	int money;
-	int sum;
+	for (int i = 0;i < num;i++)
+		choice[i] = 0;
 
 	string mainText = "Please choose the price you want.";
 	vector<string> operation = { "In actual price(bank's)", "In player's price" };
@@ -37,52 +43,99 @@ void Stock::buyStock(int player)
 	Menu menu(mainText, operation, serverText);
 
 	int n = menu.exec();
-
 	if (n == 1)  //In actual price
 	{
 		mainText = "Please enter the amount you want.\n(Attention!!! 100 ≤ Amount ≤ 1200)";   
 		serverText = "buy_from_bank";
 
-		Output::instance->print(mainText, serverText);
+		operation = {};
 
-		n = menu.exec();
-		while (n < 100 || n > 1200)
+		Menu menu1(mainText, operation, serverText);
+		sum = menu1.exec();
+		while (sum % 100 != 0)
 		{
-			mainText = "Wrong number! Please enter again! ";
-			serverText = "default_buy_from_bank";
+			mainText = "Wrong amount! \nPlease enter again! ";
+			serverText = "wrong_amount";
 
-			Output::instance->print(mainText, serverText);
-			n = menu.exec();
+			operation = {};
+
+			Menu menu2(mainText, operation, serverText);
+			sum = menu2.exec();
 		}
+
 		mainText = "Successfully bought " + to_string(n) + " shares!";                      
 		serverText = "success_buy_from_bank";
 
 		Output::instance->print(mainText, serverText);
 
-
-		//买入股票操作 个人持有股数增加 钱减少
-		sum = p.getStockNum();
-		sum += n;
-		p.setStockNum(n);         //成功买入，个人持股数增加
-
-		money = p.getMoney();
-		money -= n * actualPrice;
-		p.setMoney(money);        //成功买入后，支付，钱减少
+		p.buyStock(sum, actualPrice);
 	}
+
 	else   //In player's price
-	{
+	{	
+		mainText = "Please choose the price you want.";
+		serverText = "buy_from_player";
+		operation = {};
 
+		for (int i = 0;i < num;i++)	
+			if (soldPrice[i] != 0)
+			{
+				choice[i] = s;
+				s++;
+				str = to_string(soldPrice[i]) + "Maxium: " + to_string(soldNum[i]) + "shares)";
+				operation.push_back(str);
+			}
+
+		operation.push_back("return to previous menu");
+
+		Menu menu3(mainText, operation, serverText);
+		n = menu3.exec();//储存选项
+
+		for (int i = 0;i < num;i++)
+		{
+			if (n == choice[i])
+			{
+				price = soldPrice[i];
+				n = i;//记录选项
+				break;
+			}
+		}
+		mainText = "Please input the amount you want.";
+		serverText = "amount_from_player";
+		operation = {};
+		Menu menu4(mainText, operation, serverText);
+		sum = menu4.exec();
+
+		while(sum > soldNum[n] || sum % 100 != 0 || sum <= 0)
+		{
+			mainText = "Wrong amount! \nPlease enter again! ";
+			serverText = "wrong_amount";
+
+			operation = {};
+
+			Menu menu(mainText, operation, serverText);
+			sum = menu.exec();
+		}
+
+		mainText = "Successfully bought " + to_string(sum) + " shares!";
+		serverText = "success_buy_from_bank";
+
+		Output::instance->print(mainText, serverText);
+
+		p.buyStock(sum, price);
+		players[n].sellStock(sum, price);
 	}
-
-
 }
 
 void Stock::sellStock(int player)
 {
 	Player& p = players[player];
 
-	int money;
-	int sum;
+	float price = 0;
+	int sum = 0;
+	int amount = 0;
+
+	sum = p.getStockNum();//获取现有股数
 
 	string mainText = "Please choose the selling price you want.";                                   // 实时定价 or 自己定价
 	vector<string> operation = { "In actual price", "In your price" };
@@ -96,20 +149,19 @@ void Stock::sellStock(int player)
 	{
 		mainText = "Please enter the amount you want to sell.\n(Attention!!! youHave ≤ Amount ≤ 800)";
 		serverText = "sell_amount";
+		operation = {};
 
-		Output::instance->print(mainText, serverText);
-
-		scanf("%d", &n);
-
-		sum = p.getStockNum();//获取现有股数
+		Menu menu1(mainText, operation, serverText);
+		n = menu1.exec();
 
 		while (n < sum || n > 800)
 		{
 			mainText = "Wrong amount!\nPlease enter again!";
 			serverText = "Wrong_amount";
+			operation = {};
 
-			Output::instance->print(mainText, serverText);
-			scanf("%d", &n);
+			Menu menu2(mainText, operation, serverText);
+			n = menu2.exec();
 		}
 
 		mainText = "Successfully sold " + to_string(n) + " shares!";
@@ -117,57 +169,54 @@ void Stock::sellStock(int player)
 
 		Output::instance->print(mainText, serverText);
 
-		sum -= n;
-		p.setStockNum(sum);		  //个人持股数减少
-		money = p.getMoney();
-		money += n * actualPrice;
-		p.setMoney(money);		  //个人钱数增加
-
 		soldNum[player] = n;
 		soldPrice[player] = actualPrice;
 	}
+
 	else       //In your price
 	{
 		mainText = "Please enter the price you want.\n";//有问题
-		serverText = "set_sell_price";
+		serverText = "sell_price";
+		operation = {};
 
-		Output::instance->print(mainText, serverText);
-		scanf("%d", &n);
+		Menu menu3(mainText, operation, serverText);
+		n = menu3.exec();
 
 		while (n > 1.1 * actualPrice || n < 0.9 * actualPrice)
 		{
 			mainText = "Wrong Price!\nPlease enter again!";
-		}
+			serverText = "wrong_price";
+			operation = {};
 
-
-		mainText = "Please enter the amount you want.\n(Attention!!! youHave ≤ Amount ≤ 800)";
-		serverText = "sell_youramount";
-
-		Output::instance->print(mainText, serverText);
-
-		while (n < p.getStockNum() || n>800)
-		{
-			mainText = "Wrong amount!\nPlease enter again!";
-			serverText = "Wrong_sell_myprice_bank";
-
-			Output::instance->print(mainText, serverText);
+			Menu menu(mainText, operation, serverText);
 			n = menu.exec();
 		}
-		mainText = "Successfully sell " + to_string(n) + " shares!";
-		serverText = "Success_sell_yourprice_bank";
+
+		price = n;
+		amount = 800 + (actualPrice - amount) * 50;	//有待数学模型的建立
+		
+		mainText = "Please enter the amount you want.\n(Attention!!! youHave ≤ Amount ≤ 800)";
+		serverText = "sell_amount";
+		operation = {};
+
+		Menu menu4(mainText, operation, serverText);
+		n = menu4.exec();
+
+		while (n < sum || n > amount)
+		{
+			mainText = "Wrong amount!\nPlease enter again!";
+			serverText = "Wrong_amount";
+			operation = {};
+
+			Menu menu5(mainText, operation, serverText);
+			n = menu5.exec();
+		}
+		mainText = "Successfully input " + to_string(n) + " shares to sell.";
+		serverText = "Success_intput_amount";
 
 		Output::instance->print(mainText, serverText);
 
-		p.setStockNum(n);         //设置自己挂出的股数
-
-		//卖出股票操作 个人持有股数减少 钱增加
-		sum = p.getStockNum();
-		sum -= n;
-		p.setStockNum(sum);
-
-		money = p.getMoney();
-		p.setMoney(money);
+		soldNum[player] = n;
+		soldPrice[player] = price;
 	}
-
-
 }
