@@ -1,37 +1,35 @@
-#ifndef GROUND_GROUND_WITH_PRICE_H
-#define GROUND_GROUND_WITH_PRICE_H
+#ifndef MAP_GROUND_WITH_PRICE_H
+#define MAP_GROUND_WITH_PRICE_H
 
 #include "Ground.h"
-#include "../Player/Menu.h"
-#include "../Player/Player.h"
 
 class Player;
-
-extern Player* players;
 
 class GroundWithPrice : public Ground
 {
 protected:
-	int owner;		//拥有者
-	int price;		//价格
-	bool pledge;	//是否被抵押
-
+	Player *owner;
+	int price;
+	bool pledge;
 public:
-	GroundWithPrice() : owner(0), price(100), pledge(false) {}
+	GroundWithPrice(const std::string &name, int _price) :
+		Ground(name),
+		owner(nullptr),
+		price(_price),
+		pledge(false) {}
 
-	GroundWithPrice(int _price) : owner(0), price(_price), pledge(false) {}
-
-	virtual void onStepped(int player);
-
-	int getOwner() { return owner; }
+	Player *getOwner() { return owner; }
 	int getPrice() { return price; }
 	bool getPledge() { return pledge; }
 
-	void setOwner(int _owner) { owner = _owner; }
-	void setPrice(int _price) { price = _price; }
-	void Hypothecate() { pledge = true; }
+	void setOwner(Player *owner) { this->owner = owner; }
+	void setPrice(int price) { this->price = price; }
+	void setPledge(bool pledge) { this->pledge = pledge; }
 
-	virtual void buy(int player) = 0;
+	virtual void buy(Player *player);
+	virtual void redeem(Player *player);
+
+	virtual void onStepped(Player *player);
 };
 
-#endif
+#endif // !MAP_GROUND_WITH_PRICE_H

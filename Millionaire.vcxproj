@@ -150,23 +150,12 @@
     <ClInclude Include="Event\Listener.h" />
     <ClInclude Include="Financial\Insurance.h" />
     <ClInclude Include="Financial\Stock.h" />
-    <ClInclude Include="Map\Arrest.h" />
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />
-    <ClInclude Include="Map\Beginning.h" />
-    <ClInclude Include="Map\Car.h" />
-    <ClInclude Include="Map\ChanceGround.h" />
-    <ClInclude Include="Map\Country.h" />
     <ClInclude Include="CardsDrawing\Fate.h" />
-    <ClInclude Include="Map\FateGround.h" />
+    <ClInclude Include="Map\Ground.h" />
     <ClInclude Include="Map\GroundWithPrice.h" />
-    <ClInclude Include="Map\InitGrounds.h" />
     <ClInclude Include="Map\Map.h" />
-    <ClInclude Include="Map\Plane.h" />
-    <ClInclude Include="Map\PowerStation.h" />
-    <ClInclude Include="Map\Prison.h" />
-    <ClInclude Include="Map\Train.h" />
-    <ClInclude Include="Map\Transportation.h" />
     <ClInclude Include="Player\Dice.h" />
     <ClInclude Include="IO\Menu.h" />
     <ClInclude Include="IO\Output.h" />
@@ -178,21 +167,13 @@
     <ClCompile Include="CardsDrawing\FateSuit.cpp" />
     <ClCompile Include="Financial\Insurance.cpp" />
     <ClCompile Include="Financial\Stock.cpp" />
-    <ClCompile Include="Map\Arrest.cpp" />
-    <ClCompile Include="Map\ChanceGround.cpp" />
-    <ClCompile Include="Map\FateGround.cpp" />
-    <ClCompile Include="Map\GroundWithPrice.cpp" />
-    <ClCompile Include="Map\init.cpp" />
-    <ClCompile Include="Map\Map.cpp" />
-    <ClCompile Include="Map\PowerStation.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="IO\Menu.cpp" />
     <ClCompile Include="IO\Output.cpp" />
+    <ClCompile Include="Map\Ground.cpp" />
+    <ClCompile Include="Map\GroundWithPrice.cpp" />
+    <ClCompile Include="Map\Map.cpp" />
     <ClCompile Include="Player\Player.cpp" />
-    <ClInclude Include="Map\Ground.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Map\Country.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />

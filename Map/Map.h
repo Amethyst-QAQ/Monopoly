@@ -1,21 +1,20 @@
-#ifndef GROUND_MAP_H
-#define GROUND_MAP_H
-
-#include "Ground.h"
+#ifndef MAP_MAP_H
+#define MAP_MAP_H
 
 #include <vector>
 
+class Ground;
 class Player;
-extern Player* players;
 
 struct MapNode
 {
 	Ground *ground;
 	MapNode *next;
 	MapNode *prev;
-	MapNode(Ground *_ground, MapNode *_prev) : ground(_ground), next(nullptr), prev(_prev)
+	int index;
+	MapNode(Ground *_ground, MapNode *_prev) : ground(_ground), next(nullptr), prev(_prev), index(0)
 	{
-		if(_prev != nullptr)
+		if (_prev != nullptr)
 			_prev->next = this;
 	}
 	~MapNode() { delete ground; }
@@ -25,13 +24,16 @@ class Map
 {
 private:
 	MapNode *beginning;
-	MapNode* findNodeFromPosition(Ground* position, int distance);
+	std::vector<MapNode *> allNodes;
 public:
-	Map(std::vector<Ground*> allGrounds);
+	Map(std::vector<Ground *> allGrounds);
 	~Map();
-	Ground *findGroundFromPosition(Ground *position, int distance);
-	void movePlayer(int player, int dice);
-	void initPlayers();
+	void movePlayer(Player *player, int distance);
+	void movePlayerTo(Player *player, int position);
+	Ground *getGround(int position);
+	Ground *findGround(int position, int distance);
+	int getSize() { return allNodes.size(); }
+	static Map *instance;
 };
 
-#endif
+#endif // !MAP_MAP_H

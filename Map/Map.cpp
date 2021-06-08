@@ -1,28 +1,17 @@
 #include "Map.h"
+
+#include "Ground.h"
 #include "../Player/Player.h"
 
-MapNode* Map::findNodeFromPosition(Ground* position, int distance)
-{
-	MapNode* temp = beginning;
-	while (temp->ground != position)
-	{
-		temp = temp->next;
-	}
-
-	for (int i = 0; i < distance; i++)
-	{
-		temp = temp->next;
-	}
-	return temp;
-}
-
-Map::Map(std::vector<Ground *> allGrounds)
+Map::Map(std::vector<Ground *> allGrounds) : allNodes()
 {
 	beginning = new MapNode(allGrounds[0], nullptr);
 	MapNode *temp = beginning;
 	for (int i = 1; i < allGrounds.size(); i++)
 	{
 		temp = new MapNode(allGrounds[i], temp);
+		temp->index = allNodes.size();
+		allNodes.push_back(temp);
 	}
 	beginning->prev = temp;
 	beginning->prev->next = beginning;
@@ -30,38 +19,46 @@ Map::Map(std::vector<Ground *> allGrounds)
 
 Map::~Map()
 {
-	beginning->prev->next = nullptr;
-	beginning->prev = nullptr;
-	auto temp = beginning;
-	while (temp->next != nullptr)
+	for (int i = 0; i < allNodes.size(); i++)
+		delete allNodes[i];
+}
+
+void Map::movePlayer(Player *player, int distance)
+{
+	auto currentNode = allNodes[player->getPosition()];
+	for (int i = 0; i < distance; i++)
 	{
-		auto temp2 = temp->next;
-		delete temp;
-		temp = temp2;
+		currentNode->ground->onPassed(player);
+		currentNode = currentNode->next;
 	}
+	currentNode->ground->onStepped(player);
+	player->setPosition(currentNode->index);
 }
 
-Ground *Map::findGroundFromPosition(Ground *position, int distance)
+void Map::movePlayerTo(Player *player, int position)
 {
-	return findNodeFromPosition(position, distance)->ground;
-}
-
-void Map::movePlayer(int player, int dice)
-{
-	auto node = findNodeFromPosition(players[player].getPosition(), 0);
-
-	for (int i = 0; i < dice; i++)
+	if (position >= getSize())
+		return;
+	auto currentNode = allNodes[player->getPosition()];
+	while(currentNode->index != position)
 	{
-		node->ground->onPassed(player);
-		node = node->next;
+		currentNode->ground->onPassed(player);
+		currentNode = currentNode->next;
 	}
-
-	node->ground->onStepped(player);
-	players[player].setPosition(node->ground);
+	currentNode->ground->onStepped(player);
+	player->setPosition(currentNode->index);
 }
 
-void Map::initPlayers()
+Ground *Map::getGround(int position)
 {
-	for (int i = 0; i < 4; i++)
-		players[i].setPosition(beginning->ground);
+	return allNodes[position]->ground;
 }
+
+Ground *Map::findGround(int position, int distance)
+{
+	auto currentNode = allNodes[position];
+	for (int i = 0; i < distance; i++)
+		currentNode = currentNode->next;
+	return currentNode->ground;
+}
+
