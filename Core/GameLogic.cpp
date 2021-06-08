@@ -40,7 +40,7 @@ void GameLogic::initMap()
 	vector<Ground*> mapVector;
 	mapVector.push_back(new Beginning);
 	Prison* prison = new Prison;
-	Arrest* arrest = new Arrest(prison);
+	Arrest* arrest = new Arrest(23);
 	Country* country;
 
 	country = new Country("China", 2000, 1);                      //中国
@@ -103,7 +103,8 @@ void GameLogic::initFateSuit()
 
 void GameLogic::initChanceSuit()
 {
-	//在此处初始化ChanceSuit::instance
+	Chance_1 chance_1;
+	ChanceSuit::instance->add(chance_1)
 }
 
 void GameLogic::initMainOperations()
