@@ -1,6 +1,8 @@
 #include "ChanceSuit.h"
 #include "../IO/Output.h"
 
+ChanceSuit *ChanceSuit::instance = new ChanceSuit();
+
 void ChanceSuit::show()
 {
 	Chance* card = nullptr;

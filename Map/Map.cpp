@@ -4,7 +4,9 @@
 #include "../Player/Player.h"
 #include "Country.h"
 
-Map::Map(std::vector<Ground *> allGrounds) : allNodes()
+Map *Map::instance = new Map();
+
+void Map::initGrounds(std::vector<Ground *> allGrounds)
 {
 	beginning = new MapNode(allGrounds[0], nullptr);
 	MapNode *temp = beginning;
@@ -75,6 +77,6 @@ int Map::getCountryAmount(int color)
 {
 	auto i = countryAmounts.find(color);
 	if (i != countryAmounts.end())
-		return (*i).second();
+		return (*i).second;
 	return 0;
 }
