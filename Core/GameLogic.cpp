@@ -92,7 +92,10 @@ bool GameLogic::round()
 				"The result is " + to_string(distance),
 				"dice(" + to_string(distance) + ")"
 			);
-			Map::instance->movePlayer(players + i, distance);
+			if (players[i].getProperty("Pause") > 0)
+				players[i].setProperty("Pause", players[i].getProperty("Pause") - 1);
+			else
+				Map::instance->movePlayer(players + i, distance);
 			break;
 		}
 		case 2:
