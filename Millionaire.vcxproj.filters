@@ -37,6 +37,8 @@
     <ClInclude Include="Player\Player.h" />
     <ClInclude Include="Map\ChanceGround.h" />
     <ClInclude Include="Map\FateGround.h" />
+    <ClInclude Include="Map\Arrest.h" />
+    <ClInclude Include="Map\Prison.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />
