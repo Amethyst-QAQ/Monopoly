@@ -7,7 +7,7 @@ void ChanceSuit::show()
 {
 	Chance* card = nullptr;
 	std::string mainText = "The pile have " + std::to_string(suit.size()) + "Chance cards.";
-	std::string serverText = "show_Chance_cards";
+	std::string serverText = "show_chance_cards";
 	Output::instance->print(mainText, serverText);
 
 	for (auto i = suit.begin(); i != suit.end(); i++)
@@ -87,7 +87,7 @@ void ChanceSuit::draw(Player *player)
 			if (m == 0)
 			{
 				std::string mainText = "The Chance card been drawn is " + i->getName();
-				std::string serverText = "draw_Chance_card " + i->getName();
+				std::string serverText = "draw_chance_card(" + i->getName() + ")";
 				Output::instance->print(mainText, serverText);
 
 				i->doEvent();

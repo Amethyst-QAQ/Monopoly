@@ -25,6 +25,24 @@ void GroundWithPrice::buy(Player *player)
 	);
 }
 
+void GroundWithPrice::pledgeByPlayer(Player *player)
+{
+	if (pledge)
+		Output::instance->print(
+			"The ground is already pledged!",
+			"already_pledged"
+		);
+	else
+	{
+		setPledge(true);
+		player->setMoneyInBroke(player->getMoney() + price / 2);
+		string mainText = "You have successfully pledged the country.";
+		string serverText = "successful_pledged";
+		Output::instance->print(mainText, serverText);
+	}
+
+}
+
 void GroundWithPrice::redeem(Player *player)
 {
 	int money = player->getMoney();
@@ -68,7 +86,7 @@ bool GroundWithPrice::onStepped(Player *player)
 
 	if (owner == player && pledge)
 	{
-		string mainText = "The ground is mortgaged.";
+		string mainText = "The ground is pledged.";
 		vector<string> operations = { "Redeem at price " + to_string(price), "Exit" };
 		string serverText = "redeem_ground";
 		Menu menu(mainText, operations, serverText);
@@ -92,6 +110,7 @@ bool GroundWithPrice::onStepped(Player *player)
 			"pay_toll(" + owner->getName() + ")(" + to_string(getToll()) + ")"
 		);
 		player->setMoney(player->getMoney() - getToll());
+		owner->setMoney(owner->getMoney() + getToll());
 		return true;
 	}
 

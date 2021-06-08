@@ -28,7 +28,7 @@ int Country::getBaseToll()
 int Country::getToll()
 {
     int toll = getBaseToll();
-    if (owner->getProperty("country" + to_string(color)) == Map::instance->getCountryAmount(color))
+        if (owner->getProperty("country" + to_string(color)) == Map::instance->getCountryAmount(color))
     return toll * 4;
     return toll;
 }
@@ -53,7 +53,7 @@ void Country::build(Player *player)
     }
     money -= price;
     player->setMoney(money);
-    setOwner(player);
+    houseNum++;
     Output::instance->print(
         "Successfully build!",
         "success"
@@ -94,4 +94,6 @@ bool Country::onStepped(Player *player)
             return true;
         }
     }
+
+    return false;
 }

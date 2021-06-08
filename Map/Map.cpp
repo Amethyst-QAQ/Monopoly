@@ -15,6 +15,8 @@ void Map::initGrounds(std::vector<Ground *> allGrounds)
 	{
 		temp = new MapNode(allGrounds[i], temp);
 		temp->index = allNodes.size();
+		allGrounds[i]->setPosition(temp->index);
+
 		allNodes.push_back(temp);
 
 		if (dynamic_cast<Country *>(allGrounds[i]))

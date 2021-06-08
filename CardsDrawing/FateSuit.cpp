@@ -87,7 +87,7 @@ void FateSuit::draw(Player* player)
 			if (m == 0)
 			{
 				std::string mainText = "The Fate card been drawn is " + i->getName();
-				std::string serverText = "draw_Fate_card " + i->getName();
+				std::string serverText = "draw_fate_card(" + i->getName() + ")";
 				Output::instance->print(mainText, serverText);
 
 				i->doEvent();

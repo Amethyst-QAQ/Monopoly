@@ -29,6 +29,7 @@ public:
 	virtual int getToll() = 0;
 
 	virtual void buy(Player *player);
+	virtual void pledgeByPlayer(Player *player);
 	virtual void redeem(Player *player);
 
 	virtual bool onStepped(Player *player);
