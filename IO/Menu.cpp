@@ -9,10 +9,14 @@ void Menu::output()
 	if (!isServer)
 	{
 		cout << _mainText << "\n";
-		for (int i = 0; i < _operations.size() - 1; i++)
-			cout << to_string(i + 1) + ". " + _operations[i] << "\n";
 
-		cout << to_string(_operations.size()) + ". " + _operations[_operations.size() - 1] << endl;
+		if (_operations.size() > 0)
+		{
+			for (int i = 0; i < _operations.size() - 1; i++)
+				cout << to_string(i + 1) + ". " + _operations[i] << "\n";
+
+			cout << to_string(_operations.size()) + ". " + _operations[_operations.size() - 1] << endl;
+		}
 	}
 	else
 		cout << _serverText << endl;

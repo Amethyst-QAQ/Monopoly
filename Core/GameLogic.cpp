@@ -114,6 +114,7 @@ void GameLogic::initMainOperations()
 
 void GameLogic::startGame()
 {
+	initMainOperations();
 	initPlayers();
 	initMap();
 	initFateSuit();
