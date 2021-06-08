@@ -2,17 +2,17 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="CardsDrawing\Card.cpp" />
+    <ClCompile Include="CardsDrawing\ChanceSuit.cpp" />
     <ClCompile Include="CardsDrawing\FateSuit.cpp" />
     <ClCompile Include="Financial\Insurance.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Player\Player.cpp" />
     <ClCompile Include="Financial\Stock.cpp" />
-    <ClCompile Include="CardsDrawing\ChanceSuit.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="IO\Menu.cpp" />
     <ClCompile Include="IO\Output.cpp" />
     <ClCompile Include="Map\Ground.cpp" />
     <ClCompile Include="Map\GroundWithPrice.cpp" />
     <ClCompile Include="Map\Map.cpp" />
+    <ClCompile Include="Player\Player.cpp" />
     <ClCompile Include="Map\Country.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -25,15 +25,19 @@
     <ClInclude Include="Event\EventHandler.h" />
     <ClInclude Include="Event\Listener.h" />
     <ClInclude Include="Financial\Insurance.h" />
+    <ClInclude Include="Financial\Stock.h" />
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />
     <ClInclude Include="CardsDrawing\Fate.h" />
-    <ClInclude Include="Player\Player.h" />
+    <ClInclude Include="Map\Ground.h" />
+    <ClInclude Include="Map\GroundWithPrice.h" />
+    <ClInclude Include="Map\Map.h" />
     <ClInclude Include="Player\Dice.h" />
-    <ClInclude Include="CardsDrawing\CardsDrawingSystem.h" />
-    <ClInclude Include="Financial\Stock.h" />
     <ClInclude Include="IO\Menu.h" />
     <ClInclude Include="IO\Output.h" />
+    <ClInclude Include="Player\Player.h" />
+    <ClInclude Include="Map\ChanceGround.h" />
+    <ClInclude Include="Map\FateGround.h" />
     <ClInclude Include="Map\Ground.h" />
     <ClInclude Include="Map\GroundWithPrice.h" />
     <ClInclude Include="Map\Map.h" />
