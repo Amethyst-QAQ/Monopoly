@@ -162,6 +162,7 @@
     <ClInclude Include="CardsDrawing\Fate.h" />
     <ClInclude Include="Map\AllGrounds.h" />
     <ClInclude Include="Map\Arrest.h" />
+    <ClInclude Include="Map\Beginning.h" />
     <ClInclude Include="Map\ChanceGround.h" />
     <ClInclude Include="Map\FateGround.h" />
     <ClInclude Include="Map\Country.h" />
@@ -186,6 +187,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="IO\Menu.cpp" />
     <ClCompile Include="IO\Output.cpp" />
+    <ClCompile Include="Map\Beginning.cpp" />
     <ClCompile Include="Map\Country.cpp" />
     <ClCompile Include="Map\Ground.cpp" />
     <ClCompile Include="Map\GroundWithPrice.cpp" />
