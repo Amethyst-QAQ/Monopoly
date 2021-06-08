@@ -13,4 +13,4 @@ public:
 	void doEvent(Player* player) { player->setMoney(player->getMoney() - 800); }
 };
 
-#endif#pragma once
+#endif
