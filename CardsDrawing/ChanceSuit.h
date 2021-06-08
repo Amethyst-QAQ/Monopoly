@@ -18,7 +18,7 @@ class ChanceSuit : public CardsSuit
 private:
 	std::list<Chance> suit;
 public:
-	static Output* instance;
+	static ChanceSuit* instance;
 
 	void show ();						
 	void draw(Player* player);

@@ -8,7 +8,6 @@
     <ClCompile Include="Player\Player.cpp" />
     <ClCompile Include="Financial\Stock.cpp" />
     <ClCompile Include="CardsDrawing\ChanceSuit.cpp" />
-    <ClCompile Include="CardsDrawing\CardsSuit.cpp" />
     <ClCompile Include="Map\Arrest.cpp" />
     <ClCompile Include="Map\ChanceGround.cpp" />
     <ClCompile Include="Map\Country.cpp" />
@@ -35,7 +34,6 @@
     <ClInclude Include="CardsDrawing\Fate.h" />
     <ClInclude Include="Player\Player.h" />
     <ClInclude Include="Player\Dice.h" />
-    <ClInclude Include="CardsDrawing\CardsDrawingSystem.h" />
     <ClInclude Include="Financial\Stock.h" />
     <ClInclude Include="Map\Arrest.h" />
     <ClInclude Include="Map\Beginning.h" />

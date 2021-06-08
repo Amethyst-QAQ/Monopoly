@@ -49,8 +49,26 @@ void Player::broke()
 
 	while (money < 0)
 	{
-		//选择要抵押的地
-		//在客户端输出名字
-		//在服务端输出序号
+		string mainText = "Your money isn't enough.PLease choose a ground to pledge.";
+		vector<string> operation;
+		string serverText = "";
+		GroundWithPrice* temp;
+
+		for(int i = 0;i < grounds.size();i++)
+		{
+			temp = grounds[i];
+			operation.push_back(getName() + "(The  price is: " + to_string(i->getPrice()) + " yuan)");
+			serverText = serverText + to_string(i) + "\n";
+		}
+
+		Menu menu(mainText, operation, serverText);
+		int n = menu.exec();
+
+		bool pledge = true;
+		grounds[n - 1]->setPledge(pledge);
+
+		mainText = "You have successfully pledged the country.";
+		serverText = "successful_pledged";
+		Output::instance->print(mainText, serverText);
 	}
 }
