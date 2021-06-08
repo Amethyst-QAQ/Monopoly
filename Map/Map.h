@@ -27,8 +27,9 @@ private:
 	MapNode *beginning;
 	std::vector<MapNode *> allNodes;
 	std::map<int, int> countryAmounts;
+	Map() : beginning(nullptr), allNodes(), countryAmounts(){}
 public:
-	Map(std::vector<Ground *> allGrounds);
+	void initGrounds(std::vector<Ground *> allGrounds);
 	~Map();
 	void movePlayer(Player *player, int distance);
 	void movePlayerTo(Player *player, int position);

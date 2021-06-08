@@ -14,6 +14,7 @@
     <ClCompile Include="Map\Map.cpp" />
     <ClCompile Include="Player\Player.cpp" />
     <ClCompile Include="Map\Country.cpp" />
+    <ClCompile Include="Core\GameLogic.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
@@ -44,6 +45,8 @@
     <ClInclude Include="Map\Country.h" />
     <ClInclude Include="Map\Arrest.h" />
     <ClInclude Include="Map\Prison.h" />
+    <ClInclude Include="Core\GameLogic.h" />
+    <ClInclude Include="Map\AllGrounds.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />
