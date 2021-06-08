@@ -207,6 +207,28 @@ bool GameLogic::round()
 
 void GameLogic::searchInfomation(Player *player)
 {
+	string mainText = "Please choose what you want to search.";
+	string serverText = "search_chioce";
+	vector<string> operation ={"Player", "Map", "Chance card pile", "Fate card pile"};
+
+	Menu menu(mainText, operation, serverText);
+	int n = menu.exec();
+
+	switch (n)
+	{
+	case 1:
+		player->show();
+		break;
+	case 2:
+		//Áô°×
+		break;
+	case 3:
+		ChanceSuit::instance->show();
+		break;
+	case 4:
+		FateSuit::instance->show();
+		break;
+	}
 }
 
 void GameLogic::cleanup()
