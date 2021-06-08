@@ -20,7 +20,6 @@ void FateSuit::show()
 
 void FateSuit::draw(Player* player)
 {
-	Fate* card = nullptr;
 	int luck = player->getProperty("luck");
 	int n = rand() % 10;
 	if (luck >= 0.5)
@@ -83,15 +82,15 @@ void FateSuit::draw(Player* player)
 	auto i = suit.begin();
 	do
 	{
-		if (card->getVal() == n)
+		if (i->getVal() == n)
 		{
 			if (m == 0)
 			{
-				std::string mainText = "The Fate card been drawn is " + card->getName();
-				std::string serverText = "draw_Fate_card " + card->getName();
+				std::string mainText = "The Fate card been drawn is " + i->getName();
+				std::string serverText = "draw_Fate_card " + i->getName();
 				Output::instance->print(mainText, serverText);
 
-				card->doEvent();
+				i->doEvent();
 
 				return;
 			}

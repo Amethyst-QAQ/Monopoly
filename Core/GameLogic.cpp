@@ -53,7 +53,7 @@ void GameLogic::initMap()
 	vector<Ground*> mapVector;
 	mapVector.push_back(new Beginning);
 	Prison* prison = new Prison;
-	Arrest* arrest = new Arrest(22);
+	Arrest* arrest = new Arrest(23);
 	Country* country;
 
 	country = new Country("China", 2000, 1);                      //ÖÐ¹ú
@@ -176,26 +176,31 @@ bool GameLogic::round()
 			"choice " + to_string(i + 1)
 		);
 
-		int operation = menu.exec();
+		while (true)
+		{
+			int operation = menu.exec();
 
-		switch (operation)
-		{
-		case 1:
-		{
-			int distance = rand() % 6 + rand() % 6 + 2;
-			Output::instance->print(
-				"The result is " + to_string(distance),
-				"dice(" + to_string(distance) + ")"
-			);
-			if (players[i].getProperty("Pause") > 0)
-				players[i].setProperty("Pause", players[i].getProperty("Pause") - 1);
-			else
-				Map::instance->movePlayer(players + i, distance);
-			break;
-		}
-		case 2:
-			searchInfomation(players + i);
-			break;
+			if(operation == 1)
+			{
+				int distance = rand() % 6 + rand() % 6 + 2;
+				Output::instance->print(
+					"The result is " + to_string(distance),
+					"dice(" + to_string(distance) + ")"
+				);
+				if (players[i].getProperty("Pause") > 0)
+				{
+					players[i].setProperty("Pause", players[i].getProperty("Pause") - 1);
+					Output::instance->print(
+						"You are in prison. Please wait for " + to_string(players[i].getProperty("Pause") + 1) + " rounds.",
+						"pause(" + to_string(players[i].getProperty("Pause") + 1) + ")"
+					);
+				}
+				else
+					Map::instance->movePlayer(players + i, distance);
+				break;
+			}
+			else if(operation == 2)
+				searchInfomation(players + i);
 		}
 	}
 	if (failedPlayers >= playerAmount - 1)
