@@ -6,6 +6,7 @@
 #include "../CardsDrawing/ChanceSuit.h"
 #include "../IO/Menu.h"
 #include "../IO/Output.h"
+#include "../CardsDrawing/FateSuit/Fate_1.h"
 
 #include <iostream>
 
@@ -98,7 +99,11 @@ void GameLogic::initMap()
 
 void GameLogic::initFateSuit()
 {
-	//在此处初始化FateSuit::instance
+	for (int i = 1;i <= 10;i++)
+	{
+	Fate_1* fate = new Fate_1;
+	FateSuit::instance->add(fate);
+	}
 }
 
 void GameLogic::initChanceSuit()
