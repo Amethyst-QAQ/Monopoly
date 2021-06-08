@@ -155,8 +155,6 @@
     <ClInclude Include="Event\Event.h" />
     <ClInclude Include="Event\EventHandler.h" />
     <ClInclude Include="Event\Listener.h" />
-    <ClInclude Include="Financial\Insurance.h" />
-    <ClInclude Include="Financial\Stock.h" />
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />
     <ClInclude Include="CardsDrawing\Fate.h" />
@@ -182,8 +180,6 @@
     <ClCompile Include="CardsDrawing\ChanceSuit\Chance_5.h" />
     <ClCompile Include="CardsDrawing\FateSuit.cpp" />
     <ClCompile Include="Core\GameLogic.cpp" />
-    <ClCompile Include="Financial\Insurance.cpp" />
-    <ClCompile Include="Financial\Stock.cpp" />
     <ClCompile Include="Core\main.cpp" />
     <ClCompile Include="IO\Menu.cpp" />
     <ClCompile Include="IO\Output.cpp" />

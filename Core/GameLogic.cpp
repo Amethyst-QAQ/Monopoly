@@ -53,7 +53,7 @@ void GameLogic::initMap()
 	vector<Ground*> mapVector;
 	mapVector.push_back(new Beginning);
 	Prison* prison = new Prison;
-	Arrest* arrest = new Arrest(23);
+	Arrest* arrest = new Arrest(22);
 	Country* country;
 
 	country = new Country("China", 2000, 1);                      //ÖÐ¹ú
@@ -188,7 +188,10 @@ bool GameLogic::round()
 				"The result is " + to_string(distance),
 				"dice(" + to_string(distance) + ")"
 			);
-			Map::instance->movePlayer(players + i, distance);
+			if (players[i].getProperty("Pause") > 0)
+				players[i].setProperty("Pause", players[i].getProperty("Pause") - 1);
+			else
+				Map::instance->movePlayer(players + i, distance);
 			break;
 		}
 		case 2:

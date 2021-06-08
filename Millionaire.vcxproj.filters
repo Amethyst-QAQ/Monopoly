@@ -4,8 +4,6 @@
     <ClCompile Include="CardsDrawing\Card.cpp" />
     <ClCompile Include="CardsDrawing\ChanceSuit.cpp" />
     <ClCompile Include="CardsDrawing\FateSuit.cpp" />
-    <ClCompile Include="Financial\Insurance.cpp" />
-    <ClCompile Include="Financial\Stock.cpp" />
     <ClCompile Include="IO\Menu.cpp" />
     <ClCompile Include="IO\Output.cpp" />
     <ClCompile Include="Map\Country.cpp" />
@@ -29,8 +27,6 @@
     <ClInclude Include="Event\Event.h" />
     <ClInclude Include="Event\EventHandler.h" />
     <ClInclude Include="Event\Listener.h" />
-    <ClInclude Include="Financial\Insurance.h" />
-    <ClInclude Include="Financial\Stock.h" />
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />
     <ClInclude Include="CardsDrawing\Fate.h" />
