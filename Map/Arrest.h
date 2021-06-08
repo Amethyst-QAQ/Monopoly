@@ -12,6 +12,13 @@ private:
 	int prison;
 public:
 	Arrest(int _prison) : Ground("Arrest"), prison(_prison) {}
+
+	void show()
+	{ 
+		Ground::show();
+		Output::instance->print("Name: Arrest Ground", "show_name_Arrest");
+	}
+
 	void onStepped(Player* player)
 	{
 		player->setPosition(prison); 

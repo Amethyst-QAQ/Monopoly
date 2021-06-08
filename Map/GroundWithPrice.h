@@ -17,6 +17,8 @@ public:
 		owner(nullptr),
 		price(_price),
 		pledge(false) {}
+	
+	virtual void show();
 
 	Player *getOwner() { return owner; }
 	int getPrice() { return price; }
