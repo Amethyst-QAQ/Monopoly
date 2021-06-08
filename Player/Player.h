@@ -11,8 +11,8 @@ private:
 	int money;
 	int position;
 	std::map <std::string, int> properties;
-public:
 
+public:
 	Player() : name(), money(50000), position(0) {}
 
 	std::string getName() { return name; }

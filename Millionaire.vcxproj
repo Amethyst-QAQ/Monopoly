@@ -174,7 +174,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CardsDrawing\Card.cpp" />
-    <ClCompile Include="CardsDrawing\CardsSuit.cpp" />
     <ClCompile Include="CardsDrawing\ChanceSuit.cpp" />
     <ClCompile Include="CardsDrawing\FateSuit.cpp" />
     <ClCompile Include="Financial\Insurance.cpp" />
