@@ -33,7 +33,7 @@ public:
 	virtual void buy(Player *player);
 	virtual void redeem(Player *player);
 
-	virtual void onStepped(Player *player);
+	virtual bool onStepped(Player *player);
 };
 
 #endif // !MAP_GROUND_WITH_PRICE_H

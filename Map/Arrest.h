@@ -21,12 +21,16 @@ public:
 
 	void onStepped(Player* player)
 	{
+		if (Ground::onStepped(player))
+			return true;
+
 		player->setPosition(prison); 
 		player->setProperty("Pause", 1);
 		Output::instance->print(
 			"You are arrested",
 			"arrested"
 		);
+		return true;
 	}
 };
 

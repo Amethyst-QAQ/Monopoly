@@ -63,9 +63,10 @@ void GroundWithPrice::redeem(Player *player)
 	setPledge(false);
 }
 
-void GroundWithPrice::onStepped(Player *player)
+bool GroundWithPrice::onStepped(Player *player)
 {
-	Ground::onStepped(player);
+	if(Ground::onStepped(player))
+		return true;
 
 	if (owner == 0)
 	{
@@ -81,9 +82,9 @@ void GroundWithPrice::onStepped(Player *player)
 		{
 		case 1:
 			buy(player);
-			break;
+			return true;
 		case 2:
-			return;
+			return true;
 		}
 	}
 
@@ -100,9 +101,9 @@ void GroundWithPrice::onStepped(Player *player)
 		{
 		case 1:
 			redeem(player);
-			break;
+			return true;
 		case 2:
-			return;
+			return true;
 		}
 	}
 
@@ -113,5 +114,8 @@ void GroundWithPrice::onStepped(Player *player)
 			"pay_toll(" + owner->getName() + ")(" + to_string(getToll()) + ")"
 		);
 		player->setMoney(player->getMoney() - getToll());
+		return true;
 	}
+
+	return false;
 }
