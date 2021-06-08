@@ -5,17 +5,12 @@ ChanceSuit *ChanceSuit::instance = new ChanceSuit();
 
 void ChanceSuit::show()
 {
-	Chance* card = nullptr;
 	std::string mainText = "The pile have " + std::to_string(suit.size()) + "Chance cards.";
 	std::string serverText = "show_chance_cards";
 	Output::instance->print(mainText, serverText);
 
 	for (auto i = suit.begin(); i != suit.end(); i++)
-	{
-		*card = *i;
-		card->show();
-		printf("\n");
-	}
+		i->show();
 }
 
 void ChanceSuit::draw(Player *player)

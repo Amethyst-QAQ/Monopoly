@@ -11,19 +11,22 @@ void GroundWithPrice::show()
 	string serverText;
 
 	mainText = "Name: " + getName();
-	serverText = "show_name " + getName();
+	serverText = "show_name (" + getName() + ")";
 	Output::instance->print(mainText, serverText);
 
 	mainText = "Price: " + to_string(price);
-	serverText = "show_price " + getName();
+	serverText = "show_price (" + getName() + ")";
 	Output::instance->print(mainText, serverText);
 
-	mainText = "Owner: " + owner->getName();
-	serverText = "show_owner " + getName();
+	if (owner != nullptr)
+		mainText = "Owner: " + owner->getName();
+	else
+		mainText = "Owner: Bank";
+	serverText = "show_owner (" + getName() + ")";
 	Output::instance->print(mainText, serverText);
 
 	mainText = "Pledge: " + to_string(pledge);
-	serverText = "show_pledge " + getName();
+	serverText = "show_pledge (" + getName() + ")";
 	Output::instance->print(mainText, serverText);
 }
 
