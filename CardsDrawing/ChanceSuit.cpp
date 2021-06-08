@@ -83,15 +83,15 @@ void ChanceSuit::draw(Player *player)
 	auto i = suit.begin();
 	do
 	{
-		if (card->getVal() == n)
+		if (i->getVal() == n)
 		{
 			if (m == 0)
 			{
-				std::string mainText = "The Chance card been drawn is " + card->getName();
-				std::string serverText = "draw_Chance_card " + card->getName();
+				std::string mainText = "The Chance card been drawn is " + i->getName();
+				std::string serverText = "draw_Chance_card " + i->getName();
 				Output::instance->print(mainText, serverText);
 
-				card->doEvent();
+				i->doEvent();
 
 				return;
 			}

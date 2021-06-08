@@ -7,6 +7,33 @@
 
 using namespace std;
 
+void Player::show()
+{
+	string mainText;
+	string serverText;
+
+	mainText = "Name: " + this->name;
+	serverText = "show_name " + to_string(num);
+	Output::instance->print(mainText, serverText);
+
+	mainText = "Number: " + to_string(num);
+	serverText = "show_num " + to_string(num);
+	Output::instance->print(mainText, serverText);
+
+	mainText = "Money: " + to_string(this->money);
+	serverText = "show_money " + to_string(num);
+	Output::instance->print(mainText, serverText);
+
+	mainText = "Position Number:" + to_string(this->position);
+	serverText = "show_position_number " + to_string(num);
+	Output::instance->print(mainText, serverText);
+
+	Ground* a = Map::instance->getGround(this->position);
+	mainText = "Position Name:" + a->getName();
+	serverText = "show_position_number " + to_string(num);
+	Output::instance->print(mainText, serverText);
+}
+
 int Player::getProperty(const std::string &name)
 {
 	auto iter = properties.find(name);
