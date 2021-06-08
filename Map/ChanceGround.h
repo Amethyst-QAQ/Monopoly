@@ -15,6 +15,12 @@ public:
 		ChanceSuit::instance->draw(player); 
 		return true;
 	}
+
+	void show()
+	{
+		Ground::show();
+		Output::instance->print("Name: Chance Ground", "show_name_Chance");
+	}
 };
 
 #endif

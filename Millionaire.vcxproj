@@ -167,6 +167,7 @@
     <ClInclude Include="Map\Ground.h" />
     <ClInclude Include="Map\GroundWithPrice.h" />
     <ClInclude Include="Map\Map.h" />
+    <ClInclude Include="Map\PowerStation.h" />
     <ClInclude Include="Map\Prison.h" />
     <ClInclude Include="Player\Dice.h" />
     <ClInclude Include="IO\Menu.h" />
@@ -188,6 +189,7 @@
     <ClCompile Include="Map\Ground.cpp" />
     <ClCompile Include="Map\GroundWithPrice.cpp" />
     <ClCompile Include="Map\Map.cpp" />
+    <ClCompile Include="Map\PowerStation.cpp" />
     <ClCompile Include="Player\Player.cpp" />
   </ItemGroup>
   <ItemGroup>

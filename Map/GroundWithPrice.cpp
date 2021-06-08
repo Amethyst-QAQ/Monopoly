@@ -5,6 +5,28 @@
 
 using namespace std;
 
+void GroundWithPrice::show()
+{
+	string mainText;
+	string serverText;
+
+	mainText = "Name: " + getName();
+	serverText = "show_name " + getName();
+	Output::instance->print(mainText, serverText);
+
+	mainText = "Price: " + to_string(price);
+	serverText = "show_price " + getName();
+	Output::instance->print(mainText, serverText);
+
+	mainText = "Owner: " + owner->getName();
+	serverText = "show_owner " + getName();
+	Output::instance->print(mainText, serverText);
+
+	mainText = "Pledge: " + to_string(pledge);
+	serverText = "show_pledge " + getName();
+	Output::instance->print(mainText, serverText);
+}
+
 void GroundWithPrice::buy(Player *player)
 {
 	int money = player->getMoney();

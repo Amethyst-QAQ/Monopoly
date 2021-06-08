@@ -223,7 +223,7 @@ void GameLogic::searchInfomation(Player *player)
 		player->show();
 		break;
 	case 2:
-		//Áô°×
+		Map::instance->show();
 		break;
 	case 3:
 		ChanceSuit::instance->show();
