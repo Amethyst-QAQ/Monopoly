@@ -12,7 +12,6 @@ extern Player* players;
 class ChanceSuit : public CardsSuit
 {
 private:
-	//Chance* card;
 	std::list<Chance> suit;
 
 public:
@@ -23,4 +22,3 @@ public:
 };
 
 #endif // !CARDSDRWING_CHANCESUIT_H
-

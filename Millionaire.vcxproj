@@ -174,7 +174,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CardsDrawing\Card.cpp" />
-    <ClCompile Include="CARDSDRAWING\CardsSuit.cpp" />
+    <ClCompile Include="CardsDrawing\CardsSuit.cpp" />
     <ClCompile Include="CardsDrawing\ChanceSuit.cpp" />
     <ClCompile Include="CardsDrawing\FateSuit.cpp" />
     <ClCompile Include="Financial\Insurance.cpp" />
@@ -183,6 +183,7 @@
     <ClCompile Include="Ground\ChanceGround.cpp" />
     <ClCompile Include="Ground\FateGround.cpp" />
     <ClCompile Include="Ground\GroundWithPrice.cpp" />
+    <ClCompile Include="Ground\init.cpp" />
     <ClCompile Include="Ground\Map.cpp" />
     <ClCompile Include="Ground\PowerStation.cpp" />
     <ClCompile Include="main.cpp" />
