@@ -184,7 +184,7 @@
     <ClCompile Include="Core\GameLogic.cpp" />
     <ClCompile Include="Financial\Insurance.cpp" />
     <ClCompile Include="Financial\Stock.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Core\main.cpp" />
     <ClCompile Include="IO\Menu.cpp" />
     <ClCompile Include="IO\Output.cpp" />
     <ClCompile Include="Map\Beginning.cpp" />
