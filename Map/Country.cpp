@@ -68,8 +68,6 @@ void Country::buy(Player *player)
 
 void Country::onStepped(Player *player)
 {
-    GroundWithPrice::onStepped(player);
-
     if (owner == player && houseNum < 5)
     {
         string mainText = "The ground is yours.";
@@ -79,7 +77,7 @@ void Country::onStepped(Player *player)
             operations[0] += "hotel";
         else
             operations[0] += "house";
-        operations[0] += "at price " + to_string(getHousePrice());
+        operations[0] += " at price " + to_string(getHousePrice());
 
         Menu menu(mainText, operations, serverText);
         int n = menu.exec();
@@ -90,7 +88,9 @@ void Country::onStepped(Player *player)
             build(player);
             break;
         case 2:
+            GroundWithPrice::onStepped(player);
             return;
         }
     }
+    GroundWithPrice::onStepped(player);
 }
