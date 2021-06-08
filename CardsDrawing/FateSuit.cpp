@@ -1,4 +1,5 @@
 #include "FateSuit.h"
+#include "../IO/Output.h"
 
 void FateSuit::show()
 {
