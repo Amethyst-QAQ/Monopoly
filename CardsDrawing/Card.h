@@ -15,9 +15,8 @@ private:
 
 public:
 	Card(std::string _name, 
-		 int _val, 
-		 int _num) : name(_name), 
-					 val(_val), {}
+		 int _val) : name(_name), 
+					 val(_val){}
 
 	int getVal() { return val; }
 	std::string getName() { return name; }
