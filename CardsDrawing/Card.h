@@ -3,14 +3,16 @@
 
 #include "../Player/Output.h"
 
-///卡片类
-
+/**
+* @brief 卡片类
+* doEvent()函数用于执行卡片内容，需要在子类中重载
+*/
 class Card
 {
 private:
-	std::string name;	//存放事件名称
-	int val;			//卡的等级,分为0~5共6个等级,数字越小越坏
-	int num;			//卡在每个等级中的编号
+	std::string name;
+	int val;
+	int num;
 
 public:
 	Card(std::string _name, 
@@ -19,11 +21,11 @@ public:
 					 val(_val), 
 					 num(_num) {}
 
-	int getVal() { return val; }			//获得卡的幸运值
-	std::string getName() { return name; }			//获得卡的编号
+	int getVal() { return val; }
+	std::string getName() { return name; }
 
-	void show();							//用于输出卡的信息
-	virtual void doEvent() {};				//卡的执行操作，设为虚函数，需要子类重写
+	void show();
+	virtual void doEvent() {};
 }; 
 
 #endif
