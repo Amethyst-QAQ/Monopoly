@@ -20,6 +20,7 @@ private:
 public:
 	Ground(const std::string &_name = "") : name(_name), position(0) {}
 
+	virtual void show() {}
 	std::string getName() { return name; }
 	int getPosition() { return position; }
 

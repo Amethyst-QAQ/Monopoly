@@ -83,3 +83,15 @@ int Map::getCountryAmount(int color)
 		return (*i).second;
 	return 0;
 }
+
+void Map::show()
+{
+	MapNode* a = beginning;
+	while(true)
+	{
+		a->ground->show();
+		a = a->next;
+		if (a == beginning)
+			return;
+	}
+}

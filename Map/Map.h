@@ -37,6 +37,7 @@ public:
 	Ground *findGround(int position, int distance);
 	int getSize() { return allNodes.size(); }
 	int getCountryAmount(int color);
+	void show();
 	static Map *instance;
 };
 

@@ -15,6 +15,7 @@ public:
 		color(_color),
 		houseNum(0){}
 
+	void show();
 	virtual int getToll();
 	int getColor() { return color; }
 	int getHousePrice();
