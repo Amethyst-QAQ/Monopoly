@@ -10,6 +10,7 @@ void Map::initGrounds(std::vector<Ground *> allGrounds)
 {
 	beginning = new MapNode(allGrounds[0], nullptr);
 	MapNode *temp = beginning;
+	allNodes.push_back(temp);
 	for (int i = 1; i < allGrounds.size(); i++)
 	{
 		temp = new MapNode(allGrounds[i], temp);
