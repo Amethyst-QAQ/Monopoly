@@ -40,7 +40,7 @@ void GameLogic::initMap()
 	vector<Ground*> mapVector;
 	mapVector.push_back(new Beginning);
 	Prison* prison = new Prison;
-	Arrest* arrest = new Arrest(prison);
+	Arrest* arrest = new Arrest(22);
 	Country* country;
 
 	country = new Country("China", 2000, 1);                      //ÖÐ¹ú
