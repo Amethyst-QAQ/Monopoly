@@ -6,6 +6,19 @@
 #include "../CardsDrawing/ChanceSuit.h"
 #include "../IO/Menu.h"
 #include "../IO/Output.h"
+#include "../CardsDrawing/FateSuit/Fate_1.h"
+
+#include"../CardsDrawing/ChanceSuit/Chance_1.h"
+#include"../CardsDrawing/ChanceSuit/Chance_2.h"
+#include"../CardsDrawing/ChanceSuit/Chance_3.h"
+#include"../CardsDrawing/ChanceSuit/Chance_4.h"
+#include"../CardsDrawing/ChanceSuit/Chance_5.h"
+#include"../CardsDrawing/ChanceSuit/Chance_6.h"
+#include"../CardsDrawing/ChanceSuit/Chance_7.h"
+#include"../CardsDrawing/ChanceSuit/Chance_8.h"
+#include"../CardsDrawing/ChanceSuit/Chance_9.h"
+#include"../CardsDrawing/ChanceSuit/Chance_10.h"
+
 
 #include <iostream>
 
@@ -98,12 +111,39 @@ void GameLogic::initMap()
 
 void GameLogic::initFateSuit()
 {
-	//在此处初始化FateSuit::instance
+	for (int i = 1;i <= 10;i++)
+	{
+	Fate_1* fate = new Fate_1;
+	FateSuit::instance->add(fate);
+	}
 }
 
 void GameLogic::initChanceSuit()
 {
 	//在此处初始化ChanceSuit::instance
+	Chance_1* chance_1=new Chance_1;
+	Chance_2* chance_2 = new Chance_2;
+	Chance_3* chance_3 = new Chance_3;
+	Chance_4* chance_4 = new Chance_4;
+	Chance_5* chance_5 = new Chance_5;
+	Chance_6* chance_6 = new Chance_6;
+	Chance_7* chance_7 = new Chance_7;
+	Chance_8* chance_8 = new Chance_8;
+	Chance_9* chance_9 = new Chance_9;
+	Chance_10* chance_10 = new Chance_10;
+
+	ChanceSuit::instance->add(chance_1);
+	ChanceSuit::instance->add(chance_2);
+	ChanceSuit::instance->add(chance_3);
+	ChanceSuit::instance->add(chance_4);
+	ChanceSuit::instance->add(chance_5);
+	ChanceSuit::instance->add(chance_6);
+	ChanceSuit::instance->add(chance_7);
+	ChanceSuit::instance->add(chance_8);
+	ChanceSuit::instance->add(chance_9);
+	ChanceSuit::instance->add(chance_10);
+
+
 }
 
 void GameLogic::initMainOperations()

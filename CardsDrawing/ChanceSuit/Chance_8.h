@@ -1,5 +1,5 @@
-#ifndef CARDS_DRAWING_CHANCE_SUIT_CHANCE_3_H
-#define CARDS_DRAWING_CHANCE_SUIT_CHANCE_3_H
+#ifndef CARDS_DRAWING_CHANCE_SUIT_CHANCE_8_H
+#define CARDS_DRAWING_CHANCE_SUIT_CHANCE_8_H
 
 #include "../Chance.h"
 #include "../../Player/Player.h"
@@ -14,4 +14,4 @@ public:
 	void doEvent(Player* player) { }
 };
 
-#endif#pragma once
+#endif
