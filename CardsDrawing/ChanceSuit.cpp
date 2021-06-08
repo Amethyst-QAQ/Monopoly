@@ -20,7 +20,6 @@ void ChanceSuit::show()
 
 void ChanceSuit::draw(Player *player)
 {
-	Chance* card = nullptr;
 	int luck = player->getProperty("luck");
 	int n = rand() % 10;
 	if (luck >= 0.5)

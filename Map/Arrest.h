@@ -16,6 +16,10 @@ public:
 	{
 		player->setPosition(prison); 
 		player->setProperty("Pause", 1);
+		Output::instance->print(
+			"You are arrested",
+			"arrested"
+		);
 	}
 };
 
