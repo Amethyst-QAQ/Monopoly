@@ -9,8 +9,8 @@ class Player;
 class Chance_2 :public Chance
 {
 public:
-	Chance_2() : Chance("可怜的替罪羊(损失2000元)", 0) {}
-	void doEvent(Player* player) { player->setMoney(player->getMoney() - 2000); }
+	Chance_2() : Chance("一看就是老司机了(损失800元)", 3) {}
+	void doEvent(Player* player) { player->setMoney(player->getMoney() - 800); }
 };
 
 #endif

@@ -142,8 +142,13 @@
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
     <ClInclude Include="CardsDrawing\ChanceSuit.h" />
     <ClInclude Include="CardsDrawing\ChanceSuit\Chance_1.h" />
+    <ClInclude Include="CardsDrawing\ChanceSuit\Chance_10.h" />
     <ClInclude Include="CardsDrawing\ChanceSuit\Chance_2.h" />
     <ClInclude Include="CardsDrawing\ChanceSuit\Chance_3.h" />
+    <ClInclude Include="CardsDrawing\ChanceSuit\Chance_6.h" />
+    <ClInclude Include="CardsDrawing\ChanceSuit\Chance_7.h" />
+    <ClInclude Include="CardsDrawing\ChanceSuit\Chance_8.h" />
+    <ClInclude Include="CardsDrawing\ChanceSuit\Chance_9.h" />
     <ClInclude Include="CardsDrawing\FateSuit.h" />
     <ClInclude Include="CardsDrawing\FateSuit\Fate_1.h" />
     <ClInclude Include="Event\Event.h" />
@@ -170,6 +175,8 @@
   <ItemGroup>
     <ClCompile Include="CardsDrawing\Card.cpp" />
     <ClCompile Include="CardsDrawing\ChanceSuit.cpp" />
+    <ClCompile Include="CardsDrawing\ChanceSuit\Chance_4.h" />
+    <ClCompile Include="CardsDrawing\ChanceSuit\Chance_5.h" />
     <ClCompile Include="CardsDrawing\FateSuit.cpp" />
     <ClCompile Include="Financial\Insurance.cpp" />
     <ClCompile Include="Financial\Stock.cpp" />
