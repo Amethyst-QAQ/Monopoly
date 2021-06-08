@@ -10,17 +10,21 @@ private:
 	std::string name;
 	int money;
 	int position;
+	int num;
 	std::map <std::string, int> properties;
 
 public:
-	Player() : name(), money(50000), position(0) {}
+	Player() : name(), money(50000),num(0), position(0) {}
 
+	void show();
 	std::string getName() { return name; }
 	int getMoney() { return money; }
+	int getNum() { return num; }
 	int getPosition() { return position; }
 	int getProperty(const std::string &name);
 
 	void setName(const std::string &name) { this->name = name; }
+	void setNum(int num) { this->num = num; }
 	void setMoney(int money)
 	{
 		this->money = money;
