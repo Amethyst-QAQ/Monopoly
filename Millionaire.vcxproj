@@ -139,7 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="CardsDrawing\CardsDrawingSystem.h" />
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
     <ClInclude Include="CardsDrawing\ChanceSuit.h" />
     <ClInclude Include="CardsDrawing\ChanceSuit\Chance_1.h" />

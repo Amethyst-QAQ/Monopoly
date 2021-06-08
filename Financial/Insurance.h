@@ -2,9 +2,9 @@
 #define FINANCIAL_INSURANCE_H
 
 #include <string>
-#include "../Player/Menu.h"
+#include "../IO/Menu.h"
 #include "../Player/Player.h"
-#include "../Player/Output.h"
+#include "../IO/Output.h"
 
 extern Player* players;
 
