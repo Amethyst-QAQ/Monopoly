@@ -20,7 +20,7 @@ public:
 					 num(_num) {}
 
 	int getVal() { return val; }			//获得卡的幸运值
-	int getNum() { return num; }			//获得卡的编号
+	std::string getName() { return name; }			//获得卡的编号
 
 	void show();							//用于输出卡的信息
 	virtual void doEvent() {};				//卡的执行操作，设为虚函数，需要子类重写
