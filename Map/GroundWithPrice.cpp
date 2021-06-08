@@ -19,6 +19,10 @@ void GroundWithPrice::buy(Player *player)
 	money -= price;
 	player->setMoney(money);
 	setOwner(player);
+	Output::instance->print(
+		"Successfully bought!",
+		"success"
+	);
 }
 
 void GroundWithPrice::redeem(Player *player)
@@ -78,5 +82,14 @@ void GroundWithPrice::onStepped(Player *player)
 		case 2:
 			return;
 		}
+	}
+
+	if (owner != player)
+	{
+		Output::instance->print(
+			"The ground belongs to " + owner->getName() + ". You have to pay " + to_string(getToll()),
+			"pay_toll(" + owner->getName() + ")(" + to_string(getToll()) + ")"
+		);
+		player->setMoney(player->getMoney() - getToll());
 	}
 }
