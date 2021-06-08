@@ -157,6 +157,10 @@ void GameLogic::startGame()
 	initMap();
 	initFateSuit();
 	initChanceSuit();
+	Output::instance->print(
+		"Game Starts",
+		"game_start"
+	);
 }
 
 bool GameLogic::round()
