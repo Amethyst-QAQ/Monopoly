@@ -142,8 +142,6 @@ void GameLogic::initChanceSuit()
 	ChanceSuit::instance->add(chance_8);
 	ChanceSuit::instance->add(chance_9);
 	ChanceSuit::instance->add(chance_10);
-
-
 }
 
 void GameLogic::initMainOperations()
@@ -200,7 +198,7 @@ bool GameLogic::round()
 			break;
 		}
 	}
-	if (failedPlayers == playerAmount)
+	if (failedPlayers >= playerAmount - 1)
 		return false;
 	return true;
 }
