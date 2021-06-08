@@ -152,6 +152,8 @@
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />
     <ClInclude Include="CardsDrawing\Fate.h" />
+    <ClInclude Include="Map\ChanceGround.h" />
+    <ClInclude Include="Map\FateGround.h" />
     <ClInclude Include="Map\Ground.h" />
     <ClInclude Include="Map\GroundWithPrice.h" />
     <ClInclude Include="Map\Map.h" />
