@@ -8,7 +8,13 @@ class FateGround :public Ground
 {
 public:
 	FateGround() : Ground("Fate Ground") {}
-	void onStepped(Player* player) { FateSuit::instance->draw(player); }
+	bool onStepped(Player* player)
+	{
+		if (Ground::onStepped(player))
+			return true;
+		FateSuit::instance->draw(player); 
+		return true;
+	}
 };
 
 #endif

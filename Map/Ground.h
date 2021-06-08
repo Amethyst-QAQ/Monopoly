@@ -26,7 +26,7 @@ public:
 	void setName(const std::string &name) { this->name = name; }
 	void setPosition(int position) { this->position = position; }
 
-	virtual void onStepped(Player *player);
+	virtual bool onStepped(Player *player);
 	virtual void onPassed(Player *player);
 };
 
