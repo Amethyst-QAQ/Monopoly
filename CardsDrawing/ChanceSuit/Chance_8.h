@@ -4,13 +4,14 @@
 #include "../Chance.h"
 #include "../../Player/Player.h"
 
+//拆房子
 class Player;
 
-class Chance_3 :public Chance
+class Chance_8 :public Chance
 {
 public:
-	Chance_3() :Chance("出门记得戴眼镜(损失500)", 3) {}
-	void doEvent(Player* player) { player->setMoney(player->getMoney() - 500); }
+	Chance_8() :Chance("", 1) {}
+	void doEvent(Player* player) { }
 };
 
-#endif
+#endif#pragma once

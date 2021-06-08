@@ -4,10 +4,12 @@
 #include "../Chance.h"
 #include"../../Player/Player.h"
 
+class Player;
+
 class Chance_1 :public Chance
 {
 public:
-	Chance_1() :Chance("扫黄行动", 0, 0) {}     //构造函数，初始化Chance_1卡的事件名称、幸运值、编号
+	Chance_1() : Chance("可怜的替罪羊(损失2000元)", 2) {}
 	void doEvent(Player* player) { player->setMoney(player->getMoney() - 2000); }
 };
 
