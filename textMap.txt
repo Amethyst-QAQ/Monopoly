@@ -1,0 +1,8 @@
+Passed beginning, add 2000 yuan.	beginning
+Player 1 has stepped on Ground Arrest	step(1)(0)
+Please input Player No.1's name	name(1)
+Please input the amount of players    	player_amount
+The result is 12	dice(12)
+This is Player 1's turn.    1. Throw dice    2. Search information    	choice 1
+You are arrested	arrested
+

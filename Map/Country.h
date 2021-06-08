@@ -23,7 +23,7 @@ public:
 	void build(Player *player);
 
 	virtual void buy(Player *player);
-	virtual void onStepped(Player *player);
+	virtual bool onStepped(Player *player);
 };
 
 #endif // !MAP_COUNTRY_H

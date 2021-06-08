@@ -8,6 +8,13 @@ class ChanceGround :public Ground
 {
 public:
 	ChanceGround() : Ground("Chance Ground") {}
+	bool onStepped(Player* player) 
+	{ 
+		if (Ground::onStepped(player))
+			return true;
+		ChanceSuit::instance->draw(player); 
+		return true;
+	}
 	void onStepped(Player* player) { ChanceSuit::instance->draw(player); }
 	void show()
 	{

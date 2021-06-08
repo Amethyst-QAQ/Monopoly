@@ -4,12 +4,14 @@
 
 using namespace std;
 
-void Ground::onStepped(Player *player)
+bool Ground::onStepped(Player *player)
 {
 	Output::instance->print(
 		"Player " + player->getName() + " has stepped on Ground " + name,
 		"step(" + player->getName() + ")(" + to_string(position) + ")"
 	);
+
+	return false;
 }
 
 void Ground::onPassed(Player *player)
