@@ -15,7 +15,6 @@ public:
 		FateSuit::instance->draw(player); 
 		return true;
 	}
-	void onStepped(Player* player) { FateSuit::instance->draw(player); }
 	void show()
 	{
 		Ground::show();

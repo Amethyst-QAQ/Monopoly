@@ -15,7 +15,7 @@ public:
 		ChanceSuit::instance->draw(player); 
 		return true;
 	}
-	void onStepped(Player* player) { ChanceSuit::instance->draw(player); }
+
 	void show()
 	{
 		Ground::show();
