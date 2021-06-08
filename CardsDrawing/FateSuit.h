@@ -19,7 +19,7 @@ private:
 	std::list<Fate> suit;
 
 public:
-	static Output* instance;
+	static FateSuit* instance;
 	void show ();
 	void draw(Player* player);
 	void add(Fate* ChanceCard) { suit.push_back(*ChanceCard); }

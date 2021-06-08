@@ -1,4 +1,5 @@
 #include "ChanceSuit.h"
+#include "../IO/Output.h"
 
 void ChanceSuit::show()
 {
