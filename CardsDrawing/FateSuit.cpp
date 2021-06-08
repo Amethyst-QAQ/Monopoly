@@ -5,17 +5,12 @@ FateSuit *FateSuit::instance = new FateSuit();
 
 void FateSuit::show()
 {
-	Fate* card = nullptr;
 	std::string mainText = "The pile have " + std::to_string(suit.size()) + "Fate cards.";
 	std::string serverText = "show_Fate_cards";
 	Output::instance->print(mainText, serverText);
 
 	for (auto i = suit.begin(); i != suit.end(); i++)
-	{
-		*card = *i;
-		card->show();
-		printf("\n");
-	}
+		i->show();
 }
 
 void FateSuit::draw(Player* player)

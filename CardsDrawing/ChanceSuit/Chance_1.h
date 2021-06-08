@@ -9,7 +9,7 @@ class Player;
 class Chance_1 :public Chance
 {
 public:
-	Chance_1() : Chance("¿ÉÁ¯µÄÌæ×ïÑò(ËðÊ§2000Ôª)", 2) {}
+	Chance_1() : Chance("Poor child!(Lose 2000 yuan)", 2) {}
 	void doEvent(Player* player) { player->setMoney(player->getMoney() - 2000); }
 };
 

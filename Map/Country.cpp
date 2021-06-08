@@ -32,11 +32,11 @@ void Country::show()
     string serverText;
 
     mainText = "Color: " + to_string(color);
-    serverText = "show_color " + getName();
+    serverText = "show_color (" + getName() + ")";
     Output::instance->print(mainText, serverText);
 
     mainText = "House Number: " + to_string(houseNum);
-    serverText = "show_house_num " + getName();
+    serverText = "show_house_num (" + getName() + ")";
     Output::instance->print(mainText, serverText);
 }
 
