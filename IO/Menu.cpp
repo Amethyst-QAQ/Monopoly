@@ -37,9 +37,9 @@ bool Menu::input(int *ret)
 		}
 	}
 
-	if (_operations.size() == 0 && regex_match(buffer, regex("-?[1-9][0-9]*"))
+	if (_operations.size() == 0 && regex_match(buffer, regex("-?[1-9][0-9]*")))
 	{
-		*ret = atoi(buffer);
+		*ret = atoi(buffer.c_str());
 		return true;
 	}
 	

@@ -1,6 +1,8 @@
 #include "FateSuit.h"
 #include "../IO/Output.h"
 
+FateSuit *FateSuit::instance = new FateSuit();
+
 void FateSuit::show()
 {
 	Fate* card = nullptr;

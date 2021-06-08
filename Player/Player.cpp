@@ -57,7 +57,7 @@ void Player::broke()
 		for(int i = 0;i < grounds.size();i++)
 		{
 			temp = grounds[i];
-			operation.push_back(getName() + "(The  price is: " + to_string(i->getPrice()) + " yuan)");
+			operation.push_back(getName() + "(The  price is: " + to_string(temp->getPrice()) + " yuan)");
 			serverText = serverText + to_string(i) + "\n";
 		}
 
