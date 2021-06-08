@@ -18,6 +18,7 @@
     <ClCompile Include="Ground\Country.cpp" />
     <ClCompile Include="Ground\Arrest.cpp" />
     <ClCompile Include="Financial\Stock.cpp" />
+    <ClCompile Include="Ground\init.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
