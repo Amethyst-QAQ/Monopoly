@@ -3,8 +3,8 @@
 
 #include<ctime>
 #include<stdlib.h>
-#include "../Player/Menu.h"
-#include "../Player/Output.h"
+#include "../IO/Menu.h"
+#include "../IO/Output.h"
 #include "../Player/Player.h"
 extern Player* players;
 
