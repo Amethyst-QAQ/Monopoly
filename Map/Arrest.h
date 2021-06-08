@@ -2,6 +2,7 @@
 #define ARREST_H
 
 #include "Ground.h"
+#include "../Player/Player.h"
 
 class Player;
 
