@@ -9,11 +9,11 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="IO\Menu.cpp" />
     <ClCompile Include="IO\Output.cpp" />
+    <ClCompile Include="Map\Country.cpp" />
     <ClCompile Include="Map\Ground.cpp" />
     <ClCompile Include="Map\GroundWithPrice.cpp" />
     <ClCompile Include="Map\Map.cpp" />
     <ClCompile Include="Player\Player.cpp" />
-    <ClCompile Include="Map\Country.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
@@ -29,21 +29,20 @@
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />
     <ClInclude Include="CardsDrawing\Fate.h" />
+    <ClInclude Include="Map\Arrest.h" />
+    <ClInclude Include="Map\ChanceGround.h" />
+    <ClInclude Include="Map\FateGround.h" />
+    <ClInclude Include="Map\Country.h" />
     <ClInclude Include="Map\Ground.h" />
     <ClInclude Include="Map\GroundWithPrice.h" />
     <ClInclude Include="Map\Map.h" />
+    <ClInclude Include="Map\Prison.h" />
     <ClInclude Include="Player\Dice.h" />
     <ClInclude Include="IO\Menu.h" />
     <ClInclude Include="IO\Output.h" />
     <ClInclude Include="Player\Player.h" />
-    <ClInclude Include="Map\ChanceGround.h" />
-    <ClInclude Include="Map\FateGround.h" />
-    <ClInclude Include="Map\Ground.h" />
-    <ClInclude Include="Map\GroundWithPrice.h" />
-    <ClInclude Include="Map\Map.h" />
-    <ClInclude Include="Map\Country.h" />
-    <ClInclude Include="Map\Arrest.h" />
-    <ClInclude Include="Map\Prison.h" />
+    <ClInclude Include="CardsDrawing\ChanceSuit\Chance_2.h" />
+    <ClInclude Include="CardsDrawing\ChanceSuit\Chance_3.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />

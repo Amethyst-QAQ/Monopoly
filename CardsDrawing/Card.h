@@ -12,14 +12,12 @@ class Card
 private:
 	std::string name;
 	int val;
-	int num;
 
 public:
 	Card(std::string _name, 
 		 int _val, 
 		 int _num) : name(_name), 
-					 val(_val), 
-					 num(_num) {}
+					 val(_val), {}
 
 	int getVal() { return val; }
 	std::string getName() { return name; }
