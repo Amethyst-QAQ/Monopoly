@@ -12,7 +12,11 @@ private:
 	int prison;
 public:
 	Arrest(int _prison) : Ground("Arrest"), prison(_prison) {}
-	void onStepped(Player* player) { player->setPosition(prison); }
+	void onStepped(Player* player)
+	{
+		player->setPosition(prison); 
+		player->setProperty("Pause", 1);
+	}
 };
 
 #endif // !ARREST_H

@@ -10,7 +10,6 @@ class Prison : public Ground
 {
 public:
 	Prison() : Ground("Prison") {}
-	void onStepped(Player* player) { player->setProperty("Pause",1); }
 };
 
 #endif

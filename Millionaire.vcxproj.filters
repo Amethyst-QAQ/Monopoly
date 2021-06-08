@@ -6,7 +6,6 @@
     <ClCompile Include="CardsDrawing\FateSuit.cpp" />
     <ClCompile Include="Financial\Insurance.cpp" />
     <ClCompile Include="Financial\Stock.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="IO\Menu.cpp" />
     <ClCompile Include="IO\Output.cpp" />
     <ClCompile Include="Map\Country.cpp" />
@@ -18,6 +17,8 @@
     <ClCompile Include="Core\GameLogic.cpp" />
     <ClCompile Include="CardsDrawing\ChanceSuit\Chance_4.h" />
     <ClCompile Include="CardsDrawing\ChanceSuit\Chance_5.h" />
+    <ClCompile Include="Map\Beginning.cpp" />
+    <ClCompile Include="Core\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
@@ -62,6 +63,7 @@
     <ClInclude Include="CardsDrawing\ChanceSuit\Chance_8.h" />
     <ClInclude Include="CardsDrawing\ChanceSuit\Chance_9.h" />
     <ClInclude Include="CardsDrawing\ChanceSuit\Chance_10.h" />
+    <ClInclude Include="Map\Beginning.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />
