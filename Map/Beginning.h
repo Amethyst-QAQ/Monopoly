@@ -2,6 +2,7 @@
 #define MAP_BEGINNING_H
 
 #include "Ground.h"
+#include "../IO/Output.h"
 
 class Beginning : public Ground
 {

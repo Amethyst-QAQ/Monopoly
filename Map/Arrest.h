@@ -19,7 +19,7 @@ public:
 		Output::instance->print("Name: Arrest Ground", "show_name_Arrest");
 	}
 
-	void onStepped(Player* player)
+	bool onStepped(Player* player)
 	{
 		if (Ground::onStepped(player))
 			return true;

@@ -17,6 +17,7 @@
     <ClCompile Include="CardsDrawing\ChanceSuit\Chance_5.h" />
     <ClCompile Include="Map\Beginning.cpp" />
     <ClCompile Include="Core\main.cpp" />
+    <ClCompile Include="Map\PowerStation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
@@ -60,6 +61,7 @@
     <ClInclude Include="CardsDrawing\ChanceSuit\Chance_9.h" />
     <ClInclude Include="CardsDrawing\ChanceSuit\Chance_10.h" />
     <ClInclude Include="Map\Beginning.h" />
+    <ClInclude Include="Map\PowerStation.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />
