@@ -1,4 +1,4 @@
-#include "Core/GameLogic.h"
+#include "GameLogic.h"
 #include <string>
 
 bool isServer = false;
