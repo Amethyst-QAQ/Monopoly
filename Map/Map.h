@@ -2,6 +2,7 @@
 #define MAP_MAP_H
 
 #include <vector>
+#include <map>
 
 class Ground;
 class Player;
@@ -25,6 +26,7 @@ class Map
 private:
 	MapNode *beginning;
 	std::vector<MapNode *> allNodes;
+	std::map<int, int> countryAmounts;
 public:
 	Map(std::vector<Ground *> allGrounds);
 	~Map();
@@ -33,6 +35,7 @@ public:
 	Ground *getGround(int position);
 	Ground *findGround(int position, int distance);
 	int getSize() { return allNodes.size(); }
+	int getCountryAmount(int color);
 	static Map *instance;
 };
 

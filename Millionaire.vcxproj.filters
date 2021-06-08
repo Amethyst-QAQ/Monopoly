@@ -13,6 +13,7 @@
     <ClCompile Include="Map\GroundWithPrice.cpp" />
     <ClCompile Include="Map\Map.cpp" />
     <ClCompile Include="Player\Player.cpp" />
+    <ClCompile Include="Map\Country.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
@@ -37,6 +38,10 @@
     <ClInclude Include="Player\Player.h" />
     <ClInclude Include="Map\ChanceGround.h" />
     <ClInclude Include="Map\FateGround.h" />
+    <ClInclude Include="Map\Ground.h" />
+    <ClInclude Include="Map\GroundWithPrice.h" />
+    <ClInclude Include="Map\Map.h" />
+    <ClInclude Include="Map\Country.h" />
     <ClInclude Include="Map\Arrest.h" />
     <ClInclude Include="Map\Prison.h" />
   </ItemGroup>
