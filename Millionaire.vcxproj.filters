@@ -18,6 +18,9 @@
     <ClCompile Include="Map\PowerStation.cpp" />
     <ClCompile Include="IO\Menu.cpp" />
     <ClCompile Include="IO\Output.cpp" />
+    <ClCompile Include="Map\Ground.cpp" />
+    <ClCompile Include="Map\GroundWithPrice.cpp" />
+    <ClCompile Include="Map\Map.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
@@ -35,23 +38,11 @@
     <ClInclude Include="Player\Player.h" />
     <ClInclude Include="Player\Dice.h" />
     <ClInclude Include="Financial\Stock.h" />
-    <ClInclude Include="Map\Arrest.h" />
-    <ClInclude Include="Map\Beginning.h" />
-    <ClInclude Include="Map\Car.h" />
-    <ClInclude Include="Map\ChanceGround.h" />
-    <ClInclude Include="Map\Country.h" />
-    <ClInclude Include="Map\FateGround.h" />
-    <ClInclude Include="Map\Ground.h" />
-    <ClInclude Include="Map\GroundWithPrice.h" />
-    <ClInclude Include="Map\InitGrounds.h" />
-    <ClInclude Include="Map\Map.h" />
-    <ClInclude Include="Map\Plane.h" />
-    <ClInclude Include="Map\PowerStation.h" />
-    <ClInclude Include="Map\Prison.h" />
-    <ClInclude Include="Map\Train.h" />
-    <ClInclude Include="Map\Transportation.h" />
     <ClInclude Include="IO\Menu.h" />
     <ClInclude Include="IO\Output.h" />
+    <ClInclude Include="Map\Ground.h" />
+    <ClInclude Include="Map\GroundWithPrice.h" />
+    <ClInclude Include="Map\Map.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />
