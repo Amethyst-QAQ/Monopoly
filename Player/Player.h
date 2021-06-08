@@ -18,14 +18,14 @@ public:
 	std::string getName() { return name; }
 	int getMoney() { return money; }
 	int getPosition() { return position; }
-	int getProperty(const std::string &name) { return properties[name]; }
+	int getProperty(const std::string &name);
 
 	void setName(const std::string &name) { this->name = name; }
 	void setMoney(int money)
 	{
 		this->money = money;
 		if (money < 0)
-			broke;
+			broke();
 	}
 	void setPosition(int position) { this->position = position; }
 	void setProperty(const std::string &name, int value) { properties[name] = value; }

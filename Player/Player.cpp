@@ -1,47 +1,56 @@
 #include "Player.h"
 
+#include "../IO/Menu.h"
+#include "../IO/Output.h"
+#include "../Map/Map.h"
+#include "../Map/GroundWithPrice.h"
+
 using namespace std;
 
-void Player::setMoney(int _money)
+int Player::getProperty(const std::string &name)
 {
-	if (_money < 0)
-		broke();
-	else
-		money = _money;
-}
-
-void Player::buyStock(int sum, float price)
-{
-	price = price * sum;
-	if (money >= price)
-	{
-		stockNum += sum;
-		money -= price;
-	}
-	else broke();
-}
-
-void Player::sellStock(int sum, float price)
-{
-	stockNum -= sum;		//个人持股数减少
-	money += (sum * price);	//个人钱数增加
-}
-
-void Player::show()
-{
-	std::string mainText;
-	std::string serveText;
-	
-	//未完待续 … …
+	auto iter = properties.find(name);
+	if (iter != properties.end())
+		return (*iter).second;
+	return 0;
 }
 
 void Player::broke()
 {
-	std::string mainText = "You don't have enough money.Do you want to pledge one of your countries or a power station？";
-	std::string serveText = "broke";
-	std::vector<std::string> operation = { "One of my countries.", "A power station." };
+	int size = Map::instance->getSize();
 
-	Menu menu(mainText, operation, serveText);
-	int n = menu.exec();
-	//未完待续 … …
+	vector<GroundWithPrice *> grounds;
+
+	for (int i = 0; i < size; i++)
+	{
+		GroundWithPrice *temp = dynamic_cast<GroundWithPrice *>(Map::instance->getGround(i));
+		if (temp && temp->getOwner() == this)
+			grounds.push_back(temp);
+	}
+
+	int priceSum = 0;
+
+	for (GroundWithPrice *i : grounds)
+		priceSum += i->getPrice() / 2;
+
+	if (priceSum + money < 0)
+	{
+		Output::instance->print(
+			"Player " + name + "Failed.",
+			"fail(" + name + ")"
+		);
+
+		for (GroundWithPrice *i : grounds)
+			i->setOwner(nullptr);
+
+		setProperty("failed", 1);
+		return;
+	}
+
+	while (money < 0)
+	{
+		//选择要抵押的地
+		//在客户端输出名字
+		//在服务端输出序号
+	}
 }

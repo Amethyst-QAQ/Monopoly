@@ -150,26 +150,26 @@
     <ClInclude Include="Event\Listener.h" />
     <ClInclude Include="Financial\Insurance.h" />
     <ClInclude Include="Financial\Stock.h" />
-    <ClInclude Include="Ground\Arrest.h" />
+    <ClInclude Include="Map\Arrest.h" />
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />
-    <ClInclude Include="Ground\Beginning.h" />
-    <ClInclude Include="Ground\Car.h" />
-    <ClInclude Include="Ground\ChanceGround.h" />
-    <ClInclude Include="Ground\Country.h" />
+    <ClInclude Include="Map\Beginning.h" />
+    <ClInclude Include="Map\Car.h" />
+    <ClInclude Include="Map\ChanceGround.h" />
+    <ClInclude Include="Map\Country.h" />
     <ClInclude Include="CardsDrawing\Fate.h" />
-    <ClInclude Include="Ground\FateGround.h" />
-    <ClInclude Include="Ground\GroundWithPrice.h" />
-    <ClInclude Include="Ground\InitGrounds.h" />
-    <ClInclude Include="Ground\Map.h" />
-    <ClInclude Include="Ground\Plane.h" />
-    <ClInclude Include="Ground\PowerStation.h" />
-    <ClInclude Include="Ground\Prison.h" />
-    <ClInclude Include="Ground\Train.h" />
-    <ClInclude Include="Ground\Transportation.h" />
+    <ClInclude Include="Map\FateGround.h" />
+    <ClInclude Include="Map\GroundWithPrice.h" />
+    <ClInclude Include="Map\InitGrounds.h" />
+    <ClInclude Include="Map\Map.h" />
+    <ClInclude Include="Map\Plane.h" />
+    <ClInclude Include="Map\PowerStation.h" />
+    <ClInclude Include="Map\Prison.h" />
+    <ClInclude Include="Map\Train.h" />
+    <ClInclude Include="Map\Transportation.h" />
     <ClInclude Include="Player\Dice.h" />
-    <ClInclude Include="Player\Menu.h" />
-    <ClInclude Include="Player\Output.h" />
+    <ClInclude Include="IO\Menu.h" />
+    <ClInclude Include="IO\Output.h" />
     <ClInclude Include="Player\Player.h" />
   </ItemGroup>
   <ItemGroup>
@@ -179,21 +179,21 @@
     <ClCompile Include="CardsDrawing\FateSuit.cpp" />
     <ClCompile Include="Financial\Insurance.cpp" />
     <ClCompile Include="Financial\Stock.cpp" />
-    <ClCompile Include="Ground\Arrest.cpp" />
-    <ClCompile Include="Ground\ChanceGround.cpp" />
-    <ClCompile Include="Ground\FateGround.cpp" />
-    <ClCompile Include="Ground\GroundWithPrice.cpp" />
-    <ClCompile Include="Ground\init.cpp" />
-    <ClCompile Include="Ground\Map.cpp" />
-    <ClCompile Include="Ground\PowerStation.cpp" />
+    <ClCompile Include="Map\Arrest.cpp" />
+    <ClCompile Include="Map\ChanceGround.cpp" />
+    <ClCompile Include="Map\FateGround.cpp" />
+    <ClCompile Include="Map\GroundWithPrice.cpp" />
+    <ClCompile Include="Map\init.cpp" />
+    <ClCompile Include="Map\Map.cpp" />
+    <ClCompile Include="Map\PowerStation.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Player\Menu.cpp" />
-    <ClCompile Include="Player\Output.cpp" />
+    <ClCompile Include="IO\Menu.cpp" />
+    <ClCompile Include="IO\Output.cpp" />
     <ClCompile Include="Player\Player.cpp" />
-    <ClInclude Include="Ground\Ground.h" />
+    <ClInclude Include="Map\Ground.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ground\Country.cpp" />
+    <ClCompile Include="Map\Country.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />
