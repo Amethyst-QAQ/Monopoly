@@ -6,20 +6,23 @@
 #include "CardsSuit.h"
 #include "../Player/Player.h"
 
-extern Player* players;
+/**
+* @brief 命运牌库类，用于命运格子抽卡和输出牌库信息
+* draw()函数用于抽卡，可以根据玩家的幸运值进行自动抽卡并执行相关操作
+* show()函数用于输出牌库中含有的牌数和每张牌的信息
+* add()函数用于向牌库中添加牌
+*/
 
-//命运牌库
 class FateSuit : public CardsSuit
 {
 private:
-	Fate* card;
 	std::list<Fate> suit;
 
 public:
-	void show ();				//输出牌库
-	Fate* draw(int player);		//抽卡函数
-
-	void add(Fate* ChanceCard) { suit.push_back(*card); }	//向牌库中添加牌
+	static Output* instance;
+	void show ();
+	void draw(Player* player);
+	void add(Fate* ChanceCard) { suit.push_back(*ChanceCard); }
 };
 
 #endif // !CARDSDRAWING_FATESUIT_H
