@@ -18,7 +18,6 @@
     <ClCompile Include="Financial\Stock.cpp" />
     <ClCompile Include="Ground\init.cpp" />
     <ClCompile Include="CardsDrawing\ChanceSuit.cpp" />
-    <ClCompile Include="CardsDrawing\CardsSuit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
