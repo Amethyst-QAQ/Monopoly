@@ -66,8 +66,11 @@ void Country::buy(Player *player)
     player->setProperty("country" + to_string(color), player->getProperty("country" + to_string(color)) + 1);
 }
 
-void Country::onStepped(Player *player)
+bool Country::onStepped(Player *player)
 {
+    if (GroundWithPrice::onStepped(player))
+        return true;
+
     if (owner == player && houseNum < 5)
     {
         string mainText = "The ground is yours.";
@@ -88,9 +91,7 @@ void Country::onStepped(Player *player)
             build(player);
             break;
         case 2:
-            GroundWithPrice::onStepped(player);
-            return;
+            return true;
         }
     }
-    GroundWithPrice::onStepped(player);
 }
