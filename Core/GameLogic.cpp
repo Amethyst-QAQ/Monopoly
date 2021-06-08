@@ -191,7 +191,7 @@ bool GameLogic::round()
 				{
 					players[i].setProperty("Pause", players[i].getProperty("Pause") - 1);
 					Output::instance->print(
-						"You are in prison. Please wait for " + to_string(players[i].getProperty("Pause") + 1) + "rounds.",
+						"You are in prison. Please wait for " + to_string(players[i].getProperty("Pause") + 1) + " rounds.",
 						"pause(" + to_string(players[i].getProperty("Pause") + 1) + ")"
 					);
 				}
