@@ -13,6 +13,7 @@
     <ClCompile Include="Map\Ground.cpp" />
     <ClCompile Include="Map\GroundWithPrice.cpp" />
     <ClCompile Include="Map\Map.cpp" />
+    <ClCompile Include="Map\Country.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
@@ -36,6 +37,7 @@
     <ClInclude Include="Map\Ground.h" />
     <ClInclude Include="Map\GroundWithPrice.h" />
     <ClInclude Include="Map\Map.h" />
+    <ClInclude Include="Map\Country.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />
