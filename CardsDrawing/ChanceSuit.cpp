@@ -11,12 +11,11 @@ void ChanceSuit::show()
 	}
 }
 
-Chance* ChanceSuit::draw(int player)
+Chance* ChanceSuit::draw(Player *player)
 {
-	Player& p = players[player];
 	Chance* card = nullptr;          //用来找卡的指针
 	srand((unsigned int)time(NULL)); //根据系统时间生成随机数
-	if (p.getLuck() >= 0.6 && p.getLuck() <= 1)
+	if (player->getLuck() >= 0.6 && player->getLuck() <= 1)
 	{
 		int n = rand() % 9;	//n表示卡的等级
 		switch (n)

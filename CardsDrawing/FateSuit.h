@@ -6,8 +6,6 @@
 #include "CardsSuit.h"
 #include "../Player/Player.h"
 
-extern Player* players;
-
 //ÃüÔËÅÆ¿â
 class FateSuit : public CardsSuit
 {
@@ -16,9 +14,9 @@ private:
 	std::list<Fate> suit;
 
 public:
+	static Output* instance;
 	void show ();				//Êä³öÅÆ¿â
-	Fate* draw(int player);		//³é¿¨º¯Êı
-
+	Fate* draw(Player* player);		//³é¿¨º¯Êı
 	void add(Fate* ChanceCard) { suit.push_back(*card); }	//ÏòÅÆ¿âÖĞÌí¼ÓÅÆ
 };
 
