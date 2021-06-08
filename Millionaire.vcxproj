@@ -152,11 +152,13 @@
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />
     <ClInclude Include="CardsDrawing\Fate.h" />
+    <ClInclude Include="Map\Arrest.h" />
     <ClInclude Include="Map\ChanceGround.h" />
     <ClInclude Include="Map\FateGround.h" />
     <ClInclude Include="Map\Ground.h" />
     <ClInclude Include="Map\GroundWithPrice.h" />
     <ClInclude Include="Map\Map.h" />
+    <ClInclude Include="Map\Prison.h" />
     <ClInclude Include="Player\Dice.h" />
     <ClInclude Include="IO\Menu.h" />
     <ClInclude Include="IO\Output.h" />
