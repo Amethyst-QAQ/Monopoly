@@ -93,7 +93,6 @@ void Stock::sellStock(Player* player)
 
 		Output::instance->print(mainText, serverText);
 
-		scanf("%d", &n);
 
 		sum = player->getProperty("Stock");//获取现有股数
 
@@ -103,7 +102,7 @@ void Stock::sellStock(Player* player)
 			serverText = "Wrong_amount";
 
 			Output::instance->print(mainText, serverText);
-			scanf("%d", &n);
+			//scanf("%d", &n);
 		}
 
 		mainText = "Successfully sold " + to_string(n) + " shares!";
@@ -126,7 +125,7 @@ void Stock::sellStock(Player* player)
 		serverText = "set_sell_price";
 
 		Output::instance->print(mainText, serverText);
-		scanf("%d", &n);
+		//scanf("%d", &n);
 
 		while (n > 1.1 * actualPrice || n < 0.9 * actualPrice)
 		{
