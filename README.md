@@ -59,3 +59,4 @@ Team Work of the game "Millionaire"
 * Output class to realize the output menu (Amethyst)
 
 ### Visual Implementation (Amethyst)
+

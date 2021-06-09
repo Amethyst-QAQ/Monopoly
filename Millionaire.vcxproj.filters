@@ -18,6 +18,7 @@
     <ClCompile Include="Map\Beginning.cpp" />
     <ClCompile Include="Core\main.cpp" />
     <ClCompile Include="Map\PowerStation.cpp" />
+    <ClCompile Include="Financial\Stock.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
@@ -62,6 +63,9 @@
     <ClInclude Include="CardsDrawing\ChanceSuit\Chance_10.h" />
     <ClInclude Include="Map\Beginning.h" />
     <ClInclude Include="Map\PowerStation.h" />
+    <ClInclude Include="Financial\Insurance.cpp" />
+    <ClInclude Include="Financial\Insurance.h" />
+    <ClInclude Include="Financial\Stock.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />

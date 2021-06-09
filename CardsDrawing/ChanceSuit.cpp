@@ -71,7 +71,7 @@ void ChanceSuit::draw(Player *player)
 			m %= 8;			//等级为3和4的卡牌共有8张
 			break;
 		case 5:
-			m %= 3;			//等级为5的卡牌共有5张
+			m %= 3;			//等级为5的卡牌共有5
 		}
 
 	auto i = suit.begin();

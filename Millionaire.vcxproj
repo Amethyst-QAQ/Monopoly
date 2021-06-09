@@ -158,6 +158,9 @@
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />
     <ClInclude Include="CardsDrawing\Fate.h" />
+    <ClInclude Include="Financial\Insurance.cpp" />
+    <ClInclude Include="Financial\Insurance.h" />
+    <ClInclude Include="Financial\Stock.h" />
     <ClInclude Include="Map\AllGrounds.h" />
     <ClInclude Include="Map\Arrest.h" />
     <ClInclude Include="Map\Beginning.h" />
@@ -182,6 +185,7 @@
     <ClCompile Include="CardsDrawing\FateSuit.cpp" />
     <ClCompile Include="Core\GameLogic.cpp" />
     <ClCompile Include="Core\main.cpp" />
+    <ClCompile Include="Financial\Stock.cpp" />
     <ClCompile Include="IO\Menu.cpp" />
     <ClCompile Include="IO\Output.cpp" />
     <ClCompile Include="Map\Beginning.cpp" />
