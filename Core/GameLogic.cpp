@@ -7,6 +7,8 @@
 #include "../IO/Menu.h"
 #include "../IO/Output.h"
 #include "../CardsDrawing/FateSuit/Fate_1.h"
+#include "../Event/EventHandler.h"
+#include "../Event/Events/AllEvents.h"
 
 #include"../CardsDrawing/ChanceSuit/Chance_1.h"
 #include"../CardsDrawing/ChanceSuit/Chance_2.h"
@@ -56,18 +58,18 @@ void GameLogic::initMap()
 	Arrest* arrest = new Arrest(23);
 	Country* country;
 
-	country = new Country("China", 2000, 1);                      //中国
+	country = new Country("China", 2000, 1);                  //中国
 	mapVector.push_back(country);
-	country = new Country("Japan", 1400, 2);                        //日本
+	country = new Country("Japan", 1400, 2);                  //日本
 	mapVector.push_back(country);
 	country = new Country("South Korea", 1600, 3);            //韩国
 	mapVector.push_back(country);
-	country = new Country("Syria", 600, 4);                         //叙利亚
+	country = new Country("Syria", 600, 4);                   //叙利亚
 	mapVector.push_back(country);
 	//mapVector.push_back(new PowerStation(0));
-	country = new Country("Pakistan", 800, 5);                   //巴基斯坦
+	country = new Country("Pakistan", 800, 5);                //巴基斯坦
 	mapVector.push_back(country);
-	country = new Country("Maldives", 1600, 6);                 //马尔代夫
+	country = new Country("Maldives", 1600, 6);               //马尔代夫
 	mapVector.push_back(country);
 	country = new Country("Philippines", 1400, 7);            //菲律宾
 	mapVector.push_back(country);
@@ -156,6 +158,13 @@ void GameLogic::startGame()
 	initMap();
 	initFateSuit();
 	initChanceSuit();
+
+	vector<string> playerNames;
+	for (int i = 0; i < playerAmount; i++)
+		playerNames.push_back(players[i].getName());
+
+	EMIT_EVENT(GameStartEvent, new GameStartEvent(playerNames), 1);
+
 	Output::instance->print(
 		"Game Starts",
 		"game_start"
@@ -251,4 +260,5 @@ void GameLogic::cleanup()
 	delete FateSuit::instance;
 	delete ChanceSuit::instance;
 	delete Output::instance;
+	delete EventHandler::instance;
 }

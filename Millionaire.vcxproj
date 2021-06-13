@@ -24,6 +24,7 @@
     <ProjectGuid>{81d1d3bc-abbf-4890-9f62-042324151eaa}</ProjectGuid>
     <RootNamespace>Millionaire</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Monopoly</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -154,10 +155,16 @@
     <ClInclude Include="Core\GameLogic.h" />
     <ClInclude Include="Event\Event.h" />
     <ClInclude Include="Event\EventHandler.h" />
+    <ClInclude Include="Event\EventHandlerTest.h" />
+    <ClInclude Include="Event\Events\AllEvents.h" />
+    <ClInclude Include="Event\Events\GameStartEvent.h" />
     <ClInclude Include="Event\Listener.h" />
     <ClInclude Include="CardsDrawing\Card.h" />
     <ClInclude Include="CardsDrawing\Chance.h" />
     <ClInclude Include="CardsDrawing\Fate.h" />
+    <ClInclude Include="Financial\Insurance.cpp" />
+    <ClInclude Include="Financial\Insurance.h" />
+    <ClInclude Include="Financial\Stock.h" />
     <ClInclude Include="Map\AllGrounds.h" />
     <ClInclude Include="Map\Arrest.h" />
     <ClInclude Include="Map\Beginning.h" />
@@ -182,6 +189,9 @@
     <ClCompile Include="CardsDrawing\FateSuit.cpp" />
     <ClCompile Include="Core\GameLogic.cpp" />
     <ClCompile Include="Core\main.cpp" />
+    <ClCompile Include="Event\EventHandler.cpp" />
+    <ClCompile Include="Event\EventHandlerTest.cpp" />
+    <ClCompile Include="Financial\Stock.cpp" />
     <ClCompile Include="IO\Menu.cpp" />
     <ClCompile Include="IO\Output.cpp" />
     <ClCompile Include="Map\Beginning.cpp" />

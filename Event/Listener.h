@@ -1,6 +1,8 @@
 #ifndef EVENT_LISTENER_H
 #define EVENT_LISTENER_H
 
+#include "EventHandler.h"
+
 #include <string>
 
 /**
@@ -43,7 +45,7 @@ class TypeListener : public Listener
 private:
 	void (*onEvent)(T* event);
 	friend class EventHandler;
-	void onEventEmitted(void* event) { onEvent(dynamic_cast<T*>(event)); }
+	void onEventEmitted(void* event) { onEvent((T*)(event)); }
 public:
 	/// 不要手动调用此函数
 	TypeListener(void (*_onEvent)(T *event), const std::string& _typeName, int priority) : 
