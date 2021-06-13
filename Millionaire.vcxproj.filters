@@ -18,9 +18,8 @@
     <ClCompile Include="Map\Beginning.cpp" />
     <ClCompile Include="Core\main.cpp" />
     <ClCompile Include="Map\PowerStation.cpp" />
-    <ClCompile Include="Financial\Stock.cpp" />
     <ClCompile Include="Event\EventHandler.cpp" />
-    <ClCompile Include="Financial\StockListeners.cpp" />
+    <ClCompile Include="Map\BonusGround.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
@@ -65,16 +64,18 @@
     <ClInclude Include="CardsDrawing\ChanceSuit\Chance_10.h" />
     <ClInclude Include="Map\Beginning.h" />
     <ClInclude Include="Map\PowerStation.h" />
-    <ClInclude Include="Financial\Insurance.cpp" />
-    <ClInclude Include="Financial\Insurance.h" />
-    <ClInclude Include="Financial\Stock.h" />
     <ClInclude Include="Event\Events\GameStartEvent.h" />
     <ClInclude Include="Event\Events\AllEvents.h" />
     <ClInclude Include="Event\Events\InitMenuEvent.h" />
-    <ClInclude Include="Financial\StockListeners.h" />
     <ClInclude Include="Event\Events\RoundEvent.h" />
+    <ClInclude Include="Map\BonusGround.h" />
+    <ClInclude Include="CardsDrawing\ChanceSuit\AllChance.h" />
+    <ClInclude Include="CardsDrawing\FateSuit\AllFate.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="dlls\test.txt" />
   </ItemGroup>
 </Project>

@@ -22,7 +22,7 @@ public:
 
 	void build(Player *player);
 
-	virtual void buy(Player *player);
+	virtual bool buy(Player *player);
 	virtual bool onStepped(Player *player);
 };
 

@@ -10,11 +10,6 @@ class Prison : public Ground
 {
 public:
 	Prison() : Ground("Prison") {}
-	void show()
-	{
-		Ground::show();
-		Output::instance->print("Name: Prison Ground", "show_name_Prison");
-	}
 };
 
 #endif

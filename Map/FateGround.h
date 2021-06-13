@@ -15,11 +15,6 @@ public:
 		FateSuit::instance->draw(player); 
 		return true;
 	}
-	void show()
-	{
-		Ground::show();
-		Output::instance->print("Name: Fate Ground", "show_name_Fate");
-	}
 };
 
 #endif

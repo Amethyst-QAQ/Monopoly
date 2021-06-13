@@ -32,11 +32,11 @@ void Country::show()
     string serverText;
 
     mainText = "Color: " + to_string(color);
-    serverText = "show_color (" + getName() + ")";
+    serverText = "show_color (" + to_string(color) + ")";
     Output::instance->print(mainText, serverText);
 
     mainText = "House Number: " + to_string(houseNum);
-    serverText = "show_house_num (" + getName() + ")";
+    serverText = "show_house_num (" + to_string(houseNum) + ")";
     Output::instance->print(mainText, serverText);
 }
 
@@ -75,10 +75,14 @@ void Country::build(Player *player)
     );
 }
 
-void Country::buy(Player *player)
+bool Country::buy(Player *player)
 {
-    GroundWithPrice::buy(player);
-    player->setProperty("country" + to_string(color), player->getProperty("country" + to_string(color)) + 1);
+    if (GroundWithPrice::buy(player))
+    {
+        player->setProperty("country" + to_string(color), player->getProperty("country" + to_string(color)) + 1);
+        return true;
+    }
+    return false;
 }
 
 bool Country::onStepped(Player *player)

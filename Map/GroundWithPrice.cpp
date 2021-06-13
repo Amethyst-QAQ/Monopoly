@@ -7,30 +7,33 @@ using namespace std;
 
 void GroundWithPrice::show()
 {
+	Ground::show();
 	string mainText;
 	string serverText;
 
-	mainText = "Name: " + getName();
-	serverText = "show_name (" + getName() + ")";
-	Output::instance->print(mainText, serverText);
-
 	mainText = "Price: " + to_string(price);
-	serverText = "show_price (" + getName() + ")";
+	serverText = "show_price (" + to_string(price) + ")";
 	Output::instance->print(mainText, serverText);
 
 	if (owner != nullptr)
+	{
 		mainText = "Owner: " + owner->getName();
+		serverText = "show_owner (" + owner->getName() + ")";
+	}
 	else
+	{
 		mainText = "Owner: Bank";
-	serverText = "show_owner (" + getName() + ")";
+		serverText = "show_owner (_@$bank*#_)";
+	}
+	
 	Output::instance->print(mainText, serverText);
 
 	mainText = "Pledge: " + to_string(pledge);
-	serverText = "show_pledge (" + getName() + ")";
+	serverText = "show_pledge (" + to_string(pledge) + ")";
 	Output::instance->print(mainText, serverText);
 }
 
-void GroundWithPrice::buy(Player *player)
+bool GroundWithPrice::buy(Player *player)
 {
 	int money = player->getMoney();
 	if (money < price)
@@ -39,7 +42,7 @@ void GroundWithPrice::buy(Player *player)
 			"You don't have enough money to buy this ground.",
 			"insufficient_money"
 		);
-		return;
+		return false;
 	}
 	money -= price;
 	player->setMoney(money);
@@ -48,15 +51,19 @@ void GroundWithPrice::buy(Player *player)
 		"Successfully bought!",
 		"success"
 	);
+	return true;
 }
 
-void GroundWithPrice::pledgeByPlayer(Player *player)
+bool GroundWithPrice::pledgeByPlayer(Player *player)
 {
 	if (pledge)
+	{
 		Output::instance->print(
 			"The ground is already pledged!",
 			"already_pledged"
 		);
+		return false;
+	}
 	else
 	{
 		setPledge(true);
@@ -64,11 +71,12 @@ void GroundWithPrice::pledgeByPlayer(Player *player)
 		string mainText = "You have successfully pledged the country.";
 		string serverText = "successful_pledged";
 		Output::instance->print(mainText, serverText);
+		return true;
 	}
 
 }
 
-void GroundWithPrice::redeem(Player *player)
+bool GroundWithPrice::redeem(Player *player)
 {
 	int money = player->getMoney();
 	if (money < price)
@@ -77,11 +85,12 @@ void GroundWithPrice::redeem(Player *player)
 			"You don't have enough money to redeem this ground.",
 			"insufficient_money"
 		);
-		return;
+		return false;
 	}
 	money -= price;
 	player->setMoney(money);
 	setPledge(false);
+	return true;
 }
 
 bool GroundWithPrice::onStepped(Player *player)

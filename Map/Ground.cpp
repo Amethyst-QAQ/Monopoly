@@ -4,6 +4,16 @@
 
 using namespace std;
 
+void Ground::show()
+{
+	string mainText;
+	string serverText;
+
+	mainText = "Name: " + getName();
+	serverText = "show_name (" + getName() + ")";
+	Output::instance->print(mainText, serverText);
+}
+
 bool Ground::onStepped(Player *player)
 {
 	Output::instance->print(

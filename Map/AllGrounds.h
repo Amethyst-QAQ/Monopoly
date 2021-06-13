@@ -4,3 +4,5 @@
 #include "Arrest.h"
 #include "Prison.h"
 #include "Beginning.h"
+#include "BonusGround.h"
+#include "PowerStation.h"

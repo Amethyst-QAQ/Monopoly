@@ -13,12 +13,6 @@ private:
 public:
 	Arrest(int _prison) : Ground("Arrest"), prison(_prison) {}
 
-	void show()
-	{ 
-		Ground::show();
-		Output::instance->print("Name: Arrest Ground", "show_name_Arrest");
-	}
-
 	bool onStepped(Player* player)
 	{
 		if (Ground::onStepped(player))

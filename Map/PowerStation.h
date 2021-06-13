@@ -5,18 +5,18 @@
 #include "../Player/Player.h"
 #include "../IO/Output.h"
 
+
+
 class PowerStation : public GroundWithPrice
 {
 public:
 	PowerStation(const std::string& name, int price) : GroundWithPrice(name, price) {}
 
 	void show() { GroundWithPrice::show(); }
-	virtual int  getToll() { return this->getOwner()->getProperty("powerStation") * 500; }
-	virtual void buy(Player* player)
-	{
-		GroundWithPrice::buy(player);
-		player->setProperty("powerStation", player->getProperty("powerStation") + 1);
-	}
+	virtual int  getToll();
+	virtual bool buy(Player* player);
+	virtual bool pledgeByPlayer(Player* player);
+	virtual bool redeem(Player* player);
 
 	bool onStepped(Player* player);
 };

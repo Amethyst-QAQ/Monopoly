@@ -6,20 +6,10 @@
 #include "../CardsDrawing/ChanceSuit.h"
 #include "../IO/Menu.h"
 #include "../IO/Output.h"
-#include "../CardsDrawing/FateSuit/Fate_1.h"
+#include "../CardsDrawing/FateSuit/AllFate.h"
 #include "../Event/EventHandler.h"
 #include "../Event/Events/AllEvents.h"
-
-#include"../CardsDrawing/ChanceSuit/Chance_1.h"
-#include"../CardsDrawing/ChanceSuit/Chance_2.h"
-#include"../CardsDrawing/ChanceSuit/Chance_3.h"
-#include"../CardsDrawing/ChanceSuit/Chance_4.h"
-#include"../CardsDrawing/ChanceSuit/Chance_5.h"
-#include"../CardsDrawing/ChanceSuit/Chance_6.h"
-#include"../CardsDrawing/ChanceSuit/Chance_7.h"
-#include"../CardsDrawing/ChanceSuit/Chance_8.h"
-#include"../CardsDrawing/ChanceSuit/Chance_9.h"
-#include"../CardsDrawing/ChanceSuit/Chance_10.h"
+#include "../CardsDrawing/ChanceSuit/AllChance.h"
 
 
 #include <iostream>
@@ -60,54 +50,65 @@ void GameLogic::initMap()
 	Arrest* arrest = new Arrest(23);
 	Country* country;
 
-	country = new Country("China", 2000, 1);                  //中国
+	country = new Country("Syria", 600, 1);                   //叙利亚
 	mapVector.push_back(country);
-	country = new Country("Japan", 1400, 2);                  //日本
+	country = new Country("Pakistan", 800, 1);                //巴基斯坦
 	mapVector.push_back(country);
-	country = new Country("South Korea", 1600, 3);            //韩国
+	mapVector.push_back(new BonusGround("Tax", -2000));
+	country = new Country("Maldives", 1600, 2);               //马尔代夫
 	mapVector.push_back(country);
-	country = new Country("Syria", 600, 4);                   //叙利亚
+	country = new Country("Philippines", 1400, 2);            //菲律宾
 	mapVector.push_back(country);
-	//mapVector.push_back(new PowerStation(0));
-	country = new Country("Pakistan", 800, 5);                //巴基斯坦
+	mapVector.push_back(new FateGround);
+	country = new Country("Bangladesh", 1000, 3);              //孟加拉国
 	mapVector.push_back(country);
-	country = new Country("Maldives", 1600, 6);               //马尔代夫
+	country = new Country("India", 800, 3);                         //印度
 	mapVector.push_back(country);
-	country = new Country("Philippines", 1400, 7);            //菲律宾
+	mapVector.push_back(prison);
+	country = new Country("Sri Lanka", 800, 4);                 //斯里兰卡
 	mapVector.push_back(country);
-	mapVector.push_back(new ChanceGround);
-	country = new Country("Bangladesh", 1000, 1);              //孟加拉国
-	mapVector.push_back(country);
-	country = new Country("India", 800, 2);                         //印度
-	mapVector.push_back(country);
-	country = new Country("Sri Lanka", 800, 3);                 //斯里兰卡
-	mapVector.push_back(country);
-	mapVector.push_back(arrest);
-	country = new Country("Saudi Arabia", 2000, 4);         //沙特阿拉伯
+	mapVector.push_back(new PowerStation("Solar Power Station", 300));
+	country = new Country("Saudi Arabia", 2000, 5);         //沙特阿拉伯
 	mapVector.push_back(country);
 	country = new Country("Afghanistan", 800, 5);             //阿富汗
 	mapVector.push_back(country);
-	country = new Country("Israel", 600, 6);                      //以色列
+	country = new Country("Israel", 600, 5);                      //以色列
 	mapVector.push_back(country);
-	country = new Country("Turkey", 1600, 7);                     //土耳其
+	mapVector.push_back(new ChanceGround());
+	country = new Country("Turkey", 1600, 6);                     //土耳其
 	mapVector.push_back(country);
-	//mapVector.push_back(new PowerStation(1));
-	country = new Country("Russia", 1000, 1);                      //俄罗斯
+	country = new Country("Russia", 1000, 6);                      //俄罗斯
 	mapVector.push_back(country);
-	country = new Country("Kazakhstan", 800, 2);              //哈萨克斯坦
+	mapVector.push_back(new Ground("Park"));
+	country = new Country("Kazakhstan", 800, 7);              //哈萨克斯坦
 	mapVector.push_back(country);
-	country = new Country("Vietnam", 800, 3);                    //越南
+	country = new Country("China", 2000, 7);                  //中国
 	mapVector.push_back(country);
-	mapVector.push_back(new FateGround);
-	country = new Country("Cambodia", 400, 4);                   //柬埔寨
+	mapVector.push_back(new PowerStation("Wind Power Station", 500));
+	country = new Country("Japan", 1400, 4);                  //日本
 	mapVector.push_back(country);
-	country = new Country("Thailand", 1400, 5);                 //泰国
+	country = new Country("South Korea", 1600, 4);            //韩国
 	mapVector.push_back(country);
-	mapVector.push_back(prison);
-	country = new Country("Malaysia", 1600, 6);                 //马来西亚
+	country = new Country("Vietnam", 800, 1);                    //越南
 	mapVector.push_back(country);
-	country = new Country("Singapore", 1600, 7);               //新加坡
-	mapVector.push_back(country);                 //印度尼西亚
+	country = new Country("Cambodia", 400, 1);                   //柬埔寨
+	mapVector.push_back(country);
+	country = new Country("Thailand", 1400, 6);                 //泰国
+	mapVector.push_back(arrest);
+	mapVector.push_back(country);
+	country = new Country("Malaysia", 1600, 7);                 //马来西亚
+	mapVector.push_back(country);
+	country = new Country("Singapore", 1600, 3);               //新加坡
+	mapVector.push_back(country);
+	country = new Country("Indonesia", 800, 3);                //印度尼西亚
+	mapVector.push_back(country);
+	mapVector.push_back(new PowerStation("Hydroelectric Power Station", 700));
+	mapVector.push_back(new BonusGround("Treasure", 5000));
+	mapVector.push_back(new ChanceGround());
+	country = new Country("Australia", 1600, 2);                //澳大利亚
+	mapVector.push_back(country);
+	country = new Country("New Zealand", 1200, 2);                //新西兰
+	mapVector.push_back(country);
 
 	Map::instance->initGrounds(mapVector);
 }
