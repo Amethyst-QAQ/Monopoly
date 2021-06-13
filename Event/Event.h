@@ -24,7 +24,7 @@ private:
 protected:
 	std::list<std::string> classType;
 public:
-	virtual void* getObjAddr() = 0;                       ///< 不要手动使用该函数
+	virtual void *getObjAddr() { return nullptr; }        ///< 不要手动使用该函数
 	Event() : classType{}, finished{ false } {}           ///< 不要手动使用该函数
 	~Event() { delete getObjAddr(); }                     ///< 不要手动使用该函数
 };
@@ -51,7 +51,7 @@ public:														               \
 	Event##className() : obj(nullptr) { classType.push_back(#className); } \
 	className* getObj##className() { return obj; }                         \
 	void setObj##className(className* obj) { this->obj = obj; }            \
-	virtual void* getObjAddr(){ return static_cast<void*>(obj); }          \
+	virtual void* getObjAddr(){ return (void*)(obj); }                     \
 }
 
 /**
@@ -81,7 +81,7 @@ public:                                                                         
 		this->obj = obj;                                                                    \
 		setObj##parent(static_cast<parent*>(obj));                                          \
 	}                                                                                       \
-    virtual void* getObjAddr(){ return static_cast<void*>(obj); }                           \
+    virtual void* getObjAddr(){ return (void*)(obj); }                                      \
 }
 
 /**

@@ -155,7 +155,6 @@
     <ClInclude Include="Core\GameLogic.h" />
     <ClInclude Include="Event\Event.h" />
     <ClInclude Include="Event\EventHandler.h" />
-    <ClInclude Include="Event\EventHandlerTest.h" />
     <ClInclude Include="Event\Events\AllEvents.h" />
     <ClInclude Include="Event\Events\GameStartEvent.h" />
     <ClInclude Include="Event\Listener.h" />
@@ -190,7 +189,6 @@
     <ClCompile Include="Core\GameLogic.cpp" />
     <ClCompile Include="Core\main.cpp" />
     <ClCompile Include="Event\EventHandler.cpp" />
-    <ClCompile Include="Event\EventHandlerTest.cpp" />
     <ClCompile Include="Financial\Stock.cpp" />
     <ClCompile Include="IO\Menu.cpp" />
     <ClCompile Include="IO\Output.cpp" />
