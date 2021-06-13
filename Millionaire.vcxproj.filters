@@ -20,6 +20,7 @@
     <ClCompile Include="Map\PowerStation.cpp" />
     <ClCompile Include="Financial\Stock.cpp" />
     <ClCompile Include="Event\EventHandler.cpp" />
+    <ClCompile Include="Financial\StockListeners.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CardsDrawing\CardsSuit.h" />
@@ -69,6 +70,9 @@
     <ClInclude Include="Financial\Stock.h" />
     <ClInclude Include="Event\Events\GameStartEvent.h" />
     <ClInclude Include="Event\Events\AllEvents.h" />
+    <ClInclude Include="Event\Events\InitMenuEvent.h" />
+    <ClInclude Include="Financial\StockListeners.h" />
+    <ClInclude Include="Event\Events\RoundEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Event\README.md" />

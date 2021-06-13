@@ -26,6 +26,8 @@
 
 using namespace std;
 
+GameLogic* GameLogic::instance = nullptr;
+
 void GameLogic::initPlayers()
 {
 	Menu playerAmountMenu(
@@ -149,6 +151,7 @@ void GameLogic::initMainOperations()
 {
 	mainOperations.push_back("Throw dice");
 	mainOperations.push_back("Search information");
+	EMIT_EVENT(InitMenuEvent, new InitMenuEvent(mainOperations), 1);
 }
 
 void GameLogic::startGame()
@@ -191,6 +194,8 @@ bool GameLogic::round()
 		while (true)
 		{
 			int operation = menu.exec();
+
+			EMIT_EVENT(RoundEvent, new RoundEvent(i, operation), 1);
 
 			if(operation == 1)
 			{
@@ -262,3 +267,4 @@ void GameLogic::cleanup()
 	delete Output::instance;
 	delete EventHandler::instance;
 }
+

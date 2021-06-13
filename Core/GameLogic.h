@@ -23,6 +23,8 @@ public:
 	void startGame();
 	bool round();
 	void cleanup();
+	Player& getPlayer(int index) { return players[index]; }
+	static GameLogic* instance;
 };
 
 #endif // !CORE_GAME_LOGIC_H

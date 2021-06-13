@@ -3,9 +3,9 @@
 
 #include<stdlib.h>
 #include "../IO/Menu.h"
-#include "../IO/Output.h"
+#include "../IO/Output.h" 
+#include "../Core/GameLogic.h"
 #include "../Player/Player.h"
-extern Player* players;
 
 //π…∆±¿‡
 class Stock

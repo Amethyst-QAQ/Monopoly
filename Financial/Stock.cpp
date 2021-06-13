@@ -26,8 +26,8 @@ void Stock::setActualPrice()
 void Stock::buyStock(Player* player)
 {
 	int money;
-	int sum;
-	int num;
+	float sum;
+	float price;
 
 	string mainText = "Please choose the price you want.";
 	vector<string> operation = { "In actual price(bank's)", "In player's price" };
@@ -41,7 +41,7 @@ void Stock::buyStock(Player* player)
 	{
 		mainText = "Please enter the amount you want.\n(Attention!!! 100 ¡Ü Amount ¡Ü 1200)";
 		serverText = "buy_from_bank";
-		vector<string> operation = {};
+		operation = {};
 
 		Menu menu1(mainText, operation, serverText);
 		n = menu.exec();
@@ -50,7 +50,7 @@ void Stock::buyStock(Player* player)
 		{
 			mainText = "Wrong number! Please enter again! ";
 			serverText = "default_buy_from_bank";
-			vector<string> operation = {};
+			operation = {};
 
 			Menu menu2(mainText, operation, serverText);
 			n = menu2.exec();
@@ -62,7 +62,7 @@ void Stock::buyStock(Player* player)
 
 		sum = player->getProperty("StockNum");
 		sum += n;
-		player->setProperty("StockNum",n);
+		player->setProperty("StockNum",sum);
 
 		money = player->getMoney();
 		money -= n * actualPrice;
@@ -70,13 +70,66 @@ void Stock::buyStock(Player* player)
 	}
 	else
 	{
+		mainText = "Please choose the price you want to buy of.";
+		serverText = "choose_price";
+		operation = {};
+		int* number = new int[num];
+		int j = 0;
 
+		for (int i = 0;i < num;i++)
+		{
+			if (soldPrice[i] != 0)
+			{
+				operation.push_back(to_string(soldPrice[i]));
+				number[j] = i;
+				j++;
+			}
+		}
+
+		Menu menu3(mainText, operation, serverText);
+		n = menu3.exec();
+		j = n;
+		
+		sum = soldNum[n - 1];
+		price = soldPrice[n - 1];
+		mainText = "Please enter the amount you want.\n(Attention!!! 100 ¡Ü Amount ¡Ü " + to_string(sum) +")";
+		serverText = "buy_from_player";
+		operation = {};
+
+		Menu menu4(mainText, operation, serverText);
+		n = menu4.exec();
+
+		while (n < 100 || n > sum)
+		{
+			mainText = "Wrong number! Please enter again! ";
+			serverText = "default_buy_from_bank";
+
+			Menu menu2(mainText, operation, serverText);
+			n = menu2.exec();
+		}
+
+		mainText = "Successfully bought " + to_string(n) + " shares!";
+		serverText = "success_buy_from_player";
+
+		Output::instance->print(mainText, serverText);
+
+		sum = player->getProperty("StockNum");
+		sum += n;
+		player->setProperty("StockNum", sum);
+		sum = GameLogic::instance->getPlayer(number[j - 1]).getProperty("StockNum") - sum;
+		GameLogic::instance->getPlayer(number[j - 1]).setProperty("StockNum", sum);
+
+		money = player->getMoney();
+		money -= n * price;
+		player->setMoney(money);
+		money = GameLogic::instance->getPlayer(number[j - 1]). getMoney() + money;
+		GameLogic::instance->getPlayer(number[j - 1]).setMoney(money);
 	}
 }
 
 void Stock::sellStock(Player* player)
 {
-	int money;
+	float money;
 	int sum;
 	int num = player->getNum();
 
