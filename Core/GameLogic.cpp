@@ -103,8 +103,7 @@ void GameLogic::initMap()
 	country = new Country("Malaysia", 1600, 6);                 //马来西亚
 	mapVector.push_back(country);
 	country = new Country("Singapore", 1600, 7);               //新加坡
-	mapVector.push_back(country);
-	country = new Country("Indonesia", 800, 1);                 //印度尼西亚
+	mapVector.push_back(country);                 //印度尼西亚
 
 	Map::instance->initGrounds(mapVector);
 }
