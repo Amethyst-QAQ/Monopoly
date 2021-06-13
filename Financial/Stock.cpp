@@ -41,17 +41,19 @@ void Stock::buyStock(Player* player)
 	{
 		mainText = "Please enter the amount you want.\n(Attention!!! 100 ≤ Amount ≤ 1200)";
 		serverText = "buy_from_bank";
+		vector<string> operation = {};
 
-		Output::instance->print(mainText, serverText);
-
+		Menu menu1(mainText, operation, serverText);
 		n = menu.exec();
+
 		while (n < 100 || n > 1200)
 		{
 			mainText = "Wrong number! Please enter again! ";
 			serverText = "default_buy_from_bank";
+			vector<string> operation = {};
 
-			Output::instance->print(mainText, serverText);
-			n = menu.exec();
+			Menu menu2(mainText, operation, serverText);
+			n = menu2.exec();
 		}
 		mainText = "Successfully bought " + to_string(n) + " shares!";
 		serverText = "success_buy_from_bank";
@@ -93,16 +95,16 @@ void Stock::sellStock(Player* player)
 
 		Output::instance->print(mainText, serverText);
 
-
 		sum = player->getProperty("Stock");//获取现有股数
 
 		while (n < sum || n > 800)
 		{
 			mainText = "Wrong amount!\nPlease enter again!";
 			serverText = "Wrong_amount";
+			vector<string> operation = {};
 
-			Output::instance->print(mainText, serverText);
-			//scanf("%d", &n);
+			Menu menu1(mainText, operation, serverText);
+			n = menu1.exec();
 		}
 
 		mainText = "Successfully sold " + to_string(n) + " shares!";
@@ -123,22 +125,28 @@ void Stock::sellStock(Player* player)
 	{
 		mainText = "Please enter the price you want.\n";//有问题
 		serverText = "set_sell_price";
+		vector<string> operation = {};
 
-		Output::instance->print(mainText, serverText);
-		//scanf("%d", &n);
+		Menu menu2(mainText, operation, serverText);
+		n = menu2.exec();
 
 		while (n > 1.1 * actualPrice || n < 0.9 * actualPrice)
 		{
 			mainText = "Wrong Price!\nPlease enter again!";
-		}
+			vector<string> operation = {};
 
+			Menu menu(mainText, operation, serverText);
+			n = menu.exec();
+		}
 
 		mainText = "Please enter the amount you want.\n(Attention!!! youHave ≤ Amount ≤ 800)";
 		serverText = "sell_youramount";
+		vector<string> operation2 = {};
 
-		Output::instance->print(mainText, serverText);
+		Menu menu3(mainText, operation, serverText);
+		n = menu3.exec();
 
-		while (n < player->getProperty("Stock") || n>800)
+		while (n < player->getProperty("Stock") || n > 800)
 		{
 			mainText = "Wrong amount!\nPlease enter again!";
 			serverText = "Wrong_sell_myprice_bank";
@@ -146,6 +154,7 @@ void Stock::sellStock(Player* player)
 			Output::instance->print(mainText, serverText);
 			n = menu.exec();
 		}
+
 		mainText = "Successfully sell " + to_string(n) + " shares!";
 		serverText = "Success_sell_yourprice_bank";
 

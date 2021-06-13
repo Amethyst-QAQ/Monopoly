@@ -7,7 +7,7 @@
 
 using namespace std;
 
-EventHandler* EventHandler::instance{};
+EventHandler* EventHandler::instance = new EventHandler();
 
 void EventHandler::emitEvent(Event* event)
 {
